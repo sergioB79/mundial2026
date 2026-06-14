@@ -15,7 +15,7 @@
     <meta property="og:image:height" content="820">
     <meta property="og:site_name" content="O Guia do Caos">
 
-     <style>
+    <style>
         :root {
             --bg-page: #faf9f6;
             --text-dark: #11151c;
@@ -25,7 +25,7 @@
             --border-soft: #eae8e2;
             --card-bg: #ffffff;
         }
- 
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
             background-color: var(--bg-page);
@@ -34,9 +34,9 @@
             padding: 0;
             -webkit-font-smoothing: antialiased;
         }
- 
+
         .magazine-wrapper { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
- 
+
         /* Navegação entre páginas */
         .nav-editorial {
             display: flex;
@@ -59,7 +59,7 @@
             transition: all 0.3s ease;
         }
         .nav-editorial a:hover { border-bottom: 2px solid var(--accent-green); }
- 
+
         /* Masthead estável do diário */
         .diary-masthead { text-align: center; margin-bottom: 30px; }
         .diary-masthead .date-tag {
@@ -74,7 +74,7 @@
             font-size: 1.3rem; font-style: italic; color: var(--text-muted);
             max-width: 700px; margin: 0 auto; line-height: 1.4;
         }
- 
+
         /* MENU DE DIAS (fixo, scroll horizontal) — preenchido por JS */
         .day-menu {
             position: sticky; top: 0; z-index: 50;
@@ -94,7 +94,7 @@
         }
         .day-pill:hover { border-color: var(--accent-red); }
         .day-pill.active { background: var(--text-dark); color: #fff; border-color: var(--text-dark); }
- 
+
         /* CADA ENTRADA DE DIA */
         .diary-day { scroll-margin-top: 90px; margin-bottom: 80px; }
         .diary-day-banner { text-align: center; margin-bottom: 18px; }
@@ -111,7 +111,7 @@
             font-size: 3.2rem; line-height: 1; margin: 8px 0 16px; font-weight: 900;
             letter-spacing: -2px; text-transform: uppercase; text-align: center; border: none; padding: 0;
         }
- 
+
         /* Texto narrativo */
         .editorial-text { max-width: 750px; margin: 0 auto 50px auto; }
         p.dropcap::first-letter {
@@ -120,12 +120,12 @@
         }
         p { font-size: 1.2rem; line-height: 1.7; margin-bottom: 28px; color: #2c3e50; }
         .sub-deck { font-size: 1.3rem; font-style: italic; color: var(--text-muted); line-height: 1.4; }
- 
+
         .split-section {
             display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; margin: 50px 0; align-items: start;
         }
         @media (max-width: 850px) { .split-section { grid-template-columns: 1fr; gap: 20px; } }
- 
+
         .sidebar-lab {
             background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 12px;
             padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); position: sticky; top: 90px;
@@ -136,16 +136,16 @@
         }
         .sidebar-lab ul { padding-left: 18px; margin: 0; font-size: 1rem; color: var(--text-muted); }
         .sidebar-lab li { margin-bottom: 12px; line-height: 1.5; }
- 
+
         h2.section-title {
             font-size: 2rem; font-weight: 900; letter-spacing: -1px; margin-top: 50px; margin-bottom: 25px;
             text-transform: uppercase; border-left: 6px solid var(--accent-red); padding-left: 15px;
         }
- 
+
         /* Grelha de Jogos */
         .magazine-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin: 40px 0; }
         @media (max-width: 750px) { .magazine-grid { grid-template-columns: 1fr; } }
- 
+
         .grid-card {
             background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 8px;
             padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.01);
@@ -154,16 +154,31 @@
         .grid-card p { font-size: 1.05rem; color: var(--text-dark); margin-bottom: 15px; line-height: 1.6; }
         .grid-card .palpite { border-top: 1px solid var(--border-soft); padding-top: 12px; color: var(--text-dark); }
         .grid-card .meta-game { font-size: 0.9rem; color: var(--text-muted); font-style: italic; }
- 
+
         /* Caixa Mea Culpa */
         .mea-culpa-box { background-color: #11151c; color: #fff; padding: 40px; border-radius: 16px; margin: 50px 0; }
         .mea-culpa-box h2 { color: #ffd200; font-size: 1.6rem; margin-top: 0; text-transform: uppercase; border: none; padding: 0; }
         .mea-culpa-box p { color: #f8fafc; margin-bottom: 0; }
- 
+
+        /* Caixa Fora das Quatro Linhas (registo sóbrio) */
+        .offpitch-box {
+            background: #f0ede6;
+            border-left: 6px solid var(--text-dark);
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin: 50px 0;
+        }
+        .offpitch-box h2 {
+            font-size: 1.45rem; margin-top: 0; margin-bottom: 14px; text-transform: uppercase;
+            letter-spacing: -0.5px; border: none; padding: 0; color: var(--text-dark);
+        }
+        .offpitch-box p { font-size: 1.05rem; line-height: 1.65; color: var(--text-dark); margin-bottom: 16px; }
+        .offpitch-box p:last-child { margin-bottom: 0; }
+
         /* Twemoji */
         img.emoji { height: 1.2em; width: 1.2em; margin: 0 .1em; vertical-align: -0.15em; }
         h2.section-title img.emoji, .diary-day-title img.emoji { height: 1.1em; width: 1.1em; margin: 0 .2em; vertical-align: -0.15em; display: inline-block; }
- 
+
         footer {
             text-align: center; padding: 60px 0 20px 0; font-size: 1.3rem; font-style: italic;
             border-top: 2px solid var(--text-dark); color: var(--text-dark); font-weight: bold;
@@ -172,22 +187,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
- 
+
 <div class="magazine-wrapper">
- 
+
     <!-- NAVEGAÇÃO ENTRE PÁGINAS -->
     <nav class="nav-editorial">
         <div>📖 O Guia do Caos — Edição Diária</div>
         <div><a href="index.html">← Voltar ao Guia Tático Inicial</a></div>
     </nav>
- 
+
     <!-- MASTHEAD ESTÁVEL -->
     <header class="diary-masthead">
         <div class="date-tag">Diário do Caos • Mundial 2026</div>
         <h1>Diário do Caos</h1>
         <div class="sub-deck">As crónicas, os ressaltos e os planos que se desfazem — dia após dia.</div>
     </header>
- 
+
     <!-- MENU DE DIAS (preenchido automaticamente) -->
     <nav class="day-menu">
         <div class="day-menu-inner">
@@ -195,114 +210,149 @@
             <div class="day-menu-list" id="day-menu-list"><!-- JS --></div>
         </div>
     </nav>
- 
-    <!-- ================= ENTRADAS (mais recente no topo) ================= -->
+
+    <!-- ================= ENTRADAS ================= -->
     <div id="diary-entries">
- 
-        <!-- ====== PROGNÓSTICOS (HOJE + AMANHÃ) ====== -->
-        <section class="diary-day" id="prognosticos" data-day="3" data-label="Prognósticos" data-date="13–14 de Junho">
- 
-            <div class="sub-deck" style="text-align:center; max-width:750px; margin:0 auto 30px;">O que aí vem, com os nossos palpites. Curiosidade do dia 14: dois selecionadores neerlandeses em campo no mesmo dia (Advocaat no Curaçao, Koeman nos Países Baixos).</div>
- 
-            <h2 class="section-title">Hoje · 13 de Junho ⚽</h2>
+
+        <!-- ====== PROGNÓSTICOS (jogos por jogar) ====== -->
+        <section class="diary-day" id="prognosticos" data-day="5" data-label="Prognósticos" data-date="14 de Junho · à tarde">
+
+            <div class="sub-deck" style="text-align:center; max-width:750px; margin:0 auto 30px;">Faltam dois jogos hoje — e ambos têm um banco neerlandês: Advocaat no Curaçao, Koeman nos Países Baixos. Os nossos palpites antes de a bola rolar.</div>
+
+            <h2 class="section-title">A Seguir, Hoje 🔮</h2>
             <div class="magazine-grid">
- 
-                <div class="grid-card">
-                    <h3>🇶🇦 Catar – Suíça 🇨🇭</h3>
-                    <p>A Suíça do costume: bloco organizado, frieza e o termómetro Granit Xhaka a gerir o relógio com bola no pé. O Catar, anfitrião há apenas quatro anos, regressa agora como convidado e tem aqui o teste mais duro do grupo. No Grupo B, onde Canadá e Bósnia já empataram, somar cedo vale ouro.</p>
-                    <p class="palpite"><strong>🔮 Palpite:</strong> Suíça 2-0. A diferença de fundo deve falar mais alto; só haverá susto se o Catar transformar o jogo num bloco-baixo impenetrável.</p>
-                    <div class="meta-game">📍 Grupo B • San Francisco Bay Area • 20:00 (Lisboa)</div>
-                </div>
- 
-                <div class="grid-card">
-                    <h3>🇧🇷 Brasil – Marrocos 🇲🇦</h3>
-                    <p>O jogo grande do dia. O Brasil pentacampeão, agora orientado por Carlo Ancelotti, procura encantar e vencer ao mesmo tempo — a tal "prisão bonita". Pela frente, o Marrocos semifinalista de 2022, talvez o bloco mais bem organizado de África, que nesse Mundial eliminou Espanha e Portugal e não tem medo de gigantes.</p>
-                    <p class="palpite"><strong>🔮 Palpite:</strong> Brasil 2-1, mas com aviso: se Marrocos fechar e apostar nas transições de Hakimi, o empate (ou pior) é cenário real. É a possível bomba do dia.</p>
-                    <div class="meta-game">📍 Grupo C • Nova Iorque/Nova Jérsia • 23:00 (Lisboa)</div>
-                </div>
- 
-            </div>
- 
-            <h2 class="section-title">Amanhã · 14 de Junho 🔮</h2>
-            <div class="magazine-grid">
- 
-                <div class="grid-card">
-                    <h3>🇭🇹 Haiti – Escócia 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h3>
-                    <p>Dois regressos longuíssimos a colidir: o Haiti não vai a um Mundial há 52 anos (desde 1974), a Escócia desde 1998. De um lado, a explosão caribenha, vertical e descomprometida com a calculadora; do outro, a ordem de Steve Clarke — bloco compacto, segundas bolas e perigo nas bolas paradas com McTominay e McGinn.</p>
-                    <p class="palpite"><strong>🔮 Palpite:</strong> Escócia por margem mínima (1-0 / 2-1). A estrutura escocesa deve segurar o caos haitiano — mas a velocidade do Haiti vai dar sustos.</p>
-                    <div class="meta-game">📍 Grupo C • Boston • 02:00 (Lisboa)</div>
-                </div>
- 
-                <div class="grid-card">
-                    <h3>🇦🇺 Austrália – Türkiye 🇹🇷</h3>
-                    <p>Choque de estilos no Grupo D, já com os EUA na frente (4-1). A Austrália traz o músculo e o poder aéreo de sempre; a Türkiye, a vertigem de uma geração jovem e o pé esquerdo de Arda Güler para decidir nos detalhes. Ambas sabem que perder aqui é ficar dependente de terceiros.</p>
-                    <p class="palpite"><strong>🔮 Palpite:</strong> Türkiye 2-1, se Güler aparecer. Mas um empate físico e abafado é bem possível se a Austrália partir o jogo.</p>
-                    <div class="meta-game">📍 Grupo D • Vancouver • 05:00 (Lisboa)</div>
-                </div>
- 
+
                 <div class="grid-card">
                     <h3>🇩🇪 Alemanha – Curaçao 🇨🇼</h3>
                     <p>O jogo da história. O Curaçao é a <strong>menor nação de sempre</strong> a chegar a um Mundial — 444 km², cerca de 156 mil habitantes — orientado por Dick Advocaat, que aos 78 anos se torna o treinador mais velho de sempre num Mundial. Do outro lado, a Alemanha tetracampeã de Nagelsmann, com Musiala, Wirtz e o regresso de Neuer. No papel, é David contra Golias.</p>
                     <p class="palpite"><strong>🔮 Palpite:</strong> Alemanha 3-0. O resultado quase não interessa — o título do dia é a ilha caribenha pisar este palco.</p>
                     <div class="meta-game">📍 Grupo E • Houston • 18:00 (Lisboa)</div>
                 </div>
- 
+
                 <div class="grid-card">
                     <h3>🇳🇱 Países Baixos – Japão 🇯🇵</h3>
                     <p>O jogo mais perigoso do dia. Os Países Baixos de Koeman têm Van Dijk e estrutura, mas arrastam o "síndrome de Golias". E o Japão é, precisamente, especialista em tombar gigantes — em 2022 derrubou a Alemanha e a Espanha. Carrossel de alta rotação contra um bloco neerlandês que treme quando o plano A trava.</p>
                     <p class="palpite"><strong>🔮 Palpite:</strong> Empate 1-1, com o Japão como sério candidato à surpresa. Cuidado, Holanda.</p>
                     <div class="meta-game">📍 Grupo F • Dallas • 21:00 (Lisboa)</div>
                 </div>
- 
+
             </div>
         </section>
         <!-- ====== FIM PROGNÓSTICOS ====== -->
- 
+
+        <!-- ====== DIAS 3 E 4 ====== -->
+        <section class="diary-day" id="dia-4" data-day="4" data-label="Dias 3 e 4" data-date="13 e 14 de Junho">
+
+            <h2 class="diary-day-title">Os Favoritos Tropeçam</h2>
+            <div class="sub-deck" style="text-align:center; max-width:750px; margin:0 auto 40px;">Jogos mornos no espetáculo, mas quentes na tabela: dois empates e uma surpresa deixaram três favoritos a morder o lábio.</div>
+
+            <div class="editorial-text">
+                <p class="dropcap">Se o arranque tinha sido pirotecnia, o segundo lote foi xadrez. Poucos golos, muito cálculo e três favoritos a deixar pontos pelo caminho: o Brasil empatou, a Suíça atirou dois pontos fora ao último suspiro, e a Türkiye — favorita — saiu de Vancouver derrotada. Foram, é certo, jogos mornos. Mas o morno, num Mundial a 48, também faz tabela.</p>
+            </div>
+
+            <h2 class="section-title">Crónica do Segundo Lote ⚽</h2>
+            <div class="magazine-grid">
+
+                <div class="grid-card">
+                    <h3>Brasil 1 – 1 Marrocos</h3>
+                    <p><strong>O Aviso de Marrocos.</strong> O Brasil de Ancelotti foi surpreendido cedo: Ismael Saibari, servido por Brahim Díaz, atirou Marrocos para a frente aos 21'. Vinícius Júnior, eleito homem do jogo, repôs a igualdade aos 32' após assistência de Bruno Guimarães. Mas a sensação foi outra — Marrocos jogou de igual para igual, sem medo. O jovem Ayyoub Bouaddi foi uma máquina no meio-campo: um carregador de piano com pés de veludo, rápido e inteligente, um prazer de se ver. Se Marrocos joga assim, não teme ninguém.</p>
+                    <div class="meta-game">📍 Grupo C • MetLife, Nova Jérsia • Saibari 21' / Vinícius Jr. 32'</div>
+                </div>
+
+                <div class="grid-card">
+                    <h3>Catar 1 – 1 Suíça</h3>
+                    <p><strong>Quem Brinca, Paga.</strong> A Suíça de Yakin controlou e marcou cedo: Breel Embolo converteu de penálti aos 17'. Depois, geriu o jogo com a frieza do costume — talvez frieza a mais. A conta ficou por pagar até aos 90+4, quando um autogolo de Miro Muheim ofereceu o empate ao Catar de Lopetegui. Lição velha contra um bloco baixo: quem brinca, paga no fim.</p>
+                    <div class="meta-game">📍 Grupo B • Levi's, Santa Clara • Embolo 17' (gp) / Muheim 90+4 (ag)</div>
+                </div>
+
+                <div class="grid-card">
+                    <h3>Austrália 2 – 0 Türkiye</h3>
+                    <p><strong>A Surpresa do Lote.</strong> A Türkiye de Montella, com Arda Güler em campo, era favorita — e perdeu. Nestory Irankunda abriu aos 27' e Connor Metcalfe fechou aos 75'. Mas o verdadeiro herói foi o guarda-redes Patrick Beach, uma muralha eleita homem do jogo com nota perto da máxima. A Austrália fez o que sabe: músculo, organização e um guarda-redes inspirado. Os EUA agradecem — o Grupo D fica mais nas suas mãos.</p>
+                    <div class="meta-game">📍 Grupo D • BC Place, Vancouver • Irankunda 27', Metcalfe 75'</div>
+                </div>
+
+                <div class="grid-card">
+                    <h3>Haiti 0 – 1 Escócia</h3>
+                    <p><strong>Vendido Caro, Sem Vergonha.</strong> A Escócia de Steve Clarke venceu, mas o Haiti saiu de cabeça erguida. John McGinn decidiu aos 28' e foi o suficiente — só que os números contam outra história: o Haiti teve mais posse (54%), rematou mais (15 contra 9) e igualou os golos esperados. Para uma seleção que faltava a um Mundial há 52 anos, foi uma estreia digna, sem complexos.</p>
+                    <div class="meta-game">📍 Grupo C • Gillette, Foxborough • McGinn 28'</div>
+                </div>
+
+            </div>
+
+            <div class="mea-culpa-box">
+                <h2>📊 O Filtro do Erro: O Saldo dos Palpites</h2>
+                <p><strong>Haiti–Escócia:</strong> demos Escócia 1-0/2-1; saiu 0-1. Cheio. &nbsp;|&nbsp; <strong>Brasil–Marrocos:</strong> apontámos Brasil 2-1, mas avisámos para o empate se Marrocos se soltasse — e soltou-se (1-1). Meio acerto, com o aviso a valer. &nbsp;|&nbsp; <strong>Catar–Suíça:</strong> arriscámos Suíça 2-0; a Suíça brincou e empatou (1-1). Falhado. &nbsp;|&nbsp; <strong>Austrália–Türkiye:</strong> fomos de Türkiye e levámos 2-0, mais uma aula do guarda-redes Beach. Falhado. Saldo do dia: um cheio, um meio, dois ao lado. O caos continua a recusar a calculadora — e ainda bem.</p>
+            </div>
+
+            <div class="split-section">
+                <div class="narrative-column">
+                    <h2 class="section-title">O Padrão que Regressa 🩺</h2>
+                    <p><strong>Os detalhes decidem:</strong> a Suíça caiu num autogolo ao 90+4, o Brasil precisou de Vinícius para repor ordem, e a Austrália venceu apoiada no seu guarda-redes. Num torneio a 48, o favorito não pode relaxar — porque o adversário "pequeno" joga sem medo e cobra cada deslize.</p>
+                    <p><strong>O nome do dia:</strong> Ayyoub Bouaddi, no meio-campo de Marrocos. Jovem, sereno, com leitura de veterano. Se mantém este nível, é dos rostos a seguir no torneio.</p>
+                </div>
+                <div class="sidebar-lab">
+                    <h4>📋 Notas de Caderno</h4>
+                    <ul>
+                        <li><strong>A muralha Beach:</strong> guarda-redes australiano eleito homem do jogo num 2-0. Quando o guarda-redes é a estrela, é porque o favorito (Türkiye) atacou e esbarrou.</li>
+                        <li><strong>Haiti nos números:</strong> 54% de posse, 15 remates a 9 e golos esperados igualados. Perdeu no marcador, ganhou no respeito.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="offpitch-box">
+                <h2>📣 Fora das Quatro Linhas</h2>
+                <p>Há um Mundial que se joga nos aeroportos. Os EUA barraram adeptos do Irão e do Haiti — jogadores, treinadores e staff ficaram isentos —, dispensaram a caução de visto a adeptos de cinco países africanos (Argélia, Cabo Verde, Costa do Marfim, Senegal e Tunísia) com bilhete válido, e o árbitro somali Omar Artan, que seria o primeiro somali a apitar num Mundial, foi reenviado no aeroporto de Miami apesar de ter visto válido.</p>
+                <p>Resultado prático: o Haiti que se vendeu tão caro frente à Escócia fê-lo quase sem adeptos seus nas bancadas. E, do lado canadiano, o capitão do Gana, Thomas Partey, foi impedido de entrar por causa de um processo judicial em aberto em Inglaterra — que nega — falhando o arranque da sua seleção. O futebol, como sempre, não vive num vácuo.</p>
+            </div>
+
+        </section>
+        <!-- ====== FIM DIAS 3 E 4 ====== -->
+
         <!-- ====== DIA 1 / 2 ====== -->
         <section class="diary-day" id="dia-2" data-day="2" data-label="Dia 1 / 2" data-date="11 e 12 de Junho">
- 
+
             <h2 class="diary-day-title">O Tabuleiro Começou a Mexer</h2>
             <div class="sub-deck" style="text-align:center; max-width:750px; margin:0 auto 40px;">O silêncio acabou. Três países, festas coreografadas nas nuvens, relvados impecáveis e o início imediato do desalinhamento dos planos de laboratório.</div>
- 
+
             <div class="editorial-text">
                 <p class="dropcap">A promessa de um Mundial gigantesco materializou-se com o estrondo habitual. No Azteca, Shakira, Andrea Bocelli e J Balvin abriram a festa, e o velho coliseu da Cidade do México tornou-se o primeiro estádio de sempre a receber jogos em três Campeonatos do Mundo diferentes — 1970, 1986 e agora 2026. No dia seguinte, era Toronto a abrir as portas à estreia do Canadá em solo doméstico.</p>
                 <p>A bola rolou e o guião oficial durou pouco. A partir daí, o que vimos foi a confirmação pura da tese principal: quando o torneio abre as comportas a 48 seleções, os modelos matemáticos ficam à porta do balneário e quem manda é o cansaço, os nervos e o instinto.</p>
             </div>
- 
+
             <h2 class="section-title">Crónica dos Primeiros Duelos ⚽</h2>
             <div class="magazine-grid">
- 
+
                 <div class="grid-card">
                     <h3>México 2 – 0 África do Sul</h3>
                     <p><strong>O Fator Azteca e o Caos Disciplinar.</strong> O guião do "Vulcão da Expectativa" cumpriu-se — e o México quebrou finalmente a maldição dos jogos de abertura. Julián Quiñones marcou o primeiro golo do torneio logo aos 9 minutos. Na segunda parte, Raúl Jiménez fez o 2-0 — o seu primeiro golo de sempre num Mundial, celebrado em lágrimas — e o jogo descambou num festival de três cartões vermelhos: a África do Sul ficou reduzida a nove (expulsões de Sithole e Zwane) e César Montes viu o vermelho já nos descontos, deixando também o México com dez.</p>
                     <div class="meta-game">📍 Grupo A • Estádio Azteca, Cidade do México</div>
                 </div>
- 
+
                 <div class="grid-card">
                     <h3>Coreia do Sul 2 – 1 Chéquia</h3>
                     <p><strong>A Rotação Elétrica de Guadalajara.</strong> Um duelo tático brilhante em solo mexicano. A Chéquia adiantou-se na segunda parte com uma cabeçada de Ladislav Krejčí, na sequência de um lançamento longo de Vladimír Coufal. Mas a velocidade e a fustigante rotação sul-coreana partiram o bloco checo: Hwang In-beom restabeleceu a igualdade e, com Son sob vigilância apertada, o suplente Oh Hyeon-gyu — lançado precisamente para o lugar de Son — carimbou a cambalhota perto do minuto 80.</p>
                     <div class="meta-game">📍 Grupo A • Estádio Akron, Guadalajara</div>
                 </div>
- 
+
                 <div class="grid-card">
                     <h3>Canadá 1 – 1 Bósnia e Herzegovina</h3>
                     <p><strong>O Gelo da Muralha e o Banco Salvador.</strong> A Bósnia gelou Toronto na primeira parte, com uma cabeçada de Jovo Lukić — o primeiro golo internacional da carreira dele. Jesse Marsch percebeu que a sua "geração de ouro" estava presa na teia cínica bósnia e operou a rotação. Ao minuto 76 lançou Cyle Larin que, apenas 121 segundos depois e servido por Promise David, fez o 1-1 (78'). Resultado histórico: o primeiro ponto de sempre do Canadá num Mundial, depois de ter perdido os seis jogos das suas duas participações anteriores (1986 e 2022).</p>
                     <div class="meta-game">📍 Grupo B • BMO Field, Toronto</div>
                 </div>
- 
+
                 <div class="grid-card">
                     <h3>EUA 4 – 1 Paraguai</h3>
                     <p><strong>A Explosão do Quintal.</strong> Ao contrário do nervosismo dos outros anfitriões, a equipa de Pochettino soube usar a energia das bancadas para montar uma asfixia ofensiva avassaladora. Um autogolo madrugador (7') abriu caminho, Folarin Balogun bisou ainda antes do intervalo (3-0 ao descanso) e Giovanni Reyna fechou nos descontos. O Paraguai, de regresso a um Mundial 16 anos depois, ainda descontou por Bobadilla, mas levou uma goleada categórica de entrada.</p>
                     <div class="meta-game">📍 Grupo D • Los Angeles Stadium (SoFi), Los Angeles</div>
                 </div>
- 
+
             </div>
- 
+
             <div class="mea-culpa-box">
                 <h2>📊 O Filtro do Erro: Onde o Nosso Excel Falhou?</h2>
                 <p>No Guia Tático Principal, rotulámos a <strong>Bósnia-Herzegovina</strong> como uma equipa de "Ordem Rígida" remetida ao Tier 4/5 de perigos e estreias. No entanto, o que vimos em Toronto foi uma lição de cinismo competitivo digna de Tiers superiores. A Bósnia não só tirou o espaço interior ao Canadá, como provou que a ausência de nomes ruidosos se compensa com dobras perfeitas. O Canadá (Tier 3) sentiu o peso da responsabilidade e esteve à beira do colapso, salvo apenas por um lampejo do banco. Assumimos o desvio: o cinismo bósnio é muito mais perigoso do que a nossa calculadora previa.</p>
             </div>
- 
+
             <div class="split-section">
                 <div class="narrative-column">
                     <h2 class="section-title">Factos Curiosos dos Dias 1 e 2 🩺</h2>
@@ -317,36 +367,40 @@
                     </ul>
                 </div>
             </div>
- 
+
+            <div class="offpitch-box">
+                <h2>📣 Fora das Quatro Linhas</h2>
+                <p>A noite de abertura teve dois jogos — um dentro, outro fora. Enquanto a Shakira atuava no Azteca, cerca de 2000 manifestantes — professores, estudantes e familiares de desaparecidos — confrontavam a polícia de choque à porta do estádio, em protesto pelos cerca de 130 mil desaparecidos no México.</p>
+                <p>Houve barreiras rompidas, vidros de viaturas partidos à paulada e gás lacrimogéneo, com agentes a cavalo a dispersar a multidão. O contraste entre a festa lá dentro e o gás lá fora foi a primeira imagem dura de um torneio que, mesmo a celebrar, não consegue isolar-se do mundo à sua volta.</p>
+            </div>
+
         </section>
         <!-- ====== FIM DIA 1 / 2 ====== -->
- 
+
     </div>
     <!-- ================= FIM ENTRADAS ================= -->
- 
+
     <footer>
         "Porque o futebol é o único lugar onde uma análise de 40 páginas pode morrer num ressalto."
     </footer>
- 
+
 </div>
- 
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var entries = Array.prototype.slice.call(document.querySelectorAll('.diary-day'));
     var menu = document.getElementById('day-menu-list');
- 
+
     entries.forEach(function (sec) {
         var label = sec.dataset.label || ('Dia ' + sec.dataset.day);
         var date  = sec.dataset.date || '';
- 
-        // Banner grande no topo de cada entrada
+
         var banner = document.createElement('div');
         banner.className = 'diary-day-banner';
         banner.innerHTML = '<span class="hero-day-badge">' + label + '</span>' +
                            (date ? '<span class="diary-day-date">' + date + '</span>' : '');
         sec.insertBefore(banner, sec.firstChild);
- 
-        // Pílula no menu
+
         var a = document.createElement('a');
         a.href = '#' + sec.id;
         a.className = 'day-pill';
@@ -354,8 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
         a.textContent = label;
         menu.appendChild(a);
     });
- 
-    // Realça a pílula em vista
+
     var pills = Array.prototype.slice.call(menu.querySelectorAll('.day-pill'));
     function setActive() {
         var current = entries[0];
@@ -368,10 +421,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     window.addEventListener('scroll', setActive, { passive: true });
     setActive();
- 
+
     if (window.twemoji) twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
 });
 </script>
- 
+
 </body>
 </html>
