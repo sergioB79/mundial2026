@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Preço da Cerveja · Mundial 2026 — O Guia do Caos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf9f6;
+    --ink:#11151c;
+    --red:#d63031;
+    --blue:#0984e3;
+    --line:rgba(17,21,28,.12);
+    --muted:#5a6472;
+    --card:#ffffff;
+    --pt:#1e8a52;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  mono,.mono{font-family:'DM Mono',monospace}
+
+  /* ---- Header ---- */
+  header.top{
+    border-bottom:2px solid var(--ink);
+    padding:34px 0 26px;
+  }
+  .eyebrow{
+    font-family:'DM Mono',monospace;
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);margin-bottom:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap
+  }
+  .eyebrow .dot{width:6px;height:6px;background:var(--red);border-radius:50%}
+  h1{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:clamp(34px,6vw,64px);
+    line-height:1.02;letter-spacing:-.01em;
+  }
+  h1 em{font-style:italic;color:var(--blue)}
+  .dek{
+    margin-top:18px;max-width:62ch;color:var(--muted);font-size:16px;
+  }
+
+  /* ---- Method note ---- */
+  .method{
+    margin-top:26px;padding:18px 20px;background:var(--card);
+    border:1px solid var(--line);border-left:3px solid var(--blue);
+    font-size:13.5px;color:var(--muted);max-width:80ch;border-radius:2px
+  }
+  .method b{color:var(--ink)}
+
+  /* ---- Stat cards ---- */
+  .cards{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;margin:38px 0 10px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 18px 16px;position:relative;overflow:hidden
+  }
+  .card .lbl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .card .big{font-family:'Playfair Display',serif;font-weight:700;font-size:30px;margin-top:6px;line-height:1}
+  .card .sub{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .card .flagmini{width:20px;height:14px;object-fit:cover;border-radius:2px;vertical-align:-2px;margin-right:5px;box-shadow:0 0 0 1px var(--line)}
+  .card.accent-red .big{color:var(--red)}
+  .card.accent-blue .big{color:var(--blue)}
+
+  /* ---- Controls ---- */
+  .controls{
+    margin:40px 0 8px;display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;
+    padding-bottom:14px;border-bottom:1px solid var(--line)
+  }
+  .ctrl-group{display:flex;flex-direction:column;gap:7px}
+  .ctrl-group .lbl{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .segmented{display:flex;border:1px solid var(--ink);border-radius:3px;overflow:hidden}
+  .segmented button{
+    font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.03em;
+    padding:8px 13px;background:transparent;border:none;cursor:pointer;color:var(--ink);
+    border-right:1px solid var(--line);transition:background .15s,color .15s;white-space:nowrap
+  }
+  .segmented button:last-child{border-right:none}
+  .segmented button.active{background:var(--ink);color:var(--cream)}
+  .search{
+    font-family:'DM Mono',monospace;font-size:13px;
+    padding:9px 12px;border:1px solid var(--ink);border-radius:3px;background:var(--card);
+    min-width:200px;color:var(--ink)
+  }
+  .search:focus{outline:2px solid var(--blue);outline-offset:1px}
+  .count{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto}
+
+  /* ---- Table ---- */
+  .tablewrap{overflow-x:auto;margin-top:2px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead th{
+    font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);text-align:right;padding:14px 12px 10px;border-bottom:1.5px solid var(--ink);
+    white-space:nowrap;cursor:pointer;user-select:none
+  }
+  thead th.lft{text-align:left}
+  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  thead th.sorted{color:var(--ink)}
+  thead th.sorted .arrow{opacity:1;color:var(--red)}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+  tbody td.lft{text-align:left}
+  tbody tr:hover{background:rgba(9,132,227,.05)}
+  tbody tr.is-pt{background:rgba(30,138,82,.08)}
+  tbody tr.is-pt:hover{background:rgba(30,138,82,.14)}
+  .rk{font-family:'DM Mono',monospace;color:var(--muted);font-size:12.5px;width:34px}
+  .team{display:flex;align-items:center;gap:11px;min-width:170px}
+  .team img{width:26px;height:18px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px var(--line);flex-shrink:0}
+  .team .nm{font-weight:500}
+  .team .tag{font-family:'DM Mono',monospace;font-size:10px;color:var(--pt);border:1px solid var(--pt);border-radius:2px;padding:1px 5px;margin-left:2px}
+  .num{font-family:'DM Mono',monospace;font-variant-numeric:tabular-nums}
+  .price{font-family:'DM Mono',monospace;font-weight:500;font-variant-numeric:tabular-nums}
+  .na{color:var(--muted);opacity:.6}
+  .ref{font-size:9px;color:var(--muted);vertical-align:super}
+
+  /* bar cell */
+  .barcell{min-width:120px}
+  .bartrack{position:relative;height:8px;background:rgba(17,21,28,.06);border-radius:4px;overflow:hidden}
+  .barfill{position:absolute;left:0;top:0;bottom:0;border-radius:4px;transition:width .4s ease}
+  .barval{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:3px;display:block;text-align:left}
+
+  /* ---- Reading ---- */
+  .reading{margin:56px 0 10px}
+  .reading h2{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:28px;margin-bottom:6px;
+  }
+  .reading h2 span{color:var(--red)}
+  .reading .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+  .reading .grid p{font-size:14.5px;color:#2a323d}
+  .reading .grid h3{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  .reading .grid h3.r{color:var(--red)}
+
+  /* ---- Footer ---- */
+  footer{border-top:2px solid var(--ink);margin-top:60px;padding:30px 0 60px}
+  footer .src{font-size:12.5px;color:var(--muted);max-width:80ch}
+  footer .src b{color:var(--ink)}
+  footer .sig{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;margin-top:20px}
+  footer .sig small{font-family:'DM Mono',monospace;font-style:normal;font-size:11px;color:var(--muted);display:block;margin-top:4px;letter-spacing:.05em}
+  a{color:var(--blue)}
+
+  @media(max-width:640px){
+    .controls{gap:12px}
+    .count{margin-left:0;width:100%}
+    .barcell{display:none}
+    thead th.barcol{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> O Guia do Caos · Mundial 2026 <span class="dot"></span> Índice de Bar</div>
+    <h1>O preço de uma <em>imperial</em><br>nas 48 selecções</h1>
+    <p class="dek">Uma cerveja local de pressão (0,5&nbsp;L), num bar ou restaurante, em cada um dos 48 países do Mundial 2026 — cruzado com o que cada povo realmente bebe por ano. Do choque do Qatar à sede da Chéquia.</p>
+    <div class="method">
+      <b>Como se lê.</b> Preço: cerveja local de pressão 0,5&nbsp;L em bar/restaurante (não supermercado, não estádio), via ranking Numbeo, convertido para euros. <b>Consumo per capita</b>: litros por habitante/ano, fonte <b>Kirin Beer University Report</b> (compilado pela Wikipédia). Onde o Kirin não cobre o país — Qatar, Noruega, Suécia, Jordânia, Haiti, Curaçau, Marrocos, Iraque, Uruguai, Argentina, Cabo Verde, Senegal, Equador, Arábia Saudita, Gana, Tunísia, Colômbia, Egito, Paraguai, Argélia, Costa do Marfim, Irão — fica <b>s/ dados</b> em vez de número inventado. Inglaterra e Escócia usam o valor do Reino Unido<span class="ref">RU</span>.
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="cards" id="cards"></section>
+
+  <section class="controls">
+    <div class="ctrl-group">
+      <span class="lbl">Ordenar por</span>
+      <div class="segmented" id="sortSeg">
+        <button data-sort="price" class="active">Preço ↓</button>
+        <button data-sort="consumo">Consumo ↓</button>
+        <button data-sort="cervejas">Cervejas/€10</button>
+        <button data-sort="devocao">Devoção</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="lbl">Barra mostra</span>
+      <div class="segmented" id="metricSeg">
+        <button data-metric="price" class="active">Preço</button>
+        <button data-metric="consumo">Consumo</button>
+        <button data-metric="cervejas">Cervejas/€10</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="lbl">Procurar</span>
+      <input class="search" id="search" type="text" placeholder="selecção…" autocomplete="off">
+    </div>
+    <span class="count" id="count"></span>
+  </section>
+
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th class="lft" data-col="rank">#</th>
+          <th class="lft" data-col="name">Selecção <span class="arrow">▲</span></th>
+          <th data-col="price">€ / 0,5&nbsp;L <span class="arrow">▼</span></th>
+          <th data-col="consumo">L / hab·ano <span class="arrow">▼</span></th>
+          <th data-col="cervejas">Cervejas / €10 <span class="arrow">▼</span></th>
+          <th data-col="devocao">Devoção €/ano <span class="arrow">▼</span></th>
+          <th class="lft barcol barcell">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <section class="reading">
+    <h2>Leitura <span>rápida</span></h2>
+    <div class="grid">
+      <div>
+        <h3 class="r">O fosso é de 15×</h3>
+        <p>Uma imperial no Qatar (€11,77) custa cerca de 15 vezes mais do que no Irão (€0,77). O topo é quase todo álcool muito taxado ou restrito: Qatar, Noruega, Suíça, Suécia, Jordânia, Austrália. O fundo são mercados locais baratos: Irão, Costa do Marfim, Uzbequistão, Argélia, Paraguai, Egito.</p>
+      </div>
+      <div>
+        <h3>Caro não é o mesmo que sedento</h3>
+        <p>Preço e consumo quase não se sobrepõem. A Chéquia é a campeã mundial de consumo (126 L/ano) e ainda assim das mais <em>baratas</em> da tabela — €2,11. Já o Qatar é o mais caro e mal regista consumo. Beber muito e pagar pouco é, basicamente, a identidade checa.</p>
+      </div>
+      <div>
+        <h3 class="r">Portugal: meio-baixo, sem drama</h3>
+        <p>A €2,56, Portugal fica no meio-baixo: mais barato que Espanha, Alemanha, França, Inglaterra/Escócia, EUA e Canadá; mais caro que Brasil, México, África do Sul ou Uzbequistão. Em consumo, 54,9 L/ano — sólido, mas longe da Europa Central.</p>
+      </div>
+      <div>
+        <h3>O "índice de devoção"</h3>
+        <p>Métrica brincalhona: quanto custaria beber a média anual do teu país <em>toda a preço de bar</em>. A Chéquia lidera com folga (≈&nbsp;€532/ano), porque junta muito consumo a um preço ainda assim moderado. É a única coluna que combina as duas forças num só número.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="src">
+      <b>Fontes.</b> Preços: Numbeo, "Domestic Draft Beer 0.5L, Restaurants" — dados por país com contributos suficientes; casos fora do ranking principal via páginas de cidade/país e convertidos para euros. Consumo per capita: <b>Kirin Beer University Report</b> (Global Beer Consumption), compilado em <a href="https://en.wikipedia.org/wiki/List_of_countries_by_beer_consumption_per_capita" target="_blank" rel="noopener">List of countries by beer consumption per capita</a>; anos mistos (maioria 2019–2024). <span class="ref">RU</span> Inglaterra e Escócia herdam o valor do Reino Unido por falta de série separada. Métricas derivadas (cervejas/€10, devoção, índice vs Portugal) são cálculo directo sobre estes números, não dados novos.
+    </p>
+    <p class="sig">Mantém-te orientado. Bebe com método.<small>O Guia do Caos · Mundial 2026 · Tomás Nazário</small></p>
+  </div>
+</footer>
+
+<script>
+const PT_PRICE = 2.56;
+// name, ISO code (flagcdn), price €/0.5L, consumo L/hab·ano (null = s/dados), uk flag
+const DATA = [
+  ["Qatar","qa",11.77,null,false],
+  ["Noruega","no",10.49,null,false],
+  ["Suíça","ch",8.07,55.1,false],
+  ["Suécia","se",7.44,null,false],
+  ["Jordânia","jo",7.10,null,false],
+  ["Austrália","au",6.97,75.1,false],
+  ["Nova Zelândia","nz",6.24,61.0,false],
+  ["Países Baixos","nl",6.16,79.3,false],
+  ["França","fr",6.16,33.0,false],
+  ["Escócia","gb-sct",5.93,70.3,true],
+  ["Inglaterra","gb-eng",5.93,70.3,true],
+  ["Haiti","ht",5.53,null,false],
+  ["Estados Unidos","us",5.25,72.7,false],
+  ["Curaçau","cw",5.14,null,false],
+  ["Bélgica","be",5.14,65.9,false],
+  ["Áustria","at",5.14,107.8,false],
+  ["Canadá","ca",5.11,53.5,false],
+  ["Alemanha","de",4.48,99.0,false],
+  ["Marrocos","ma",3.35,null,false],
+  ["Iraque","iq",3.34,null,false],
+  ["Uruguai","uy",3.31,null,false],
+  ["Croácia","hr",3.29,85.5,false],
+  ["Espanha","es",3.08,88.8,false],
+  ["Cabo Verde","cv",2.99,null,false],
+  ["Coreia do Sul","kr",2.92,39.4,false],
+  ["Turquia","tr",2.89,10.9,false],
+  ["Argentina","ar",2.86,null,false],
+  ["Japão","jp",2.77,38.4,false],
+  ["Portugal","pt",2.56,54.9,false],
+  ["Senegal","sn",2.29,null,false],
+  ["México","mx",2.28,70.5,false],
+  ["África do Sul","za",2.12,60.1,false],
+  ["Chéquia","cz",2.11,126.0,false],
+  ["Bósnia e Herzegovina","ba",2.10,68.6,false],
+  ["Panamá","pa",1.97,78.3,false],
+  ["Brasil","br",1.79,58.4,false],
+  ["Equador","ec",1.75,null,false],
+  ["RD Congo","cd",1.75,54.8,false],
+  ["Arábia Saudita","sa",1.63,null,false],
+  ["Gana","gh",1.56,null,false],
+  ["Tunísia","tn",1.51,null,false],
+  ["Colômbia","co",1.40,null,false],
+  ["Egito","eg",1.32,null,false],
+  ["Paraguai","py",1.31,null,false],
+  ["Argélia","dz",1.23,null,false],
+  ["Uzbequistão","uz",1.16,11.0,false],
+  ["Costa do Marfim","ci",1.06,null,false],
+  ["Irão","ir",0.77,null,false],
+];
+
+// enrich
+const ROWS = DATA.map(d=>{
+  const [name,code,price,consumo,uk]=d;
+  const litreBar = price*2;                       // €/litro a preço de bar
+  const devocao = consumo!=null ? consumo*litreBar : null;  // beber a média a preço de bar
+  const cervejas = 10/price;                      // imperiais por €10
+  const idxPT = price/PT_PRICE;                    // índice vs Portugal
+  return {name,code,price,consumo,uk,devocao,cervejas,idxPT};
+});
+
+// maxima for bars
+const MAX={
+  price: Math.max(...ROWS.map(r=>r.price)),
+  consumo: Math.max(...ROWS.map(r=>r.consumo||0)),
+  cervejas: Math.max(...ROWS.map(r=>r.cervejas)),
+};
+
+let sortKey="price", metric="price", filter="";
+
+function fmtEuro(n){return "€"+n.toLocaleString("pt-PT",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtNum(n,d=1){return n.toLocaleString("pt-PT",{minimumFractionDigits:d,maximumFractionDigits:d});}
+
+function barColor(){
+  if(metric==="price") return "var(--red)";
+  if(metric==="consumo") return "var(--blue)";
+  return "var(--pt)";
+}
+
+function renderCards(){
+  const sorted=[...ROWS].sort((a,b)=>b.price-a.price);
+  const top=sorted[0], bottom=sorted[sorted.length-1];
+  const thirst=[...ROWS].filter(r=>r.consumo!=null).sort((a,b)=>b.consumo-a.consumo)[0];
+  const pt=ROWS.find(r=>r.code==="pt");
+  const flag=c=>`<img class="flagmini" src="https://flagcdn.com/${c}.svg" alt="">`;
+  const cards=[
+    {cls:"accent-red",lbl:"Mais cara",big:fmtEuro(top.price),sub:`${flag(top.code)}${top.name} · ${fmtNum(top.price/bottom.price,0)}× a mais barata`},
+    {cls:"accent-blue",lbl:"Mais barata",big:fmtEuro(bottom.price),sub:`${flag(bottom.code)}${bottom.name} · €0,77 a imperial`},
+    {cls:"",lbl:"Maior consumo",big:fmtNum(thirst.consumo,0)+" L",big2:true,sub:`${flag(thirst.code)}${thirst.name} · por habitante/ano`},
+    {cls:"",lbl:"Portugal",big:fmtEuro(pt.price),sub:`${flag("pt")}${rankOf(pt,"price")}º de 48 no preço · 54,9 L/ano`},
+  ];
+  document.getElementById("cards").innerHTML=cards.map(c=>`
+    <div class="card ${c.cls}">
+      <div class="lbl">${c.lbl}</div>
+      <div class="big">${c.big}</div>
+      <div class="sub">${c.sub}</div>
+    </div>`).join("");
+}
+
+function rankOf(row,key){
+  const sorted=[...ROWS].sort((a,b)=>(b[key]||0)-(a[key]||0));
+  return sorted.indexOf(row)+1;
+}
+
+function render(){
+  const tbody=document.getElementById("tbody");
+  let rows=[...ROWS];
+  if(filter){
+    const f=filter.toLowerCase();
+    rows=rows.filter(r=>r.name.toLowerCase().includes(f));
+  }
+  rows.sort((a,b)=>{
+    if(sortKey==="name") return a.name.localeCompare(b.name,"pt");
+    const av=a[sortKey], bv=b[sortKey];
+    if(av==null) return 1; if(bv==null) return -1;
+    return bv-av;
+  });
+
+  tbody.innerHTML=rows.map((r,i)=>{
+    const ukref = r.uk?'<span class="ref">RU</span>':'';
+    const ptTag = r.code==="pt"?'<span class="tag">cá em casa</span>':'';
+    const consumoCell = r.consumo!=null
+        ? `<span class="num">${fmtNum(r.consumo,1)}</span>`
+        : `<span class="na">s/ dados</span>`;
+    const devCell = r.devocao!=null
+        ? `<span class="num">${fmtEuro(r.devocao)}</span>`
+        : `<span class="na">—</span>`;
+    // bar
+    let bv=0,bl="";
+    if(metric==="price"){bv=r.price/MAX.price; bl=fmtEuro(r.price);}
+    else if(metric==="consumo"){ if(r.consumo!=null){bv=r.consumo/MAX.consumo; bl=fmtNum(r.consumo,0)+" L";} else {bl="s/ dados";} }
+    else {bv=r.cervejas/MAX.cervejas; bl=fmtNum(r.cervejas,1)+" 🍺";}
+    const bar = `<div class="bartrack"><div class="barfill" style="width:${(bv*100).toFixed(1)}%;background:${barColor()}"></div></div><span class="barval">${bl}</span>`;
+    return `<tr class="${r.code==="pt"?"is-pt":""}">
+      <td class="lft rk">${String(i+1).padStart(2,"0")}</td>
+      <td class="lft">
+        <div class="team">
+          <img src="https://flagcdn.com/${r.code}.svg" alt="${r.name}" loading="lazy">
+          <span class="nm">${r.name}${ukref}</span>${ptTag}
+        </div>
+      </td>
+      <td class="price">${fmtEuro(r.price)}</td>
+      <td>${consumoCell}</td>
+      <td class="num">${fmtNum(r.cervejas,1)}</td>
+      <td>${devCell}</td>
+      <td class="lft barcell">${bar}</td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("count").textContent=`${rows.length} / 48 selecções`;
+  // header sort highlight
+  document.querySelectorAll("thead th").forEach(th=>{
+    th.classList.toggle("sorted",th.dataset.col===sortKey);
+  });
+}
+
+// sort segmented
+document.getElementById("sortSeg").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  document.querySelectorAll("#sortSeg button").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); sortKey=b.dataset.sort; render();
+});
+// metric segmented
+document.getElementById("metricSeg").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  document.querySelectorAll("#metricSeg button").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); metric=b.dataset.metric; render();
+});
+// header click sort
+document.querySelectorAll("thead th[data-col]").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const c=th.dataset.col;
+    if(c==="rank")return;
+    sortKey=c;
+    document.querySelectorAll("#sortSeg button").forEach(x=>{
+      x.classList.toggle("active",x.dataset.sort===c);
+    });
+    render();
+  });
+});
+// search
+document.getElementById("search").addEventListener("input",e=>{filter=e.target.value;render();});
+
+renderCards();
+render();
+</script>
+</body>
+</html>
