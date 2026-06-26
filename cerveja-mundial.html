@@ -164,7 +164,7 @@
 <header class="top">
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> O Guia do Caos · Mundial 2026 <span class="dot"></span> Índice de Bar</div>
-    <h1>O preço de uma <em>imperial</em><br>nas 48 selecções</h1>
+    <h1>O preço de uma <em>cerveja</em><br>nas 48 selecções</h1>
     <p class="dek">Uma cerveja local de pressão (0,5&nbsp;L), num bar ou restaurante, em cada um dos 48 países do Mundial 2026 — cruzado com o que cada povo realmente bebe por ano. Do choque do Qatar à sede da Chéquia.</p>
     <div class="method">
       <b>Como se lê.</b> Preço: cerveja local de pressão 0,5&nbsp;L em bar/restaurante (não supermercado, não estádio), via ranking Numbeo, convertido para euros. <b>Consumo per capita</b>: litros por habitante/ano, fonte <b>Kirin Beer University Report</b> (compilado pela Wikipédia). Onde o Kirin não cobre o país — Qatar, Noruega, Suécia, Jordânia, Haiti, Curaçau, Marrocos, Iraque, Uruguai, Argentina, Cabo Verde, Senegal, Equador, Arábia Saudita, Gana, Tunísia, Colômbia, Egito, Paraguai, Argélia, Costa do Marfim, Irão — fica <b>s/ dados</b> em vez de número inventado. Inglaterra e Escócia usam o valor do Reino Unido<span class="ref">RU</span>.
@@ -182,7 +182,7 @@
       <div class="segmented" id="sortSeg">
         <button data-sort="price" class="active">Preço ↓</button>
         <button data-sort="consumo">Consumo ↓</button>
-        <button data-sort="cervejas">Cervejas/€10</button>
+        <button data-sort="cervejas">Copos 0,5L/€10</button>
         <button data-sort="devocao">Devoção</button>
       </div>
     </div>
@@ -191,7 +191,7 @@
       <div class="segmented" id="metricSeg">
         <button data-metric="price" class="active">Preço</button>
         <button data-metric="consumo">Consumo</button>
-        <button data-metric="cervejas">Cervejas/€10</button>
+        <button data-metric="cervejas">Copos 0,5L/€10</button>
       </div>
     </div>
     <div class="ctrl-group">
@@ -209,7 +209,7 @@
           <th class="lft" data-col="name">Selecção <span class="arrow">▲</span></th>
           <th data-col="price">€ / 0,5&nbsp;L <span class="arrow">▼</span></th>
           <th data-col="consumo">L / hab·ano <span class="arrow">▼</span></th>
-          <th data-col="cervejas">Cervejas / €10 <span class="arrow">▼</span></th>
+          <th data-col="cervejas">Copos 0,5&nbsp;L / €10 <span class="arrow">▼</span></th>
           <th data-col="devocao">Devoção €/ano <span class="arrow">▼</span></th>
           <th class="lft barcol barcell">&nbsp;</th>
         </tr>
@@ -223,7 +223,7 @@
     <div class="grid">
       <div>
         <h3 class="r">O fosso é de 15×</h3>
-        <p>Uma imperial no Qatar (€11,77) custa cerca de 15 vezes mais do que no Irão (€0,77). O topo é quase todo álcool muito taxado ou restrito: Qatar, Noruega, Suíça, Suécia, Jordânia, Austrália. O fundo são mercados locais baratos: Irão, Costa do Marfim, Uzbequistão, Argélia, Paraguai, Egito.</p>
+        <p>Uma cerveja local de pressão de 0,5&nbsp;L no Qatar (€11,77) custa cerca de 15 vezes mais do que no Irão (€0,77). O topo é quase todo álcool muito taxado ou restrito: Qatar, Noruega, Suíça, Suécia, Jordânia, Austrália. O fundo são mercados locais baratos: Irão, Costa do Marfim, Uzbequistão, Argélia, Paraguai, Egito.</p>
       </div>
       <div>
         <h3>Caro não é o mesmo que sedento</h3>
@@ -245,7 +245,7 @@
 <footer>
   <div class="wrap">
     <p class="src">
-      <b>Fontes.</b> Preços: Numbeo, "Domestic Draft Beer 0.5L, Restaurants" — dados por país com contributos suficientes; casos fora do ranking principal via páginas de cidade/país e convertidos para euros. Consumo per capita: <b>Kirin Beer University Report</b> (Global Beer Consumption), compilado em <a href="https://en.wikipedia.org/wiki/List_of_countries_by_beer_consumption_per_capita" target="_blank" rel="noopener">List of countries by beer consumption per capita</a>; anos mistos (maioria 2019–2024). <span class="ref">RU</span> Inglaterra e Escócia herdam o valor do Reino Unido por falta de série separada. Métricas derivadas (cervejas/€10, devoção, índice vs Portugal) são cálculo directo sobre estes números, não dados novos.
+      <b>Fontes.</b> Preços: Numbeo, "Domestic Draft Beer 0.5L, Restaurants" — dados por país com contributos suficientes; casos fora do ranking principal via páginas de cidade/país e convertidos para euros. Consumo per capita: <b>Kirin Beer University Report</b> (Global Beer Consumption), compilado em <a href="https://en.wikipedia.org/wiki/List_of_countries_by_beer_consumption_per_capita" target="_blank" rel="noopener">List of countries by beer consumption per capita</a>; anos mistos (maioria 2019–2024). <span class="ref">RU</span> Inglaterra e Escócia herdam o valor do Reino Unido por falta de série separada. Métricas derivadas (copos de 0,5&nbsp;L/€10, devoção, índice vs Portugal) são cálculo directo sobre estes números, não dados novos.
     </p>
     <p class="sig">Mantém-te orientado. Bebe com método.<small>O Guia do Caos · Mundial 2026 · Tomás Nazário</small></p>
   </div>
@@ -310,7 +310,7 @@ const ROWS = DATA.map(d=>{
   const [name,code,price,consumo,uk]=d;
   const litreBar = price*2;                       // €/litro a preço de bar
   const devocao = consumo!=null ? consumo*litreBar : null;  // beber a média a preço de bar
-  const cervejas = 10/price;                      // imperiais por €10
+  const cervejas = 10/price;                      // copos de 0,5 L por €10
   const idxPT = price/PT_PRICE;                    // índice vs Portugal
   return {name,code,price,consumo,uk,devocao,cervejas,idxPT};
 });
@@ -341,7 +341,7 @@ function renderCards(){
   const flag=c=>`<img class="flagmini" src="https://flagcdn.com/${c}.svg" alt="">`;
   const cards=[
     {cls:"accent-red",lbl:"Mais cara",big:fmtEuro(top.price),sub:`${flag(top.code)}${top.name} · ${fmtNum(top.price/bottom.price,0)}× a mais barata`},
-    {cls:"accent-blue",lbl:"Mais barata",big:fmtEuro(bottom.price),sub:`${flag(bottom.code)}${bottom.name} · €0,77 a imperial`},
+    {cls:"accent-blue",lbl:"Mais barata",big:fmtEuro(bottom.price),sub:`${flag(bottom.code)}${bottom.name} · €0,77 por 0,5 L`},
     {cls:"",lbl:"Maior consumo",big:fmtNum(thirst.consumo,0)+" L",big2:true,sub:`${flag(thirst.code)}${thirst.name} · por habitante/ano`},
     {cls:"",lbl:"Portugal",big:fmtEuro(pt.price),sub:`${flag("pt")}${rankOf(pt,"price")}º de 48 no preço · 54,9 L/ano`},
   ];
