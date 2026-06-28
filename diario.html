@@ -184,6 +184,57 @@
             border-top: 2px solid var(--text-dark); color: var(--text-dark); font-weight: bold;
         }
         .flag { height: 0.95em; width: auto; vertical-align: -0.12em; margin: 0 .18em; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+
+        .phase-cta {
+            max-width: 860px;
+            margin: 42px auto 10px auto;
+            padding: 28px 30px;
+            background: #11151c;
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .phase-cta h2 {
+            margin: 0 0 10px 0;
+            color: #ffd200;
+            font-size: 1.45rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+        .phase-cta p {
+            color: #f8fafc;
+            font-size: 1.04rem;
+            line-height: 1.65;
+            margin: 0 0 20px 0;
+        }
+        .phase-cta-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+        @media (max-width: 650px) { .phase-cta-actions { grid-template-columns: 1fr; } }
+        .phase-cta a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            color: #11151c;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-weight: 800;
+            border: 2px solid transparent;
+            transition: all .2s ease;
+        }
+        .phase-cta a:hover {
+            border-color: #ffd200;
+            transform: translateY(-1px);
+        }
+        .phase-cta small {
+            display: block;
+            margin-top: 6px;
+            color: #576574;
+            font-weight: 600;
+            line-height: 1.35;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
@@ -224,6 +275,15 @@
                 <h3>📌 Próximo capítulo</h3>
                 <p>Este ficheiro fica como arquivo completo da fase de grupos: Dia 1/2 até Dia 18, com prognósticos, erros, ruído e contas fechadas. A Ronda dos 32 deve nascer numa página própria, mais leve e limpa.</p>
                 <p style="margin-bottom:0;"><strong>Primeiro jogo da nova fase:</strong> África do Sul – Canadá.</p>
+            </div>
+
+            <div class="phase-cta">
+                <h2>Próxima leitura</h2>
+                <p>A fase de grupos fica arquivada aqui. A partir daqui, o Mundial divide-se em duas páginas novas: uma para fechar as contas do que já aconteceu, outra para acompanhar a fase a eliminar sem carregar este ficheiro às costas.</p>
+                <div class="phase-cta-actions">
+                    <a href="mapa-dos-sobreviventes.html">🧭 Mapa dos Sobreviventes<small>Resumo da fase de grupos: revelações, desilusões, curiosidades e emparelhamentos.</small></a>
+                    <a href="ronda-32.html">⚔️ Ronda dos 32<small>Nova página para prognósticos, crónicas e caminhos da fase a eliminar.</small></a>
+                </div>
             </div>
 
         </section>
@@ -285,6 +345,15 @@
                 <h2>📣 Fora das Quatro Linhas</h2>
                 <p><strong>O Mundial Não Respira.</strong> A fase de grupos acabou e a fase a eliminar começou quase sem intervalo. Não há tempo para fechar o caderno, limpar a mesa e fingir que começa outro torneio. Hoje já há África do Sul–Canadá nos 32. É o formato de 48 equipas no seu estado puro: grupos gigantes, contas até de madrugada, terceiros classificados à espera de oxigénio, e depois mata-mata antes de alguém perceber bem quem sobreviveu.</p>
                 <p><strong>Portugal Descobre o Preço do Segundo Lugar.</strong> O empate com a Colômbia não é desastre, mas é sentença de caminho. Portugal não ganhou o grupo, não escolheu a porta e entra agora na fase a eliminar pelo corredor dos segundos classificados. O adversário que se desenha é a Croácia: velha, cansada, irritante, sobrevivente. Exatamente o tipo de equipa que parece sempre perto do fim — até estar outra vez no jogo seguinte.</p>
+            </div>
+
+            <div class="phase-cta">
+                <h2>Próxima leitura</h2>
+                <p>A fase de grupos fica arquivada aqui. A partir daqui, o Mundial divide-se em duas páginas novas: uma para fechar as contas do que já aconteceu, outra para acompanhar a fase a eliminar sem carregar este ficheiro às costas.</p>
+                <div class="phase-cta-actions">
+                    <a href="mapa-dos-sobreviventes.html">🧭 Mapa dos Sobreviventes<small>Resumo da fase de grupos: revelações, desilusões, curiosidades e emparelhamentos.</small></a>
+                    <a href="ronda-32.html">⚔️ Ronda dos 32<small>Nova página para prognósticos, crónicas e caminhos da fase a eliminar.</small></a>
+                </div>
             </div>
 
         </section>
