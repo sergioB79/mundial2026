@@ -602,6 +602,148 @@
             vertical-align: -0.15em;
         }
 
+
+        .daily-update {
+            margin: 12px 0 60px;
+        }
+
+        .daily-hero {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 22px;
+            padding: clamp(26px, 4vw, 42px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.03);
+            margin-bottom: 28px;
+        }
+
+        .daily-hero .day-tag {
+            display: inline-block;
+            font-size: .76rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-red);
+            margin-bottom: 12px;
+        }
+
+        .daily-hero h2 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 5vw, 3.7rem);
+            line-height: .95;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .daily-hero p {
+            margin: 0 0 18px;
+            color: var(--ink-soft);
+            font-size: 1.12rem;
+            line-height: 1.7;
+        }
+
+        .daily-hero p:last-child { margin-bottom: 0; }
+
+        .daily-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 18px;
+            margin: 24px 0 34px;
+        }
+
+        .daily-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.025);
+        }
+
+        .daily-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.18rem;
+            letter-spacing: -.2px;
+        }
+
+        .daily-card p {
+            margin: 0;
+            color: var(--ink-soft);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .daily-card strong { color: var(--text-dark); }
+
+        .offpitch-mini {
+            background: #f0ede6;
+            border-left: 7px solid var(--text-dark);
+            border-radius: 12px;
+            padding: 24px 26px;
+            margin: 30px 0 38px;
+        }
+
+        .offpitch-mini h3 {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: -.3px;
+        }
+
+        .offpitch-mini p {
+            margin: 0 0 14px;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        .offpitch-mini p:last-child { margin-bottom: 0; }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .preview-card {
+            background: #11151c;
+            color: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+
+        .preview-card .time {
+            display: inline-block;
+            color: var(--accent-yellow);
+            font-size: .78rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .preview-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
+        .preview-card p { margin: 0 0 14px; color: #f8fafc; line-height: 1.6; font-size: 1rem; }
+
+        .preview-card .prediction {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,.18);
+            color: var(--accent-yellow);
+            font-weight: 950;
+            font-size: 1.12rem;
+        }
+
+        .match-card.completed {
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 10px 26px rgba(0,184,148,.08);
+        }
+        .match-card.completed .tag { background: var(--accent-green); color: #fff; }
+
+        @media (max-width: 980px) {
+            .daily-grid, .preview-grid { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 980px) {
             .split-section,
             .bracket,
@@ -654,14 +796,14 @@
         <section class="survivor-strip">
             <article class="survivor-box highlight">
                 <span class="kicker">Contador do caos</span>
-                <strong>32 vivos</strong>
-                <p>De 48 equipas sobram 32. A partir daqui, o torneio deixa de aceitar justificações.</p>
+                <strong>31 vivos</strong>
+                <p>O Canadá já riscou a África do Sul. De 32 sobreviventes, sobra o primeiro fantasma.</p>
             </article>
 
             <article class="survivor-box">
                 <span class="kicker">Jogo de abertura</span>
-                <strong>RSA vs CAN</strong>
-                <p>28 de junho, 20:00 em Portugal. Primeiro jogo do mata-mata: África do Sul contra Canadá.</p>
+                <strong>RSA 0–1 CAN</strong>
+                <p>Stephen Eustáquio marcou aos 90+2 e pôs o Canadá nos oitavos.</p>
             </article>
 
             <article class="survivor-box">
@@ -677,20 +819,79 @@
             </article>
         </section>
 
-        <h2 class="section-title">O jogo de hoje</h2>
+        <section class="daily-update">
+            <article class="daily-hero">
+                <span class="day-tag">Novo dia · 29 de junho</span>
+                <h2>O primeiro corte veio com sotaque nazareno</h2>
+                <p>Houve só um jogo ontem. Bastou. A África do Sul aguentou quase tudo, o Canadá foi mastigando a noite sem grande brilho, e quando o prolongamento já parecia estar a vestir o casaco, Stephen Eustáquio apareceu aos 90+2'. Um remate, um golo, um país nos oitavos e um pedacinho da Nazaré metido no mapa do Mundial.</p>
+                <p>O Canadá não fez uma exibição imperial. Fez uma coisa mais útil em mata-mata: não se perdeu. Criou mais, sofreu menos do que o drama queria, e encontrou no fim o jogador certo para dar nome à noite. A África do Sul sai de pé. O Canadá segue sem pedir desculpa.</p>
+            </article>
+
+            <section class="daily-grid">
+                <article class="daily-card">
+                    <h3>O detalhe do jogo</h3>
+                    <p><strong>África do Sul 0–1 Canadá.</strong> Eustáquio marcou aos 90+2, foi homem do jogo nos dados disponíveis e deixou o primeiro eliminado da fase a eliminar.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>A estatística que ajuda a página</h3>
+                    <p>O Canadá ganhou, mas não esmagou nos ratings coletivos: o jogo foi mais nervo do que superioridade. Eustáquio destoou porque deu volume, passe e a facada final.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>O Mundial em números</h3>
+                    <p>Messi continua no topo dos marcadores com 6 golos. Dembélé, Vinícius Júnior, Haaland e Mbappé aparecem logo atrás com 4. Nas médias de equipa, França, Espanha, Brasil, Portugal e Alemanha seguem no topo.</p>
+                </article>
+            </section>
+
+            <section class="offpitch-mini">
+                <h3>Fora das quatro linhas</h3>
+                <p><strong>O golo também é familiar — e é mesmo nazareno.</strong> O detalhe mais forte do dia não está no VAR nem numa polémica de FIFA: está na biografia. Os pais de Stephen Eustáquio eram da Nazaré, a família voltou para lá quando ele era miúdo, e foi n’<strong>Os Nazarenos</strong> que ele começou a jogar. Antes de haver Canadá nos oitavos, houve campo pequeno, clube da terra e uma bola a ganhar destino.</p>
+                <p>Jesse Marsch falou dos pais de Eustáquio depois do jogo, como se aquela bola também tivesse atravessado uma ausência. Às vezes o futebol é só isto: uma pancada aos 90+2 que parece pequena no marcador e enorme em tudo o resto. Para a Nazaré, porém, não é pequena coisa nenhuma.</p>
+            </section>
+
+            <h2 class="section-title">Previsões dos jogos de hoje</h2>
+            <p class="section-lead">Hoje já não há aquecimento. Há Brasil, Alemanha e uma madrugada com Países Baixos–Marrocos que parece grande demais para ser escondida às duas da manhã.</p>
+
+            <section class="preview-grid">
+                <article class="preview-card">
+                    <span class="time">18:00</span>
+                    <h3>Brasil vs Japão</h3>
+                    <p>O Brasil chega com Vinícius em alta e uma sensação de crescimento depois da fase de grupos. Mas o Japão é das piores equipas para quem gosta de acelerar sem pensar: fecha, espera e castiga.</p>
+                    <div class="prediction">Palpite: Brasil 2–1 Japão</div>
+                </article>
+
+                <article class="preview-card">
+                    <span class="time">21:30</span>
+                    <h3>Alemanha vs Paraguai</h3>
+                    <p>A Alemanha tem mais futebol, mais banco e mais obrigação. Mas a derrota com o Equador deixou aviso: se entra em modo “já está”, o jogo morde. O Paraguai vai tentar precisamente isso.</p>
+                    <div class="prediction">Palpite: Alemanha 2–1 Paraguai</div>
+                </article>
+
+                <article class="preview-card">
+                    <span class="time">02:00</span>
+                    <h3>Países Baixos vs Marrocos</h3>
+                    <p>O melhor jogo escondido na madrugada. A Holanda tem estrutura e chegada. Marrocos tem identidade, memória de 2022 e aquele veneno emocional de quem já deixou de pedir licença.</p>
+                    <div class="prediction">Palpite: 1–1 · Marrocos nos penáltis</div>
+                </article>
+            </section>
+        </section>
+
+
+        <h2 class="section-title">Arquivo do jogo de abertura</h2>
 
         <section class="split-section">
             <article class="lead-card">
                 <h3>África do Sul vs Canadá</h3>
-                <div class="meta">Ronda dos 32 · 28/06/2026 · Los Angeles Stadium · 20:00 em Portugal continental</div>
+                <div class="meta">Ronda dos 32 · 28/06/2026 · Los Angeles Stadium · Resultado final: África do Sul 0–1 Canadá</div>
 
-                <p class="dropcap">É um belo arranque para a fase a eliminar porque junta duas narrativas que raramente se encontram em paz. De um lado, o Canadá, coanfitrião, mas longe do conforto doméstico: joga em Los Angeles, não em casa. Do outro, a África do Sul, que chega sem o peso do nome mas com a leveza perigosa de quem já fez mais do que lhe exigiam.</p>
+                <p class="dropcap">Foi um belo arranque para a fase a eliminar porque juntou duas narrativas que raramente se encontram em paz. De um lado, o Canadá, coanfitrião, mas longe do conforto doméstico: joga em Los Angeles, não em casa. Do outro, a África do Sul, que chegou sem o peso do nome mas com a leveza perigosa de quem já fez mais do que lhe exigiam.</p>
 
                 <p>O Canadá tem mais velocidade declarada, mais talento reconhecível e mais jogadores capazes de resolver um jogo num arranque. Davies é sempre um curto-circuito ambulante, Jonathan David aparece bem entre linhas, e a equipa tem a obrigação emocional de não ser a primeira a cair numa fase que começa precisamente com um duelo seu. Mas obrigação, em torneios, nem sempre ajuda. Às vezes só pesa.</p>
 
-                <p>A África do Sul entra com menos bazófia e talvez com menos teatro. Fez o suficiente para sobreviver ao grupo, sabe jogar sem se desorganizar e tem o tipo de energia que pode transformar um jogo teoricamente menor numa noite incómoda. Para um favorito moderado, não há nada pior do que um adversário que não sente a obrigação de provar estatuto nenhum.</p>
+                <p>A África do Sul entrou com menos bazófia e talvez com menos teatro. Fez o suficiente para sobreviver ao grupo, sabe jogar sem se desorganizar e tem o tipo de energia que pode transformar um jogo teoricamente menor numa noite incómoda. Para um favorito moderado, não há nada pior do que um adversário que não sente a obrigação de provar estatuto nenhum.</p>
 
-                <p>Este jogo também tem a cara certa para abrir a ronda: não é glamour puro, mas é tensão verdadeira. Um quer confirmar crescimento. O outro quer continuar a estragar hierarquias. E como isto já não é fase de grupos, o empate deixou de ser abrigo. Hoje alguém segue. Hoje alguém desaparece.</p>
+                <p>Este jogo teve a cara certa para abrir a ronda: não é glamour puro, mas é tensão verdadeira. Um quer confirmar crescimento. O outro quer continuar a estragar hierarquias. E como isto já não é fase de grupos, o empate deixou de ser abrigo. O Canadá seguiu. A África do Sul desapareceu sem cair de joelhos.</p>
             </article>
 
             <aside class="side-stack">
@@ -699,7 +900,7 @@
                     <ul>
                         <li><strong>Canadá:</strong> provar que a passagem do grupo não foi apenas efeito de contexto e que há mesmo equipa para mais.</li>
                         <li><strong>África do Sul:</strong> continuar a viver da disciplina, do bloco curto e da libertação total de expectativas.</li>
-                        <li><strong>Contexto:</strong> o vencedor entra nos oitavos contra quem passar de Países Baixos vs Marrocos.</li>
+                        <li><strong>Contexto:</strong> o Canadá entra nos oitavos contra quem passar de Países Baixos vs Marrocos.</li>
                     </ul>
                 </section>
 
@@ -714,8 +915,8 @@
 
                 <section class="side-card score-prediction">
                     <h4>Palpite do dia</h4>
-                    <div class="scoreline">África do Sul 1–2 Canadá</div>
-                    <p>Jogo tenso, provavelmente mais apertado do que os nomes sugerem. O Canadá tem mais argumento individual para fugir com a noite, mas não deve ter descanso nenhum.</p>
+                    <div class="scoreline">Saiu: África do Sul 0–1 Canadá</div>
+                    <p>O palpite acertou o vencedor, mas o jogo foi ainda mais seco: menos golo, mais nervo, e uma facada só aos 90+2.</p>
                 </section>
             </aside>
         </section>
@@ -750,32 +951,32 @@
                     <div class="match-column">
                         <div class="column-label">Ronda dos 32</div>
 
-                        <article class="match-card today">
-                            <span class="tag">Hoje</span>
-                            <div class="match-code">M73 · 28/06 · 20:00</div>
-                            <div class="teams">África do Sul vs Canadá</div>
-                            <div class="details">Los Angeles Stadium · hora de Portugal continental</div>
-                            <div class="path">O vencedor cruza com o vencedor de Países Baixos vs Marrocos.</div>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M73 · 28/06 · FT</div>
+                            <div class="teams">África do Sul 0–1 Canadá</div>
+                            <div class="details">Golo: Stephen Eustáquio 90+2 · Los Angeles Stadium</div>
+                            <div class="path">O Canadá segue para os oitavos contra o vencedor de <strong>Países Baixos vs Marrocos</strong>.</div>
                         </article>
 
-                        <article class="match-card">
-                            <span class="tag">29/06</span>
+                        <article class="match-card today">
+                            <span class="tag">Hoje</span>
                             <div class="match-code">M76 · 29/06 · 18:00</div>
                             <div class="teams">Brasil vs Japão</div>
                             <div class="details">Houston Stadium · hora de Portugal continental</div>
                             <div class="path">O vencedor cruza com o vencedor de Costa do Marfim vs Noruega.</div>
                         </article>
 
-                        <article class="match-card">
-                            <span class="tag">29/06</span>
+                        <article class="match-card today">
+                            <span class="tag">Hoje</span>
                             <div class="match-code">M74 · 29/06 · 21:30</div>
                             <div class="teams">Alemanha vs Paraguai</div>
                             <div class="details">Boston Stadium · hora de Portugal continental</div>
                             <div class="path">O vencedor cruza com o vencedor de França vs Suécia.</div>
                         </article>
 
-                        <article class="match-card">
-                            <span class="tag">30/06</span>
+                        <article class="match-card today">
+                            <span class="tag">Madrugada</span>
                             <div class="match-code">M75 · 30/06 · 02:00</div>
                             <div class="teams">Países Baixos vs Marrocos</div>
                             <div class="details">Monterrey Stadium · hora de Portugal continental</div>
@@ -820,7 +1021,7 @@
 
                         <article class="r16-card">
                             <strong>Oitavos M89</strong>
-                            <p>Vencedor M73 vs Vencedor M75</p>
+                            <p>Canadá vs Vencedor M75</p>
                         </article>
 
                         <article class="r16-card">
