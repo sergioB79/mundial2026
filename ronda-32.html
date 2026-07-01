@@ -7,9 +7,9 @@
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Ronda dos 32 — Mundial 2026 ⚔️">
-    <meta property="og:description" content="França, Noruega e México seguem; hoje há Inglaterra, Bélgica e EUA em campo. O mata-mata já comeu sete equipas.">
+    <meta property="og:description" content="A fase a eliminar, dia a dia: todos os jogos jogados, prognósticos, falhanços, sobreviventes e próximos duelos.">
     <meta property="og:url" content="https://sergiob79.github.io/mundial2026/ronda-32.html">
-    <meta property="og:image" content="https://i.postimg.cc/bYFjR0mC/Screenshot-2026-06-13-192003.png">
+    <meta property="og:image" content="https://sergiob79.github.io/mundial2026/mapa.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="820">
     <meta property="og:site_name" content="O Guia do Caos">
@@ -72,9 +72,7 @@
             border-bottom: none !important;
         }
 
-        .brand:hover {
-            color: var(--accent-red);
-        }
+        .brand:hover { color: var(--accent-red); }
 
         .nav-links {
             display: flex;
@@ -86,10 +84,7 @@
             letter-spacing: 1.6px;
         }
 
-        .nav-links a {
-            font-weight: 850;
-            opacity: .72;
-        }
+        .nav-links a { font-weight: 850; opacity: .72; }
 
         .nav-links a:hover,
         .nav-links a.active {
@@ -250,126 +245,154 @@
             line-height: 1.5;
         }
 
-        .split-section {
-            display: grid;
-            grid-template-columns: 1.18fr 0.82fr;
-            gap: 34px;
-            align-items: start;
-            margin-bottom: 56px;
-        }
+        .daily-update { margin: 12px 0 70px; }
 
-        .lead-card, .side-card, .match-card, .r16-card, .note-box, .cta-box {
-            background: var(--card-bg);
+        .daily-hero {
+            background: #fff;
             border: 1px solid var(--border-soft);
-            border-radius: 18px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+            border-radius: 22px;
+            padding: clamp(26px, 4vw, 42px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.03);
+            margin-bottom: 28px;
         }
 
-        .lead-card {
-            padding: 30px;
-        }
-
-        .lead-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 2rem;
-            letter-spacing: -1px;
-        }
-
-        .lead-card .meta {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 18px;
-        }
-
-        .lead-card p {
-            font-size: 1.12rem;
-            line-height: 1.72;
-            color: var(--ink-soft);
-            margin: 0 0 18px 0;
-        }
-
-        .lead-card p:last-child { margin-bottom: 0; }
-
-        .lead-card p.dropcap::first-letter {
-            font-size: 4.2rem;
-            float: left;
-            line-height: .82;
-            padding-right: 8px;
-            padding-top: 4px;
+        .daily-hero .day-tag {
+            display: inline-block;
+            font-size: .76rem;
             font-weight: 950;
-            color: var(--text-dark);
-        }
-
-        .side-stack {
-            display: grid;
-            gap: 18px;
-        }
-
-        .side-card {
-            padding: 24px;
-        }
-
-        .side-card h4 {
-            margin: 0 0 14px 0;
-            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 2px solid var(--text-dark);
-            padding-bottom: 8px;
-        }
-
-        .side-card ul {
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .side-card li {
+            color: var(--accent-red);
             margin-bottom: 12px;
-            line-height: 1.55;
+        }
+
+        .daily-hero h2 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 5vw, 3.7rem);
+            line-height: .95;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .daily-hero p {
+            margin: 0 0 18px;
+            color: var(--ink-soft);
+            font-size: 1.12rem;
+            line-height: 1.7;
+        }
+
+        .daily-hero p:last-child { margin-bottom: 0; }
+
+        .daily-grid,
+        .preview-grid,
+        .review-grid,
+        .archive-grid,
+        .factcheck-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 16px;
+            margin: 28px 0 56px;
+        }
+
+        .daily-card,
+        .review-card,
+        .archive-card,
+        .fact-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.025);
+        }
+
+        .daily-card h3,
+        .review-card h3,
+        .archive-card h3,
+        .fact-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.18rem;
+        }
+
+        .daily-card p,
+        .review-card p,
+        .archive-card p,
+        .fact-card p {
+            margin: 0 0 12px;
             color: var(--ink-soft);
             font-size: 1rem;
+            line-height: 1.6;
         }
 
-        .side-card li:last-child { margin-bottom: 0; }
+        .daily-card p:last-child,
+        .review-card p:last-child,
+        .archive-card p:last-child,
+        .fact-card p:last-child { margin-bottom: 0; }
 
-        .score-prediction {
-            background: #11151c;
-            color: #fff;
-            border-color: #11151c;
-        }
-
-        .score-prediction h4 {
-            border-bottom-color: rgba(255,255,255,.25);
-        }
-
-        .score-prediction .scoreline {
-            font-size: 2.2rem;
-            font-weight: 950;
-            letter-spacing: -1px;
-            color: var(--accent-yellow);
+        .archive-card .result {
+            display: inline-block;
             margin-bottom: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(0,184,148,.13);
+            color: #00775f;
+            font-size: .75rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
         }
 
-        .score-prediction p {
-            margin: 0;
-            color: #f8fafc;
-            line-height: 1.55;
-        }
-
-        .note-box {
-            padding: 24px 26px;
-            margin: 10px 0 48px;
+        .offpitch-mini {
             background: #f0ede6;
             border-left: 7px solid var(--text-dark);
             border-radius: 12px;
+            padding: 24px 26px;
+            margin: 30px 0 38px;
         }
 
-        .note-box p {
-            margin: 0;
+        .offpitch-mini h3 {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: -.3px;
+        }
+
+        .offpitch-mini p {
+            margin: 0 0 14px;
             color: var(--text-dark);
-            font-size: 1.06rem;
+            font-size: 1.05rem;
             line-height: 1.65;
+        }
+
+        .offpitch-mini p:last-child { margin-bottom: 0; }
+
+        .preview-card {
+            background: #11151c;
+            color: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+
+        .preview-card .time {
+            display: inline-block;
+            color: var(--accent-yellow);
+            font-size: .78rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .preview-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
+        .preview-card p { margin: 0 0 14px; color: #f8fafc; line-height: 1.6; font-size: 1rem; }
+
+        .preview-card .prediction {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,.18);
+            color: var(--accent-yellow);
+            font-weight: 950;
+            font-size: 1.12rem;
         }
 
         .bracket {
@@ -379,10 +402,7 @@
             margin-top: 26px;
         }
 
-        .bracket-half {
-            display: grid;
-            gap: 22px;
-        }
+        .bracket-half { display: grid; gap: 22px; }
 
         .half-title {
             margin: 0;
@@ -403,10 +423,8 @@
             align-items: start;
         }
 
-        .match-column, .r16-column {
-            display: grid;
-            gap: 14px;
-        }
+        .match-column,
+        .r16-column { display: grid; gap: 14px; }
 
         .column-label {
             font-size: 0.76rem;
@@ -417,7 +435,12 @@
             margin: 0 0 2px 2px;
         }
 
-        .match-card, .r16-card {
+        .match-card,
+        .r16-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
             padding: 18px 18px 16px;
         }
 
@@ -429,6 +452,11 @@
         .match-card.portugal {
             border: 2px solid var(--accent-blue);
             box-shadow: 0 10px 26px rgba(9,132,227,.08);
+        }
+
+        .match-card.completed {
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 10px 26px rgba(0,184,148,.08);
         }
 
         .tag {
@@ -444,15 +472,9 @@
             color: var(--text-dark);
         }
 
-        .match-card.today .tag {
-            background: var(--accent-red);
-            color: #fff;
-        }
-
-        .match-card.portugal .tag {
-            background: var(--accent-blue);
-            color: #fff;
-        }
+        .match-card.today .tag { background: var(--accent-red); color: #fff; }
+        .match-card.portugal .tag { background: var(--accent-blue); color: #fff; }
+        .match-card.completed .tag { background: var(--accent-green); color: #fff; }
 
         .match-code {
             font-size: 0.78rem;
@@ -486,9 +508,7 @@
             line-height: 1.5;
         }
 
-        .r16-card {
-            background: #f8fafc;
-        }
+        .r16-card { background: #f8fafc; }
 
         .r16-card strong {
             display: block;
@@ -503,39 +523,14 @@
             line-height: 1.5;
         }
 
-        .factcheck-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            gap: 16px;
-            margin: 28px 0 56px;
-        }
-
-        .fact-card {
-            background: #fff;
-            border: 1px solid var(--border-soft);
-            border-radius: 16px;
-            padding: 22px;
-            box-shadow: 0 8px 24px rgba(0,0,0,.025);
-        }
-
-        .fact-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.18rem;
-        }
-
-        .fact-card p {
-            margin: 0;
-            color: var(--ink-soft);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
         .cta-box {
             margin-top: 54px;
             padding: 28px 30px;
             background: #11151c;
             color: #fff;
-            border-color: #11151c;
+            border: 1px solid #11151c;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
         }
 
         .cta-box h3 {
@@ -602,172 +597,23 @@
             vertical-align: -0.15em;
         }
 
-
-        .daily-update {
-            margin: 12px 0 60px;
-        }
-
-        .daily-hero {
-            background: #fff;
-            border: 1px solid var(--border-soft);
-            border-radius: 22px;
-            padding: clamp(26px, 4vw, 42px);
-            box-shadow: 0 8px 24px rgba(0,0,0,.03);
-            margin-bottom: 28px;
-        }
-
-        .daily-hero .day-tag {
-            display: inline-block;
-            font-size: .76rem;
-            font-weight: 950;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-red);
-            margin-bottom: 12px;
-        }
-
-        .daily-hero h2 {
-            margin: 0 0 16px;
-            font-size: clamp(2rem, 5vw, 3.7rem);
-            line-height: .95;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-        }
-
-        .daily-hero p {
-            margin: 0 0 18px;
-            color: var(--ink-soft);
-            font-size: 1.12rem;
-            line-height: 1.7;
-        }
-
-        .daily-hero p:last-child { margin-bottom: 0; }
-
-        .daily-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            gap: 18px;
-            margin: 24px 0 34px;
-        }
-
-        .daily-card {
-            background: #fff;
-            border: 1px solid var(--border-soft);
-            border-radius: 16px;
-            padding: 22px;
-            box-shadow: 0 8px 24px rgba(0,0,0,.025);
-        }
-
-        .daily-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.18rem;
-            letter-spacing: -.2px;
-        }
-
-        .daily-card p {
-            margin: 0;
-            color: var(--ink-soft);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .daily-card strong { color: var(--text-dark); }
-
-        .offpitch-mini {
-            background: #f0ede6;
-            border-left: 7px solid var(--text-dark);
-            border-radius: 12px;
-            padding: 24px 26px;
-            margin: 30px 0 38px;
-        }
-
-        .offpitch-mini h3 {
-            margin: 0 0 12px;
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: -.3px;
-        }
-
-        .offpitch-mini p {
-            margin: 0 0 14px;
-            color: var(--text-dark);
-            font-size: 1.05rem;
-            line-height: 1.65;
-        }
-
-        .offpitch-mini p:last-child { margin-bottom: 0; }
-
-        .preview-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            gap: 18px;
-            margin-top: 24px;
-        }
-
-        .preview-card {
-            background: #11151c;
-            color: #fff;
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 8px 24px rgba(0,0,0,.08);
-        }
-
-        .preview-card .time {
-            display: inline-block;
-            color: var(--accent-yellow);
-            font-size: .78rem;
-            font-weight: 950;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .preview-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
-        .preview-card p { margin: 0 0 14px; color: #f8fafc; line-height: 1.6; font-size: 1rem; }
-
-        .preview-card .prediction {
-            margin-top: 16px;
-            padding-top: 14px;
-            border-top: 1px solid rgba(255,255,255,.18);
-            color: var(--accent-yellow);
-            font-weight: 950;
-            font-size: 1.12rem;
-        }
-
-        .match-card.completed {
-            border: 2px solid var(--accent-green);
-            box-shadow: 0 10px 26px rgba(0,184,148,.08);
-        }
-        .match-card.completed .tag { background: var(--accent-green); color: #fff; }
-
         @media (max-width: 980px) {
-            .daily-grid, .preview-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 980px) {
-            .split-section,
             .bracket,
             .half-grid,
             .survivor-strip,
             .factcheck-grid,
+            .daily-grid,
+            .preview-grid,
+            .review-grid,
+            .archive-grid,
             .cta-actions {
                 grid-template-columns: 1fr;
             }
 
             .page { padding: 28px 16px 56px; }
-
-            .phase-hero {
-                border-radius: 20px;
-            }
-
-            .phase-hero h1 {
-                letter-spacing: -3px;
-            }
-
-            .nav-links {
-                gap: 12px;
-                font-size: .78rem;
-            }
+            .phase-hero { border-radius: 20px; }
+            .phase-hero h1 { letter-spacing: -3px; }
+            .nav-links { gap: 12px; font-size: .78rem; }
         }
     </style>
 </head>
@@ -789,6 +635,7 @@
             <p class="hero-line">Acabaram-se as contas, as frestas e os “se empatar ainda dá”. Restam os que aguentam. Agora cada jogo deixa um cadáver no caminho.</p>
             <div class="hero-actions">
                 <a href="mapa-dos-sobreviventes.html">← Mapa dos Sobreviventes</a>
+                <a href="#arquivo">Ver jogos jogados →</a>
                 <a href="#quadro">Ver quadro completo →</a>
             </div>
         </header>
@@ -821,9 +668,9 @@
 
         <section class="daily-update">
             <article class="daily-hero">
-                <span class="day-tag">Novo dia · 1 de julho</span>
+                <span class="day-tag">Dia 3 do mata-mata · 1 de julho</span>
                 <h2>A faca já aprendeu o caminho</h2>
-                <p>O terceiro dia do mata-mata não trouxe uma hecatombe como a queda da Alemanha ou da Holanda, mas trouxe uma coisa talvez mais perigosa: os favoritos que sabem fazer o serviço sem se explicar demasiado.</p>
+                <p>O terceiro dia do mata-mata não trouxe uma hecatombe como a queda da Alemanha ou da Holanda, mas trouxe uma coisa talvez mais perigosa: favoritos que sabem fazer o serviço sem se explicar demasiado.</p>
                 <p>A França passou por cima da Suécia com 3–0 e Mbappé outra vez a escrever o jogo com letra grossa. O México bateu o Equador por 2–0, cedo, seco, adulto. A Noruega sofreu, levou pancada da Costa do Marfim, mas saiu viva com Haaland a aparecer quando o jogo já cheirava a prolongamento.</p>
                 <p>Foi uma noite menos caótica no formato, mas não menos decisiva no mapa. França espera Paraguai. Brasil espera Noruega. México espera Inglaterra ou RD Congo. O funil começa a desenhar monstros.</p>
             </article>
@@ -846,20 +693,23 @@
             </section>
 
             <h2 class="section-title">Revisão dos palpites de ontem</h2>
-            <section class="daily-grid">
-                <article class="daily-card">
+            <section class="review-grid">
+                <article class="review-card">
                     <h3>Costa do Marfim–Noruega</h3>
-                    <p><strong>Palpite:</strong> 1–1 e Noruega no prolongamento. <strong>Saiu:</strong> 1–2 em tempo regulamentar. Acertámos o vencedor e o aperto; falhámos o modo da sobrevivência.</p>
+                    <p><strong>Palpite:</strong> 1–1 e Noruega no prolongamento.</p>
+                    <p><strong>Saiu:</strong> Costa do Marfim 1–2 Noruega. Acertámos o vencedor e o aperto; falhámos o modo da sobrevivência.</p>
                 </article>
 
-                <article class="daily-card">
+                <article class="review-card">
                     <h3>França–Suécia</h3>
-                    <p><strong>Palpite:</strong> França 2–0. <strong>Saiu:</strong> 3–0. Leitura limpa: vencedor certo, baliza limpa certa, só faltou mais um golo francês na conta.</p>
+                    <p><strong>Palpite:</strong> França 2–0.</p>
+                    <p><strong>Saiu:</strong> França 3–0. Leitura limpa: vencedor certo, baliza limpa certa, só faltou mais um golo francês na conta.</p>
                 </article>
 
-                <article class="daily-card">
+                <article class="review-card">
                     <h3>México–Equador</h3>
-                    <p><strong>Palpite:</strong> 1–1, México nos penáltis. <strong>Saiu:</strong> México 2–0. Acertámos o sobrevivente; exagerámos o drama.</p>
+                    <p><strong>Palpite registado nesta página:</strong> México 1–1 Equador, México nos penáltis.</p>
+                    <p><strong>Saiu:</strong> México 2–0. Acertámos o sobrevivente; exagerámos o drama. Se o palpite estava noutro rascunho como 2–0, então era cheio cirúrgico — mas neste HTML estava 1–1 e penáltis.</p>
                 </article>
             </section>
 
@@ -896,49 +746,96 @@
             </section>
         </section>
 
-        <h2 class="section-title">Arquivo do primeiro corte</h2>
-
-        <section class="split-section">
-            <article class="lead-card">
-                <h3>África do Sul vs Canadá</h3>
-                <div class="meta">Ronda dos 32 · 28/06/2026 · Los Angeles Stadium · Resultado final: África do Sul 0–1 Canadá</div>
-
-                <p class="dropcap">Foi um belo arranque para a fase a eliminar porque juntou duas narrativas que raramente se encontram em paz. De um lado, o Canadá, coanfitrião, mas longe do conforto doméstico: joga em Los Angeles, não em casa. Do outro, a África do Sul, que chegou sem o peso do nome mas com a leveza perigosa de quem já fez mais do que lhe exigiam.</p>
-
-                <p>O Canadá tem mais velocidade declarada, mais talento reconhecível e mais jogadores capazes de resolver um jogo num arranque. Davies é sempre um curto-circuito ambulante, Jonathan David aparece bem entre linhas, e a equipa tem a obrigação emocional de não ser a primeira a cair numa fase que começa precisamente com um duelo seu. Mas obrigação, em torneios, nem sempre ajuda. Às vezes só pesa.</p>
-
-                <p>A África do Sul entrou com menos bazófia e talvez com menos teatro. Fez o suficiente para sobreviver ao grupo, sabe jogar sem se desorganizar e tem o tipo de energia que pode transformar um jogo teoricamente menor numa noite incómoda. Para um favorito moderado, não há nada pior do que um adversário que não sente a obrigação de provar estatuto nenhum.</p>
-
-                <p>Este jogo teve a cara certa para abrir a ronda: não é glamour puro, mas é tensão verdadeira. Um quer confirmar crescimento. O outro quer continuar a estragar hierarquias. E como isto já não é fase de grupos, o empate deixou de ser abrigo. O Canadá seguiu. A África do Sul desapareceu sem cair de joelhos.</p>
+        <section class="daily-update">
+            <article class="daily-hero">
+                <span class="day-tag">Dia 2 do mata-mata · 30 de junho</span>
+                <h2>Já não há respeito</h2>
+                <p>Há dias em que o Mundial parece olhar para a tradição e responder: obrigado, mas agora joga-se outra coisa.</p>
+                <p>A Alemanha caiu. Outra vez. E desta vez nem foi preciso uma goleada histórica, nem um colapso dramático em campo corrido. Bastou o tipo de morte mais cruel: prolongamento, esperança, VAR a cortar o grito, penalties e cabeça baixa.</p>
+                <p>Alemanha 1–1 Paraguai. Paraguai passa nos penalties. O sonho alemão acabou nos pés de quem falhou e nas mãos de quem já não assusta como antes.</p>
+                <p>Nós avisámos: esta Alemanha já não era bem aquela Alemanha. Tinha bola, tinha nome, tinha camisola, tinha passado. Mas faltava-lhe aquilo que durante décadas parecia automático: respeito. Aquele medo antigo que fazia os adversários encolherem antes do apito inicial. Hoje já não. Hoje o Paraguai olha para a Alemanha e pensa: dá.</p>
+                <p>E deu.</p>
             </article>
 
-            <aside class="side-stack">
-                <section class="side-card">
-                    <h4>O que já aconteceu</h4>
-                    <ul>
-                        <li><strong>Canadá:</strong> primeiro sobrevivente da ronda, com golo de Stephen Eustáquio aos 90+2.</li>
-                        <li><strong>Brasil:</strong> venceu o Japão por 2–1 e joga com a Noruega nos oitavos.</li>
-                        <li><strong>Paraguai:</strong> eliminou a Alemanha nos penalties e virou ameaça real no quadro.</li>
-                        <li><strong>Marrocos:</strong> eliminou a Holanda nos penalties e confirmou o nosso palpite da madrugada.</li>
-                        <li><strong>França, Noruega e México:</strong> fecharam o terceiro bloco de apurados.</li>
-                    </ul>
-                </section>
+            <section class="daily-grid">
+                <article class="daily-card">
+                    <h3>Brasil sobreviveu</h3>
+                    <p><strong>Brasil 2–1 Japão.</strong> O Japão ainda assustou, mas o Brasil ficou de pé. Casemiro decidiu e a equipa de Ancelotti seguiu para os oitavos.</p>
+                </article>
 
-                <section class="side-card">
-                    <h4>A frase da ronda</h4>
-                    <ul>
-                        <li>O nome já não chega.</li>
-                        <li>O passado já não defende ninguém.</li>
-                        <li>Quem treme, vai embora.</li>
-                    </ul>
-                </section>
+                <article class="daily-card">
+                    <h3>Alemanha caiu</h3>
+                    <p><strong>Alemanha 1–1 Paraguai.</strong> Depois do prolongamento, vieram os penalties. Paraguai fez-se herói. Alemanha fora.</p>
+                </article>
 
-                <section class="side-card score-prediction">
-                    <h4>Saldo dos palpites de ontem</h4>
-                    <div class="scoreline">3/3 vencedores</div>
-                    <p>Acertámos França, Noruega e México. A forma é que variou: França foi mais forte, Noruega decidiu antes do prolongamento, México dispensou penáltis.</p>
-                </section>
-            </aside>
+                <article class="daily-card">
+                    <h3>Acertámos Marrocos</h3>
+                    <p><strong>Países Baixos 1–1 Marrocos.</strong> Dissemos 1–1 e Marrocos nos penáltis. Foi exatamente isso. Nem sempre é sorte. Às vezes é leitura.</p>
+                </article>
+            </section>
+
+            <section class="offpitch-mini">
+                <h3>Fora das quatro linhas</h3>
+                <p><strong>Já não há respeito.</strong> A Alemanha já não entra em campo com o jogo meio ganho. Entra com o passado às costas e um adversário a olhar para ela sem pedir licença.</p>
+                <p>O Paraguai percebeu isso. Marrocos também percebeu com a Holanda. O mata-mata está a fazer aquilo que prometeu: tirar o nome da camisola e perguntar quem aguenta o momento.</p>
+            </section>
+        </section>
+
+        <section class="daily-update">
+            <article class="daily-hero">
+                <span class="day-tag">Dia 1 do mata-mata · 29 de junho</span>
+                <h2>O primeiro corte veio com sotaque nazareno</h2>
+                <p>Só houve um jogo. Chegou.</p>
+                <p>A África do Sul caiu aos 90+2, quando Stephen Eustáquio — formado n’Os Nazarenos — meteu o Canadá nos oitavos.</p>
+                <p>Foi 0–1. Foi tarde. Foi cruel. Foi nazareno. A Ronda dos 32 começou assim: sem margem, sem calculadora, sem segunda vida.</p>
+            </article>
+        </section>
+
+        <h2 class="section-title" id="arquivo">Arquivo dos jogos já jogados</h2>
+        <p class="section-lead">Nada é apagado: todos os jogos fechados da Ronda dos 32 ficam aqui, em ordem de entrada no cemitério.</p>
+
+        <section class="archive-grid">
+            <article class="archive-card">
+                <span class="result">M73 · fechado</span>
+                <h3>África do Sul 0–1 Canadá</h3>
+                <p>Eustáquio apareceu aos 90+2 e fez o primeiro corte da ronda. A África do Sul saiu de pé; o Canadá seguiu sem pedir desculpa.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M76 · fechado</span>
+                <h3>Brasil 2–1 Japão</h3>
+                <p>O Japão assustou, mas o Brasil sobreviveu. A diferença não foi esmagadora; foi suficiente. Em mata-mata, suficiente é lei.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M74 · fechado</span>
+                <h3>Alemanha 1–1 Paraguai · pen. 3–4</h3>
+                <p>A Alemanha caiu nos penalties e o Paraguai arrancou uma das grandes peles do torneio. Já não há medo automático da camisola.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M75 · fechado</span>
+                <h3>Países Baixos 1–1 Marrocos · pen. 2–3</h3>
+                <p>Marrocos confirmou a leitura da madrugada: aguentar, sujar, levar ao limite e decidir quando o jogo deixa de ser bonito.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M78 · fechado</span>
+                <h3>Costa do Marfim 1–2 Noruega</h3>
+                <p>Amad Diallo ainda empatou, mas Haaland decidiu aos 86'. A Costa do Marfim mordeu; a Noruega sobreviveu.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M77 · fechado</span>
+                <h3>França 3–0 Suécia</h3>
+                <p>A França limpou a Suécia sem grande drama. Mbappé bisou, Barcola marcou, e o favorito passou com cara de favorito.</p>
+            </article>
+
+            <article class="archive-card">
+                <span class="result">M79 · fechado</span>
+                <h3>México 2–0 Equador</h3>
+                <p>Quiñones e Raúl Jiménez resolveram cedo. O México não precisou de penalties nem de drama: matou antes da meia hora.</p>
+            </article>
         </section>
 
         <section class="note-box">
@@ -948,16 +845,16 @@
         <h2 class="section-title">Factcheck rápido da página</h2>
         <section class="factcheck-grid">
             <article class="fact-card">
-                <h3>Horas uniformizadas</h3>
-                <p>A página usa sempre Portugal continental para evitar misturar hora local do estádio, hora ET e hora de Portugal.</p>
+                <h3>Todos os jogos ficam</h3>
+                <p>Esta versão não apaga os jogos anteriores: Canadá, Brasil, Paraguai, Marrocos, Noruega, França e México ficam todos arquivados.</p>
             </article>
             <article class="fact-card">
                 <h3>Resultados atualizados</h3>
                 <p>Canadá, Brasil, Paraguai, Marrocos, França, Noruega e México já estão nos oitavos.</p>
             </article>
             <article class="fact-card">
-                <h3>Cruzamentos atualizados</h3>
-                <p>Canadá–Marrocos, Paraguai–França e Brasil–Noruega já estão fixos. México espera Inglaterra ou RD Congo.</p>
+                <h3>Palpite México</h3>
+                <p>No HTML usado como base, o palpite registado era 1–1 e México nos penáltis. Se noutra versão estava 2–0, essa versão não estava neste excerto.</p>
             </article>
         </section>
 
@@ -1041,12 +938,12 @@
 
                         <article class="r16-card">
                             <strong>Oitavos M89</strong>
-                            <p>Canadá vs Marrocos</p>
+                            <p>Paraguai vs França</p>
                         </article>
 
                         <article class="r16-card">
                             <strong>Oitavos M90</strong>
-                            <p>Paraguai vs França</p>
+                            <p>Canadá vs Marrocos</p>
                         </article>
 
                         <article class="r16-card">
@@ -1162,7 +1059,7 @@
 
         <section class="cta-box">
             <h3>Próximos passos do caos</h3>
-            <p>Esta página fica como quadro-base da Ronda dos 32. A cada dia pode receber três coisas: o sobrevivente novo, o eliminado riscado e a crónica curta do jogo seguinte.</p>
+            <p>Esta página fica como quadro-base da Ronda dos 32. A cada dia recebe três coisas: o sobrevivente novo, o eliminado riscado e a crónica curta do jogo seguinte — sem apagar o que já ficou para trás.</p>
             <div class="cta-actions">
                 <a href="mapa-dos-sobreviventes.html">Voltar ao Mapa dos Sobreviventes<small>Resumo da fase de grupos, revelações, desilusões e mapa geral do torneio.</small></a>
                 <a href="diario.html">Voltar ao Diário do Caos<small>Arquivo completo da fase de grupos, dia a dia, com erros, acertos e crónicas.</small></a>
@@ -1178,7 +1075,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (window.twemoji) {
-                twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+                twemoji.parse(document.body, { folder: 'svg', ext: ".svg" });
             }
         });
     </script>
