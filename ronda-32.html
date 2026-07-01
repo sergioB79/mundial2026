@@ -1,779 +1,775 @@
 <!DOCTYPE html>
-
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ronda dos 32 — Mundial 2026</title>
 
-```
-<meta property="og:type" content="article">
-<meta property="og:title" content="Ronda dos 32 — Mundial 2026 ⚔️">
-<meta property="og:description" content="Alemanha e Países Baixos caem nos penalties, Brasil sobrevive e Marrocos confirma o palpite da madrugada.">
-<meta property="og:url" content="https://sergiob79.github.io/mundial2026/ronda-32.html">
-<meta property="og:image" content="https://sergiob79.github.io/mundial2026/mapa.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="820">
-<meta property="og:site_name" content="O Guia do Caos">
-
-<style>
-    :root {
-        --bg-page: #faf9f6;
-        --text-dark: #11151c;
-        --text-muted: #576574;
-        --accent-blue: #0984e3;
-        --accent-red: #d63031;
-        --accent-yellow: #ffd200;
-        --accent-green: #00b894;
-        --border-soft: #eae8e2;
-        --card-bg: #ffffff;
-        --ink-soft: #2c3e50;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
-        background: var(--bg-page);
-        color: var(--text-dark);
-        -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; }
-
-    .page {
-        max-width: 1160px;
-        margin: 0 auto;
-        padding: 40px 20px 70px;
-    }
-
-    .nav-editorial {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid var(--text-dark);
-        padding-bottom: 18px;
-        margin-bottom: 34px;
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .nav-editorial a {
-        color: var(--text-dark);
-        text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: all .25s ease;
-    }
-
-    .brand {
-        font-size: 1rem;
-        font-weight: 950;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-bottom: none !important;
-    }
-
-    .brand:hover {
-        color: var(--accent-red);
-    }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        flex-wrap: wrap;
-        font-size: .86rem;
-        text-transform: uppercase;
-        letter-spacing: 1.6px;
-    }
-
-    .nav-links a {
-        font-weight: 850;
-        opacity: .72;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-        opacity: 1;
-        border-bottom-color: var(--accent-red);
-    }
-
-    .phase-hero {
-        position: relative;
-        text-align: left;
-        margin: 0 0 42px;
-        padding: clamp(34px, 7vw, 78px);
-        border-radius: 26px;
-        background:
-            radial-gradient(circle at top right, rgba(255,210,0,.32), transparent 28%),
-            linear-gradient(135deg, #11151c 0%, #171d27 58%, #242b38 100%);
-        color: #fff;
-        overflow: hidden;
-        box-shadow: 0 20px 55px rgba(0,0,0,.12);
-    }
-
-    .phase-hero::after {
-        content: "32";
-        position: absolute;
-        right: clamp(18px, 5vw, 58px);
-        bottom: -28px;
-        font-size: clamp(7rem, 20vw, 16rem);
-        line-height: .8;
-        font-weight: 950;
-        letter-spacing: -12px;
-        color: rgba(255,255,255,.055);
-        pointer-events: none;
-    }
-
-    .hero-label {
-        display: inline-block;
-        color: var(--accent-yellow);
-        font-size: .82rem;
-        font-weight: 950;
-        text-transform: uppercase;
-        letter-spacing: 2.6px;
-        margin-bottom: 18px;
-    }
-
-    .phase-hero h1 {
-        color: #fff;
-        max-width: 760px;
-        font-size: clamp(3.4rem, 10vw, 7.4rem);
-        line-height: .82;
-        margin: 0 0 24px;
-        letter-spacing: -5px;
-        text-transform: uppercase;
-    }
-
-    .hero-line {
-        color: #f8fafc;
-        max-width: 720px;
-        font-size: clamp(1.15rem, 2vw, 1.55rem);
-        line-height: 1.45;
-        margin: 0 0 26px;
-        font-style: italic;
-    }
-
-    .hero-actions {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-actions a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 44px;
-        padding: 12px 16px;
-        border-radius: 999px;
-        background: #fff;
-        color: var(--text-dark);
-        text-decoration: none;
-        font-weight: 900;
-        font-size: .92rem;
-        border: 2px solid rgba(255,255,255,.18);
-        transition: transform .2s ease, border-color .2s ease;
-    }
-
-    .hero-actions a:hover {
-        transform: translateY(-1px);
-        border-color: var(--accent-yellow);
-    }
-
-    .survivor-strip {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
-        gap: 16px;
-        margin: 34px 0 58px;
-    }
-
-    .survivor-box {
-        background: var(--card-bg);
-        border: 1px solid var(--border-soft);
-        border-radius: 18px;
-        padding: 24px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.03);
-    }
-
-    .survivor-box .kicker {
-        display: block;
-        font-size: 0.72rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--text-muted);
-        font-weight: 900;
-        margin-bottom: 10px;
-    }
-
-    .survivor-box strong {
-        display: block;
-        font-size: 2rem;
-        letter-spacing: -1px;
-        margin-bottom: 8px;
-    }
-
-    .survivor-box p {
-        margin: 0;
-        color: var(--ink-soft);
-        line-height: 1.55;
-        font-size: 1rem;
-    }
-
-    .survivor-box.highlight {
-        background: #11151c;
-        color: #fff;
-        border-color: #11151c;
-    }
-
-    .survivor-box.highlight .kicker { color: #cbd5e1; }
-    .survivor-box.highlight strong { color: var(--accent-yellow); }
-    .survivor-box.highlight p { color: #f8fafc; }
-
-    .section-title {
-        font-size: clamp(1.8rem, 4vw, 2.45rem);
-        font-weight: 950;
-        letter-spacing: -1.5px;
-        margin: 0 0 24px 0;
-        text-transform: uppercase;
-        border-left: 7px solid var(--accent-red);
-        padding-left: 15px;
-    }
-
-    .section-lead {
-        max-width: 820px;
-        font-size: 1.22rem;
-        color: var(--text-muted);
-        font-style: italic;
-        margin: -8px 0 30px;
-        line-height: 1.5;
-    }
-
-    .split-section {
-        display: grid;
-        grid-template-columns: 1.18fr 0.82fr;
-        gap: 34px;
-        align-items: start;
-        margin-bottom: 56px;
-    }
-
-    .lead-card, .side-card, .match-card, .r16-card, .note-box, .cta-box {
-        background: var(--card-bg);
-        border: 1px solid var(--border-soft);
-        border-radius: 18px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.03);
-    }
-
-    .lead-card {
-        padding: 30px;
-    }
-
-    .lead-card h3 {
-        margin: 0 0 10px 0;
-        font-size: 2rem;
-        letter-spacing: -1px;
-    }
-
-    .lead-card .meta {
-        font-size: 0.92rem;
-        color: var(--text-muted);
-        font-style: italic;
-        margin-bottom: 18px;
-    }
-
-    .lead-card p {
-        font-size: 1.12rem;
-        line-height: 1.72;
-        color: var(--ink-soft);
-        margin: 0 0 18px 0;
-    }
-
-    .lead-card p:last-child { margin-bottom: 0; }
-
-    .lead-card p.dropcap::first-letter {
-        font-size: 4.2rem;
-        float: left;
-        line-height: .82;
-        padding-right: 8px;
-        padding-top: 4px;
-        font-weight: 950;
-        color: var(--text-dark);
-    }
-
-    .side-stack {
-        display: grid;
-        gap: 18px;
-    }
-
-    .side-card {
-        padding: 24px;
-    }
-
-    .side-card h4 {
-        margin: 0 0 14px 0;
-        font-size: 0.88rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-bottom: 2px solid var(--text-dark);
-        padding-bottom: 8px;
-    }
-
-    .side-card ul {
-        margin: 0;
-        padding-left: 18px;
-    }
-
-    .side-card li {
-        margin-bottom: 12px;
-        line-height: 1.55;
-        color: var(--ink-soft);
-        font-size: 1rem;
-    }
-
-    .side-card li:last-child { margin-bottom: 0; }
-
-    .score-prediction {
-        background: #11151c;
-        color: #fff;
-        border-color: #11151c;
-    }
-
-    .score-prediction h4 {
-        border-bottom-color: rgba(255,255,255,.25);
-    }
-
-    .score-prediction .scoreline {
-        font-size: 2.2rem;
-        font-weight: 950;
-        letter-spacing: -1px;
-        color: var(--accent-yellow);
-        margin-bottom: 10px;
-    }
-
-    .score-prediction p {
-        margin: 0;
-        color: #f8fafc;
-        line-height: 1.55;
-    }
-
-    .note-box {
-        padding: 24px 26px;
-        margin: 10px 0 48px;
-        background: #f0ede6;
-        border-left: 7px solid var(--text-dark);
-        border-radius: 12px;
-    }
-
-    .note-box p {
-        margin: 0;
-        color: var(--text-dark);
-        font-size: 1.06rem;
-        line-height: 1.65;
-    }
-
-    .bracket {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
-        gap: 22px;
-        margin-top: 26px;
-    }
-
-    .bracket-half {
-        display: grid;
-        gap: 22px;
-    }
-
-    .half-title {
-        margin: 0;
-        padding: 14px 18px;
-        font-size: 0.82rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: #11151c;
-        color: #fff;
-        border-radius: 14px;
-        font-weight: 900;
-    }
-
-    .half-grid {
-        display: grid;
-        grid-template-columns: 1.45fr .95fr;
-        gap: 16px;
-        align-items: start;
-    }
-
-    .match-column, .r16-column {
-        display: grid;
-        gap: 14px;
-    }
-
-    .column-label {
-        font-size: 0.76rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--text-muted);
-        font-weight: 900;
-        margin: 0 0 2px 2px;
-    }
-
-    .match-card, .r16-card {
-        padding: 18px 18px 16px;
-    }
-
-    .match-card.today {
-        border: 2px solid var(--accent-red);
-        box-shadow: 0 10px 26px rgba(214,48,49,.08);
-    }
-
-    .match-card.portugal {
-        border: 2px solid var(--accent-blue);
-        box-shadow: 0 10px 26px rgba(9,132,227,.08);
-    }
-
-    .tag {
-        display: inline-block;
-        font-size: 0.68rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 1.8px;
-        border-radius: 999px;
-        padding: 6px 10px;
-        margin-bottom: 10px;
-        background: #eef2f7;
-        color: var(--text-dark);
-    }
-
-    .match-card.today .tag {
-        background: var(--accent-red);
-        color: #fff;
-    }
-
-    .match-card.portugal .tag {
-        background: var(--accent-blue);
-        color: #fff;
-    }
-
-    .match-code {
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--text-muted);
-        margin-bottom: 8px;
-        font-weight: 900;
-    }
-
-    .teams {
-        font-size: 1.1rem;
-        line-height: 1.45;
-        font-weight: 900;
-        color: var(--text-dark);
-        margin-bottom: 8px;
-    }
-
-    .details {
-        font-size: 0.92rem;
-        color: var(--text-muted);
-        line-height: 1.5;
-    }
-
-    .path {
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px dashed var(--border-soft);
-        font-size: 0.9rem;
-        color: var(--ink-soft);
-        line-height: 1.5;
-    }
-
-    .r16-card {
-        background: #f8fafc;
-    }
-
-    .r16-card strong {
-        display: block;
-        font-size: 1.02rem;
-        margin-bottom: 6px;
-    }
-
-    .r16-card p {
-        margin: 0;
-        font-size: 0.92rem;
-        color: var(--text-muted);
-        line-height: 1.5;
-    }
-
-    .factcheck-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 16px;
-        margin: 28px 0 56px;
-    }
-
-    .fact-card {
-        background: #fff;
-        border: 1px solid var(--border-soft);
-        border-radius: 16px;
-        padding: 22px;
-        box-shadow: 0 8px 24px rgba(0,0,0,.025);
-    }
-
-    .fact-card h3 {
-        margin: 0 0 10px;
-        font-size: 1.18rem;
-    }
-
-    .fact-card p {
-        margin: 0;
-        color: var(--ink-soft);
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .cta-box {
-        margin-top: 54px;
-        padding: 28px 30px;
-        background: #11151c;
-        color: #fff;
-        border-color: #11151c;
-    }
-
-    .cta-box h3 {
-        margin: 0 0 10px 0;
-        color: var(--accent-yellow);
-        font-size: 1.45rem;
-        text-transform: uppercase;
-        letter-spacing: -0.5px;
-    }
-
-    .cta-box p {
-        margin: 0 0 18px 0;
-        color: #f8fafc;
-        line-height: 1.65;
-        font-size: 1.04rem;
-    }
-
-    .cta-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
-        gap: 14px;
-    }
-
-    .cta-actions a {
-        display: block;
-        text-decoration: none;
-        background: #fff;
-        color: #11151c;
-        border-radius: 12px;
-        padding: 16px 18px;
-        font-weight: 900;
-        border: 2px solid transparent;
-        transition: all .2s ease;
-    }
-
-    .cta-actions a:hover {
-        border-color: var(--accent-yellow);
-        transform: translateY(-1px);
-    }
-
-    .cta-actions small {
-        display: block;
-        margin-top: 6px;
-        color: var(--text-muted);
-        font-weight: 650;
-        line-height: 1.35;
-    }
-
-    footer {
-        text-align: center;
-        padding-top: 50px;
-        font-size: 1.2rem;
-        font-style: italic;
-        border-top: 2px solid var(--text-dark);
-        color: var(--text-dark);
-        font-weight: bold;
-        margin-top: 60px;
-    }
-
-    img.emoji {
-        height: 1.2em;
-        width: 1.2em;
-        margin: 0 .1em;
-        vertical-align: -0.15em;
-    }
-
-    .daily-update {
-        margin: 12px 0 60px;
-    }
-
-    .daily-hero {
-        background: #fff;
-        border: 1px solid var(--border-soft);
-        border-radius: 22px;
-        padding: clamp(26px, 4vw, 42px);
-        box-shadow: 0 8px 24px rgba(0,0,0,.03);
-        margin-bottom: 28px;
-    }
-
-    .daily-hero .day-tag {
-        display: inline-block;
-        font-size: .76rem;
-        font-weight: 950;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--accent-red);
-        margin-bottom: 12px;
-    }
-
-    .daily-hero h2 {
-        margin: 0 0 16px;
-        font-size: clamp(2rem, 5vw, 3.7rem);
-        line-height: .95;
-        letter-spacing: -2px;
-        text-transform: uppercase;
-    }
-
-    .daily-hero p {
-        margin: 0 0 18px;
-        color: var(--ink-soft);
-        font-size: 1.12rem;
-        line-height: 1.7;
-    }
-
-    .daily-hero p:last-child { margin-bottom: 0; }
-
-    .daily-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 18px;
-        margin: 24px 0 34px;
-    }
-
-    .daily-card {
-        background: #fff;
-        border: 1px solid var(--border-soft);
-        border-radius: 16px;
-        padding: 22px;
-        box-shadow: 0 8px 24px rgba(0,0,0,.025);
-    }
-
-    .daily-card h3 {
-        margin: 0 0 10px;
-        font-size: 1.18rem;
-        letter-spacing: -.2px;
-    }
-
-    .daily-card p {
-        margin: 0;
-        color: var(--ink-soft);
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .daily-card strong { color: var(--text-dark); }
-
-    .offpitch-mini {
-        background: #f0ede6;
-        border-left: 7px solid var(--text-dark);
-        border-radius: 12px;
-        padding: 24px 26px;
-        margin: 30px 0 38px;
-    }
-
-    .offpitch-mini h3 {
-        margin: 0 0 12px;
-        font-size: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: -.3px;
-    }
-
-    .offpitch-mini p {
-        margin: 0 0 14px;
-        color: var(--text-dark);
-        font-size: 1.05rem;
-        line-height: 1.65;
-    }
-
-    .offpitch-mini p:last-child { margin-bottom: 0; }
-
-    .preview-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 18px;
-        margin-top: 24px;
-    }
-
-    .preview-card {
-        background: #11151c;
-        color: #fff;
-        border-radius: 18px;
-        padding: 24px;
-        box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    }
-
-    .preview-card .time {
-        display: inline-block;
-        color: var(--accent-yellow);
-        font-size: .78rem;
-        font-weight: 950;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-    }
-
-    .preview-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
-    .preview-card p { margin: 0 0 14px; color: #f8fafc; line-height: 1.6; font-size: 1rem; }
-
-    .preview-card .prediction {
-        margin-top: 16px;
-        padding-top: 14px;
-        border-top: 1px solid rgba(255,255,255,.18);
-        color: var(--accent-yellow);
-        font-weight: 950;
-        font-size: 1.12rem;
-    }
-
-    .match-card.completed {
-        border: 2px solid var(--accent-green);
-        box-shadow: 0 10px 26px rgba(0,184,148,.08);
-    }
-
-    .match-card.completed .tag { background: var(--accent-green); color: #fff; }
-
-    @media (max-width: 980px) {
-        .daily-grid, .preview-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 980px) {
-        .split-section,
-        .bracket,
-        .half-grid,
-        .survivor-strip,
-        .factcheck-grid,
-        .cta-actions {
-            grid-template-columns: 1fr;
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ronda dos 32 — Mundial 2026 ⚔️">
+    <meta property="og:description" content="França, Noruega e México seguem; hoje há Inglaterra, Bélgica e EUA em campo. O mata-mata já comeu sete equipas.">
+    <meta property="og:url" content="https://sergiob79.github.io/mundial2026/ronda-32.html">
+    <meta property="og:image" content="https://i.postimg.cc/bYFjR0mC/Screenshot-2026-06-13-192003.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="820">
+    <meta property="og:site_name" content="O Guia do Caos">
+
+    <style>
+        :root {
+            --bg-page: #faf9f6;
+            --text-dark: #11151c;
+            --text-muted: #576574;
+            --accent-blue: #0984e3;
+            --accent-red: #d63031;
+            --accent-yellow: #ffd200;
+            --accent-green: #00b894;
+            --border-soft: #eae8e2;
+            --card-bg: #ffffff;
+            --ink-soft: #2c3e50;
         }
 
-        .page { padding: 28px 16px 56px; }
+        *, *::before, *::after { box-sizing: border-box; }
 
-        .phase-hero {
-            border-radius: 20px;
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+            background: var(--bg-page);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
         }
 
-        .phase-hero h1 {
-            letter-spacing: -3px;
+        a { color: inherit; }
+
+        .page {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 40px 20px 70px;
+        }
+
+        .nav-editorial {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 18px;
+            margin-bottom: 34px;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .nav-editorial a {
+            color: var(--text-dark);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all .25s ease;
+        }
+
+        .brand {
+            font-size: 1rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: none !important;
+        }
+
+        .brand:hover {
+            color: var(--accent-red);
         }
 
         .nav-links {
-            gap: 12px;
-            font-size: .78rem;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: .86rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
         }
-    }
-</style>
-```
 
+        .nav-links a {
+            font-weight: 850;
+            opacity: .72;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            opacity: 1;
+            border-bottom-color: var(--accent-red);
+        }
+
+        .phase-hero {
+            position: relative;
+            text-align: left;
+            margin: 0 0 42px;
+            padding: clamp(34px, 7vw, 78px);
+            border-radius: 26px;
+            background:
+                radial-gradient(circle at top right, rgba(255,210,0,.32), transparent 28%),
+                linear-gradient(135deg, #11151c 0%, #171d27 58%, #242b38 100%);
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .phase-hero::after {
+            content: "32";
+            position: absolute;
+            right: clamp(18px, 5vw, 58px);
+            bottom: -28px;
+            font-size: clamp(7rem, 20vw, 16rem);
+            line-height: .8;
+            font-weight: 950;
+            letter-spacing: -12px;
+            color: rgba(255,255,255,.055);
+            pointer-events: none;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: var(--accent-yellow);
+            font-size: .82rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2.6px;
+            margin-bottom: 18px;
+        }
+
+        .phase-hero h1 {
+            color: #fff;
+            max-width: 760px;
+            font-size: clamp(3.4rem, 10vw, 7.4rem);
+            line-height: .82;
+            margin: 0 0 24px;
+            letter-spacing: -5px;
+            text-transform: uppercase;
+        }
+
+        .hero-line {
+            color: #f8fafc;
+            max-width: 720px;
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            line-height: 1.45;
+            margin: 0 0 26px;
+            font-style: italic;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-actions a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: #fff;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: .92rem;
+            border: 2px solid rgba(255,255,255,.18);
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .hero-actions a:hover {
+            transform: translateY(-1px);
+            border-color: var(--accent-yellow);
+        }
+
+        .survivor-strip {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0,1fr));
+            gap: 16px;
+            margin: 34px 0 58px;
+        }
+
+        .survivor-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+        }
+
+        .survivor-box .kicker {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .survivor-box strong {
+            display: block;
+            font-size: 2rem;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .survivor-box p {
+            margin: 0;
+            color: var(--ink-soft);
+            line-height: 1.55;
+            font-size: 1rem;
+        }
+
+        .survivor-box.highlight {
+            background: #11151c;
+            color: #fff;
+            border-color: #11151c;
+        }
+
+        .survivor-box.highlight .kicker { color: #cbd5e1; }
+        .survivor-box.highlight strong { color: var(--accent-yellow); }
+        .survivor-box.highlight p { color: #f8fafc; }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.45rem);
+            font-weight: 950;
+            letter-spacing: -1.5px;
+            margin: 0 0 24px 0;
+            text-transform: uppercase;
+            border-left: 7px solid var(--accent-red);
+            padding-left: 15px;
+        }
+
+        .section-lead {
+            max-width: 820px;
+            font-size: 1.22rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin: -8px 0 30px;
+            line-height: 1.5;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 34px;
+            align-items: start;
+            margin-bottom: 56px;
+        }
+
+        .lead-card, .side-card, .match-card, .r16-card, .note-box, .cta-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+        }
+
+        .lead-card {
+            padding: 30px;
+        }
+
+        .lead-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            letter-spacing: -1px;
+        }
+
+        .lead-card .meta {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .lead-card p {
+            font-size: 1.12rem;
+            line-height: 1.72;
+            color: var(--ink-soft);
+            margin: 0 0 18px 0;
+        }
+
+        .lead-card p:last-child { margin-bottom: 0; }
+
+        .lead-card p.dropcap::first-letter {
+            font-size: 4.2rem;
+            float: left;
+            line-height: .82;
+            padding-right: 8px;
+            padding-top: 4px;
+            font-weight: 950;
+            color: var(--text-dark);
+        }
+
+        .side-stack {
+            display: grid;
+            gap: 18px;
+        }
+
+        .side-card {
+            padding: 24px;
+        }
+
+        .side-card h4 {
+            margin: 0 0 14px 0;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 8px;
+        }
+
+        .side-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .side-card li {
+            margin-bottom: 12px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            font-size: 1rem;
+        }
+
+        .side-card li:last-child { margin-bottom: 0; }
+
+        .score-prediction {
+            background: #11151c;
+            color: #fff;
+            border-color: #11151c;
+        }
+
+        .score-prediction h4 {
+            border-bottom-color: rgba(255,255,255,.25);
+        }
+
+        .score-prediction .scoreline {
+            font-size: 2.2rem;
+            font-weight: 950;
+            letter-spacing: -1px;
+            color: var(--accent-yellow);
+            margin-bottom: 10px;
+        }
+
+        .score-prediction p {
+            margin: 0;
+            color: #f8fafc;
+            line-height: 1.55;
+        }
+
+        .note-box {
+            padding: 24px 26px;
+            margin: 10px 0 48px;
+            background: #f0ede6;
+            border-left: 7px solid var(--text-dark);
+            border-radius: 12px;
+        }
+
+        .note-box p {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1.06rem;
+            line-height: 1.65;
+        }
+
+        .bracket {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 22px;
+            margin-top: 26px;
+        }
+
+        .bracket-half {
+            display: grid;
+            gap: 22px;
+        }
+
+        .half-title {
+            margin: 0;
+            padding: 14px 18px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #11151c;
+            color: #fff;
+            border-radius: 14px;
+            font-weight: 900;
+        }
+
+        .half-grid {
+            display: grid;
+            grid-template-columns: 1.45fr .95fr;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .match-column, .r16-column {
+            display: grid;
+            gap: 14px;
+        }
+
+        .column-label {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            font-weight: 900;
+            margin: 0 0 2px 2px;
+        }
+
+        .match-card, .r16-card {
+            padding: 18px 18px 16px;
+        }
+
+        .match-card.today {
+            border: 2px solid var(--accent-red);
+            box-shadow: 0 10px 26px rgba(214,48,49,.08);
+        }
+
+        .match-card.portugal {
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 10px 26px rgba(9,132,227,.08);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            border-radius: 999px;
+            padding: 6px 10px;
+            margin-bottom: 10px;
+            background: #eef2f7;
+            color: var(--text-dark);
+        }
+
+        .match-card.today .tag {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .match-card.portugal .tag {
+            background: var(--accent-blue);
+            color: #fff;
+        }
+
+        .match-code {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 900;
+        }
+
+        .teams {
+            font-size: 1.1rem;
+            line-height: 1.45;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .details {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .path {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-soft);
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.5;
+        }
+
+        .r16-card {
+            background: #f8fafc;
+        }
+
+        .r16-card strong {
+            display: block;
+            font-size: 1.02rem;
+            margin-bottom: 6px;
+        }
+
+        .r16-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .factcheck-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 16px;
+            margin: 28px 0 56px;
+        }
+
+        .fact-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.025);
+        }
+
+        .fact-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.18rem;
+        }
+
+        .fact-card p {
+            margin: 0;
+            color: var(--ink-soft);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .cta-box {
+            margin-top: 54px;
+            padding: 28px 30px;
+            background: #11151c;
+            color: #fff;
+            border-color: #11151c;
+        }
+
+        .cta-box h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent-yellow);
+            font-size: 1.45rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-box p {
+            margin: 0 0 18px 0;
+            color: #f8fafc;
+            line-height: 1.65;
+            font-size: 1.04rem;
+        }
+
+        .cta-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 14px;
+        }
+
+        .cta-actions a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            color: #11151c;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-weight: 900;
+            border: 2px solid transparent;
+            transition: all .2s ease;
+        }
+
+        .cta-actions a:hover {
+            border-color: var(--accent-yellow);
+            transform: translateY(-1px);
+        }
+
+        .cta-actions small {
+            display: block;
+            margin-top: 6px;
+            color: var(--text-muted);
+            font-weight: 650;
+            line-height: 1.35;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 50px;
+            font-size: 1.2rem;
+            font-style: italic;
+            border-top: 2px solid var(--text-dark);
+            color: var(--text-dark);
+            font-weight: bold;
+            margin-top: 60px;
+        }
+
+        img.emoji {
+            height: 1.2em;
+            width: 1.2em;
+            margin: 0 .1em;
+            vertical-align: -0.15em;
+        }
+
+
+        .daily-update {
+            margin: 12px 0 60px;
+        }
+
+        .daily-hero {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 22px;
+            padding: clamp(26px, 4vw, 42px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.03);
+            margin-bottom: 28px;
+        }
+
+        .daily-hero .day-tag {
+            display: inline-block;
+            font-size: .76rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-red);
+            margin-bottom: 12px;
+        }
+
+        .daily-hero h2 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 5vw, 3.7rem);
+            line-height: .95;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .daily-hero p {
+            margin: 0 0 18px;
+            color: var(--ink-soft);
+            font-size: 1.12rem;
+            line-height: 1.7;
+        }
+
+        .daily-hero p:last-child { margin-bottom: 0; }
+
+        .daily-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 18px;
+            margin: 24px 0 34px;
+        }
+
+        .daily-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.025);
+        }
+
+        .daily-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.18rem;
+            letter-spacing: -.2px;
+        }
+
+        .daily-card p {
+            margin: 0;
+            color: var(--ink-soft);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .daily-card strong { color: var(--text-dark); }
+
+        .offpitch-mini {
+            background: #f0ede6;
+            border-left: 7px solid var(--text-dark);
+            border-radius: 12px;
+            padding: 24px 26px;
+            margin: 30px 0 38px;
+        }
+
+        .offpitch-mini h3 {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: -.3px;
+        }
+
+        .offpitch-mini p {
+            margin: 0 0 14px;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        .offpitch-mini p:last-child { margin-bottom: 0; }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .preview-card {
+            background: #11151c;
+            color: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+
+        .preview-card .time {
+            display: inline-block;
+            color: var(--accent-yellow);
+            font-size: .78rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .preview-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
+        .preview-card p { margin: 0 0 14px; color: #f8fafc; line-height: 1.6; font-size: 1rem; }
+
+        .preview-card .prediction {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,.18);
+            color: var(--accent-yellow);
+            font-weight: 950;
+            font-size: 1.12rem;
+        }
+
+        .match-card.completed {
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 10px 26px rgba(0,184,148,.08);
+        }
+        .match-card.completed .tag { background: var(--accent-green); color: #fff; }
+
+        @media (max-width: 980px) {
+            .daily-grid, .preview-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 980px) {
+            .split-section,
+            .bracket,
+            .half-grid,
+            .survivor-strip,
+            .factcheck-grid,
+            .cta-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .page { padding: 28px 16px 56px; }
+
+            .phase-hero {
+                border-radius: 20px;
+            }
+
+            .phase-hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: .78rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -787,388 +783,404 @@
             </div>
         </nav>
 
-```
-    <header class="phase-hero">
-        <div class="hero-label">Fase a eliminar · Horários PT</div>
-        <h1>Ronda dos<br>32</h1>
-        <p class="hero-line">Acabaram-se as contas, as frestas e os “se empatar ainda dá”. Restam os que aguentam. Agora cada jogo deixa um cadáver no caminho.</p>
-        <div class="hero-actions">
-            <a href="mapa-dos-sobreviventes.html">← Mapa dos Sobreviventes</a>
-            <a href="#quadro">Ver quadro completo →</a>
-        </div>
-    </header>
+        <header class="phase-hero">
+            <div class="hero-label">Fase a eliminar · Dia 3 · Horários PT</div>
+            <h1>Ronda dos<br>32</h1>
+            <p class="hero-line">Acabaram-se as contas, as frestas e os “se empatar ainda dá”. Restam os que aguentam. Agora cada jogo deixa um cadáver no caminho.</p>
+            <div class="hero-actions">
+                <a href="mapa-dos-sobreviventes.html">← Mapa dos Sobreviventes</a>
+                <a href="#quadro">Ver quadro completo →</a>
+            </div>
+        </header>
 
-    <section class="survivor-strip">
-        <article class="survivor-box highlight">
-            <span class="kicker">Contador do caos</span>
-            <strong>28 vivos</strong>
-            <p>África do Sul, Japão, Alemanha e Países Baixos já caíram. A ronda começou a comer nomes grandes.</p>
-        </article>
-
-        <article class="survivor-box">
-            <span class="kicker">A noite dos penalties</span>
-            <strong>PAR + MAR</strong>
-            <p>Paraguai eliminou a Alemanha. Marrocos eliminou a Holanda. Já não há respeito pelo crachá.</p>
-        </article>
-
-        <article class="survivor-box">
-            <span class="kicker">Brasil</span>
-            <strong>BRA 2–1 JPN</strong>
-            <p>O Brasil sofreu, mas passou. Casemiro decidiu e o Japão saiu de pé.</p>
-        </article>
-
-        <article class="survivor-box">
-            <span class="kicker">Portugal</span>
-            <strong>02/07 · 20:00</strong>
-            <p>Portugal joga com a Croácia às 20h, hora de Portugal continental.</p>
-        </article>
-    </section>
-
-    <section class="daily-update">
-        <article class="daily-hero">
-            <span class="day-tag">Novo dia · 30 de junho</span>
-            <h2>Já não há respeito</h2>
-            <p>Há dias em que o Mundial parece olhar para a tradição e responder: obrigado, mas agora joga-se outra coisa.</p>
-            <p>A Alemanha caiu. Outra vez. E desta vez nem foi preciso uma goleada histórica, nem um colapso dramático em campo corrido. Bastou o tipo de morte mais cruel: prolongamento, esperança, VAR a cortar o grito, penalties e cabeça baixa.</p>
-            <p>Alemanha 1–1 Paraguai. Paraguai passa nos penalties. O sonho alemão acabou nos pés de quem falhou e nas mãos de quem já não assusta como antes.</p>
-            <p>Nós avisámos: esta Alemanha já não era bem aquela Alemanha. Tinha bola, tinha nome, tinha camisola, tinha passado. Mas faltava-lhe aquilo que durante décadas parecia automático: respeito. Aquele medo antigo que fazia os adversários encolherem antes do apito inicial. Hoje já não. Hoje o Paraguai olha para a Alemanha e pensa: dá.</p>
-            <p>E deu.</p>
-        </article>
-
-        <section class="daily-grid">
-            <article class="daily-card">
-                <h3>Brasil sobreviveu</h3>
-                <p><strong>Brasil 2–1 Japão.</strong> O Japão ainda assustou, mas o Brasil ficou de pé. Casemiro decidiu e a equipa de Ancelotti segue para os oitavos.</p>
+        <section class="survivor-strip">
+            <article class="survivor-box highlight">
+                <span class="kicker">Contador do caos</span>
+                <strong>25 vivos</strong>
+                <p>Sete equipas já caíram. O mata-mata está a comer nomes, certezas e margens de erro.</p>
             </article>
 
-            <article class="daily-card">
-                <h3>Alemanha caiu</h3>
-                <p><strong>Alemanha 1–1 Paraguai.</strong> Depois do prolongamento, vieram os penalties. Havertz, Woltemade e Tah falharam. Canale fez-se herói. Alemanha fora.</p>
+            <article class="survivor-box">
+                <span class="kicker">Ontem passaram</span>
+                <strong>FRA + NOR + MEX</strong>
+                <p>França confirmou estatuto; Noruega sobreviveu tarde; México matou cedo e controlou.</p>
             </article>
 
-            <article class="daily-card">
-                <h3>Acertámos Marrocos</h3>
-                <p><strong>Países Baixos 1–1 Marrocos.</strong> Dissemos 1–1 e Marrocos nos penáltis. Foi exatamente isso. Nem sempre é sorte. Às vezes é leitura.</p>
+            <article class="survivor-box">
+                <span class="kicker">Hoje há</span>
+                <strong>ENG · BEL · USA</strong>
+                <p>Inglaterra, Bélgica e Estados Unidos entram no fio. À 01h já será manhã de nervos.</p>
+            </article>
+
+            <article class="survivor-box">
+                <span class="kicker">Portugal</span>
+                <strong>02/07 · 20:00</strong>
+                <p>Portugal joga com a Croácia às 20h, hora de Portugal continental.</p>
             </article>
         </section>
 
-        <section class="offpitch-mini">
-            <h3>Fora das quatro linhas</h3>
-            <p><strong>Já não há respeito.</strong> A Alemanha já não entra em campo com o jogo meio ganho. Entra com o passado às costas e um adversário a olhar para ela sem pedir licença.</p>
-            <p>O Paraguai percebeu isso. Marrocos também percebeu com a Holanda. O mata-mata está a fazer aquilo que prometeu: tirar o nome da camisola e perguntar quem aguenta o momento.</p>
+        <section class="daily-update">
+            <article class="daily-hero">
+                <span class="day-tag">Novo dia · 1 de julho</span>
+                <h2>A faca já aprendeu o caminho</h2>
+                <p>O terceiro dia do mata-mata não trouxe uma hecatombe como a queda da Alemanha ou da Holanda, mas trouxe uma coisa talvez mais perigosa: os favoritos que sabem fazer o serviço sem se explicar demasiado.</p>
+                <p>A França passou por cima da Suécia com 3–0 e Mbappé outra vez a escrever o jogo com letra grossa. O México bateu o Equador por 2–0, cedo, seco, adulto. A Noruega sofreu, levou pancada da Costa do Marfim, mas saiu viva com Haaland a aparecer quando o jogo já cheirava a prolongamento.</p>
+                <p>Foi uma noite menos caótica no formato, mas não menos decisiva no mapa. França espera Paraguai. Brasil espera Noruega. México espera Inglaterra ou RD Congo. O funil começa a desenhar monstros.</p>
+            </article>
+
+            <section class="daily-grid">
+                <article class="daily-card">
+                    <h3>França não brincou</h3>
+                    <p><strong>França 3–0 Suécia.</strong> Mbappé marcou aos 45' e 74', Barcola fez o outro, e a Suécia acabou reduzida àquilo que a França permitiu. Jogo limpo, porta fechada, favorito intacto.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>Noruega sobreviveu</h3>
+                    <p><strong>Costa do Marfim 1–2 Noruega.</strong> Nusa abriu, Amad Diallo empatou, Haaland decidiu aos 86'. A Costa do Marfim saiu de pé, mas a Noruega levou o bilhete.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>México matou cedo</h3>
+                    <p><strong>México 2–0 Equador.</strong> Quiñones e Raúl Jiménez resolveram antes da meia hora. O Equador mordeu, mas passou demasiado tempo a correr atrás do prejuízo.</p>
+                </article>
+            </section>
+
+            <h2 class="section-title">Revisão dos palpites de ontem</h2>
+            <section class="daily-grid">
+                <article class="daily-card">
+                    <h3>Costa do Marfim–Noruega</h3>
+                    <p><strong>Palpite:</strong> 1–1 e Noruega no prolongamento. <strong>Saiu:</strong> 1–2 em tempo regulamentar. Acertámos o vencedor e o aperto; falhámos o modo da sobrevivência.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>França–Suécia</h3>
+                    <p><strong>Palpite:</strong> França 2–0. <strong>Saiu:</strong> 3–0. Leitura limpa: vencedor certo, baliza limpa certa, só faltou mais um golo francês na conta.</p>
+                </article>
+
+                <article class="daily-card">
+                    <h3>México–Equador</h3>
+                    <p><strong>Palpite:</strong> 1–1, México nos penáltis. <strong>Saiu:</strong> México 2–0. Acertámos o sobrevivente; exagerámos o drama.</p>
+                </article>
+            </section>
+
+            <section class="offpitch-mini">
+                <h3>Fora das quatro linhas</h3>
+                <p><strong>“Vocês não estão sozinhos.”</strong> No meio da máquina do Mundial, a imagem mais limpa veio da memória das vítimas dos terramotos na Venezuela. Houve minuto de silêncio, houve estádio inteiro a perceber que nem tudo cabe no marcador, e houve uma frase simples a atravessar a festa: vocês não estão sozinhos.</p>
+                <p>É raro o futebol parar sem se transformar logo em espectáculo de si próprio. Aqui valeu pela pausa. Pela lembrança. Pelo gesto mínimo num torneio que normalmente só sabe acelerar.</p>
+            </section>
+
+            <h2 class="section-title">Previsões dos jogos de hoje</h2>
+            <p class="section-lead">Hoje o quadro passa para outro corredor: Inglaterra tenta evitar a armadilha congolesa, Bélgica apanha um Senegal perigoso, e os EUA jogam já de madrugada contra uma Bósnia sem nada a perder.</p>
+
+            <section class="preview-grid">
+                <article class="preview-card">
+                    <span class="time">17:00</span>
+                    <h3>Inglaterra vs RD Congo</h3>
+                    <p>A Inglaterra tem nomes para resolver, mas a RD Congo já mostrou contra Portugal que não se assusta com camisolas grandes. Se o jogo fica preso até tarde, começa o desconforto inglês.</p>
+                    <div class="prediction">Palpite: Inglaterra 2–1 RD Congo</div>
+                </article>
+
+                <article class="preview-card">
+                    <span class="time">21:00</span>
+                    <h3>Bélgica vs Senegal</h3>
+                    <p>A Bélgica ganhou o grupo sem convencer; o Senegal chegou aos 32 pela fresta, mas chegou com cinco golos no último jogo. Isto cheira a favorito nervoso.</p>
+                    <div class="prediction">Palpite: 1–1 · Senegal nos penáltis</div>
+                </article>
+
+                <article class="preview-card">
+                    <span class="time">01:00</span>
+                    <h3>Estados Unidos vs Bósnia e Herzegovina</h3>
+                    <p>Os EUA têm casa emocional, intensidade e obrigação. A Bósnia tem aquele tipo de jogo que pode durar mais do que devia. Se houver golo cedo, muda tudo.</p>
+                    <div class="prediction">Palpite: Estados Unidos 2–1 Bósnia</div>
+                </article>
+            </section>
         </section>
 
-        <h2 class="section-title">Previsões dos jogos de hoje</h2>
-        <p class="section-lead">Depois da noite em que caíram Alemanha e Holanda, o Mundial acorda com outra cara. Hoje há Costa do Marfim–Noruega, França–Suécia e México–Equador na madrugada.</p>
+        <h2 class="section-title">Arquivo do primeiro corte</h2>
 
-        <section class="preview-grid">
-            <article class="preview-card">
-                <span class="time">18:00</span>
-                <h3>Costa do Marfim vs Noruega</h3>
-                <p>A Costa do Marfim chega com força física e liberdade competitiva. A Noruega chega com Haaland e aquela ameaça simples: podes controlar muita coisa, mas não podes controlar tudo.</p>
-                <div class="prediction">Palpite: 1–1 · Noruega no prolongamento</div>
+        <section class="split-section">
+            <article class="lead-card">
+                <h3>África do Sul vs Canadá</h3>
+                <div class="meta">Ronda dos 32 · 28/06/2026 · Los Angeles Stadium · Resultado final: África do Sul 0–1 Canadá</div>
+
+                <p class="dropcap">Foi um belo arranque para a fase a eliminar porque juntou duas narrativas que raramente se encontram em paz. De um lado, o Canadá, coanfitrião, mas longe do conforto doméstico: joga em Los Angeles, não em casa. Do outro, a África do Sul, que chegou sem o peso do nome mas com a leveza perigosa de quem já fez mais do que lhe exigiam.</p>
+
+                <p>O Canadá tem mais velocidade declarada, mais talento reconhecível e mais jogadores capazes de resolver um jogo num arranque. Davies é sempre um curto-circuito ambulante, Jonathan David aparece bem entre linhas, e a equipa tem a obrigação emocional de não ser a primeira a cair numa fase que começa precisamente com um duelo seu. Mas obrigação, em torneios, nem sempre ajuda. Às vezes só pesa.</p>
+
+                <p>A África do Sul entrou com menos bazófia e talvez com menos teatro. Fez o suficiente para sobreviver ao grupo, sabe jogar sem se desorganizar e tem o tipo de energia que pode transformar um jogo teoricamente menor numa noite incómoda. Para um favorito moderado, não há nada pior do que um adversário que não sente a obrigação de provar estatuto nenhum.</p>
+
+                <p>Este jogo teve a cara certa para abrir a ronda: não é glamour puro, mas é tensão verdadeira. Um quer confirmar crescimento. O outro quer continuar a estragar hierarquias. E como isto já não é fase de grupos, o empate deixou de ser abrigo. O Canadá seguiu. A África do Sul desapareceu sem cair de joelhos.</p>
             </article>
 
-            <article class="preview-card">
-                <span class="time">22:00</span>
-                <h3>França vs Suécia</h3>
-                <p>A França tem mais talento, mais profundidade e mais obrigação. A Suécia tem organização suficiente para tornar isto feio durante uma hora. Mas, se o jogo abrir, a França tem outro motor.</p>
-                <div class="prediction">Palpite: França 2–0 Suécia</div>
-            </article>
+            <aside class="side-stack">
+                <section class="side-card">
+                    <h4>O que já aconteceu</h4>
+                    <ul>
+                        <li><strong>Canadá:</strong> primeiro sobrevivente da ronda, com golo de Stephen Eustáquio aos 90+2.</li>
+                        <li><strong>Brasil:</strong> venceu o Japão por 2–1 e joga com a Noruega nos oitavos.</li>
+                        <li><strong>Paraguai:</strong> eliminou a Alemanha nos penalties e virou ameaça real no quadro.</li>
+                        <li><strong>Marrocos:</strong> eliminou a Holanda nos penalties e confirmou o nosso palpite da madrugada.</li>
+                        <li><strong>França, Noruega e México:</strong> fecharam o terceiro bloco de apurados.</li>
+                    </ul>
+                </section>
 
-            <article class="preview-card">
-                <span class="time">02:00</span>
-                <h3>México vs Equador</h3>
-                <p>Jogo de nervo puro. México com ambiente, Equador com equipa para estragar a festa. A madrugada pode trazer outro favorito encostado à parede.</p>
-                <div class="prediction">Palpite: México 1–1 Equador · México nos penáltis</div>
+                <section class="side-card">
+                    <h4>A frase da ronda</h4>
+                    <ul>
+                        <li>O nome já não chega.</li>
+                        <li>O passado já não defende ninguém.</li>
+                        <li>Quem treme, vai embora.</li>
+                    </ul>
+                </section>
+
+                <section class="side-card score-prediction">
+                    <h4>Saldo dos palpites de ontem</h4>
+                    <div class="scoreline">3/3 vencedores</div>
+                    <p>Acertámos França, Noruega e México. A forma é que variou: França foi mais forte, Noruega decidiu antes do prolongamento, México dispensou penáltis.</p>
+                </section>
+            </aside>
+        </section>
+
+        <section class="note-box">
+            <p><strong>Nota de factcheck:</strong> os horários abaixo ficam apresentados para leitura em Portugal continental. Portugal–Croácia mantém-se às 20h de 02/07.</p>
+        </section>
+
+        <h2 class="section-title">Factcheck rápido da página</h2>
+        <section class="factcheck-grid">
+            <article class="fact-card">
+                <h3>Horas uniformizadas</h3>
+                <p>A página usa sempre Portugal continental para evitar misturar hora local do estádio, hora ET e hora de Portugal.</p>
+            </article>
+            <article class="fact-card">
+                <h3>Resultados atualizados</h3>
+                <p>Canadá, Brasil, Paraguai, Marrocos, França, Noruega e México já estão nos oitavos.</p>
+            </article>
+            <article class="fact-card">
+                <h3>Cruzamentos atualizados</h3>
+                <p>Canadá–Marrocos, Paraguai–França e Brasil–Noruega já estão fixos. México espera Inglaterra ou RD Congo.</p>
             </article>
         </section>
-    </section>
 
-    <h2 class="section-title">Arquivo do primeiro corte</h2>
+        <h2 class="section-title" id="quadro">Diagrama dos emparelhamentos</h2>
+        <p class="section-lead">O quadro está separado em dois lados e organizado por hora de Portugal. Os jogos já fechados aparecem a verde; os jogos de hoje continuam marcados a vermelho.</p>
 
-    <section class="split-section">
-        <article class="lead-card">
-            <h3>África do Sul vs Canadá</h3>
-            <div class="meta">Ronda dos 32 · 28/06/2026 · Los Angeles Stadium · Resultado final: África do Sul 0–1 Canadá</div>
+        <section class="bracket">
+            <div class="bracket-half">
+                <h3 class="half-title">Lado A do quadro</h3>
+                <div class="half-grid">
+                    <div class="match-column">
+                        <div class="column-label">Ronda dos 32</div>
 
-            <p class="dropcap">Foi um belo arranque para a fase a eliminar porque juntou duas narrativas que raramente se encontram em paz. De um lado, o Canadá, coanfitrião, mas longe do conforto doméstico: joga em Los Angeles, não em casa. Do outro, a África do Sul, que chegou sem o peso do nome mas com a leveza perigosa de quem já fez mais do que lhe exigiam.</p>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M73 · 28/06 · FT</div>
+                            <div class="teams">África do Sul 0–1 Canadá</div>
+                            <div class="details">Golo: Stephen Eustáquio 90+2 · Los Angeles Stadium</div>
+                            <div class="path">O Canadá segue para os oitavos contra <strong>Marrocos</strong>.</div>
+                        </article>
 
-            <p>O Canadá não fez uma exibição imperial. Fez uma coisa mais útil em mata-mata: não se perdeu. Criou mais, sofreu menos do que o drama queria, e encontrou no fim o jogador certo para dar nome à noite.</p>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M76 · 29/06 · FT</div>
+                            <div class="teams">Brasil 2–1 Japão</div>
+                            <div class="details">Brasil segue para defrontar a Noruega.</div>
+                            <div class="path">O Brasil cruza com a <strong>Noruega</strong>.</div>
+                        </article>
 
-            <p>Stephen Eustáquio apareceu aos 90+2. Um remate, um golo, um país nos oitavos e um pedacinho da Nazaré metido no mapa do Mundial. A África do Sul saiu de pé. O Canadá seguiu sem pedir desculpa.</p>
-        </article>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M74 · 29/06 · AP</div>
+                            <div class="teams">Alemanha 1–1 Paraguai · pen. 3–4</div>
+                            <div class="details">Paraguai segue nos penalties.</div>
+                            <div class="path">O Paraguai cruza com a <strong>França</strong>.</div>
+                        </article>
 
-        <aside class="side-stack">
-            <section class="side-card">
-                <h4>O que já aconteceu</h4>
-                <ul>
-                    <li><strong>Canadá:</strong> primeiro sobrevivente da ronda, com golo de Stephen Eustáquio aos 90+2.</li>
-                    <li><strong>Brasil:</strong> venceu o Japão por 2–1 e espera Costa do Marfim ou Noruega.</li>
-                    <li><strong>Paraguai:</strong> eliminou a Alemanha nos penalties e virou ameaça real no quadro.</li>
-                    <li><strong>Marrocos:</strong> eliminou a Holanda nos penalties e confirmou o nosso palpite da madrugada.</li>
-                </ul>
-            </section>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M75 · 30/06 · AP</div>
+                            <div class="teams">Países Baixos 1–1 Marrocos · pen. 2–3</div>
+                            <div class="details">Marrocos segue nos penalties.</div>
+                            <div class="path">Marrocos cruza com o <strong>Canadá</strong>.</div>
+                        </article>
 
-            <section class="side-card">
-                <h4>A frase da ronda</h4>
-                <ul>
-                    <li>O nome já não chega.</li>
-                    <li>O passado já não defende ninguém.</li>
-                    <li>Quem treme, vai embora.</li>
-                </ul>
-            </section>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M78 · 30/06 · FT</div>
+                            <div class="teams">Costa do Marfim 1–2 Noruega</div>
+                            <div class="details">Nusa 39', Haaland 86' · Amad Diallo 74'</div>
+                            <div class="path">A Noruega cruza com o <strong>Brasil</strong>.</div>
+                        </article>
 
-            <section class="side-card score-prediction">
-                <h4>Palpite que bateu certo</h4>
-                <div class="scoreline">1–1 · Marrocos nos penáltis</div>
-                <p>Não acertámos só o vencedor. Acertámos o tipo de jogo: Holanda a cair no limite, Marrocos a aguentar e a decidir no momento sujo.</p>
-            </section>
-        </aside>
-    </section>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M77 · 30/06 · FT</div>
+                            <div class="teams">França 3–0 Suécia</div>
+                            <div class="details">Mbappé 45', 74' · Barcola 53'</div>
+                            <div class="path">A França cruza com o <strong>Paraguai</strong>.</div>
+                        </article>
 
-    <section class="note-box">
-        <p><strong>Nota de factcheck:</strong> os horários abaixo ficam apresentados para leitura em Portugal continental. Portugal–Croácia mantém-se às 20h de 02/07.</p>
-    </section>
+                        <article class="match-card completed">
+                            <span class="tag">Fechado</span>
+                            <div class="match-code">M79 · 01/07 · FT</div>
+                            <div class="teams">México 2–0 Equador</div>
+                            <div class="details">Quiñones 22' · Raúl Jiménez 31'</div>
+                            <div class="path">O México cruza com o vencedor de <strong>Inglaterra vs RD Congo</strong>.</div>
+                        </article>
 
-    <h2 class="section-title">Factcheck rápido da página</h2>
-    <section class="factcheck-grid">
-        <article class="fact-card">
-            <h3>Horas uniformizadas</h3>
-            <p>A página usa sempre Portugal continental para evitar misturar hora local do estádio, hora ET e hora de Portugal.</p>
-        </article>
-        <article class="fact-card">
-            <h3>Resultados atualizados</h3>
-            <p>Canadá, Brasil, Paraguai e Marrocos já estão nos oitavos. África do Sul, Japão, Alemanha e Países Baixos estão fora.</p>
-        </article>
-        <article class="fact-card">
-            <h3>Cruzamentos corrigidos</h3>
-            <p>Canadá joga com Marrocos. Brasil espera Costa do Marfim ou Noruega. Paraguai espera França ou Suécia.</p>
-        </article>
-    </section>
+                        <article class="match-card today">
+                            <span class="tag">Hoje</span>
+                            <div class="match-code">M80 · 01/07 · 17:00</div>
+                            <div class="teams">Inglaterra vs RD Congo</div>
+                            <div class="details">Atlanta Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o <strong>México</strong>.</div>
+                        </article>
+                    </div>
 
-    <h2 class="section-title" id="quadro">Diagrama dos emparelhamentos</h2>
-    <p class="section-lead">O quadro está separado em dois lados e organizado por hora de Portugal. Os jogos já fechados aparecem a verde; os jogos de hoje continuam marcados a vermelho.</p>
+                    <div class="r16-column">
+                        <div class="column-label">Oitavos correspondentes</div>
 
-    <section class="bracket">
-        <div class="bracket-half">
-            <h3 class="half-title">Lado A do quadro</h3>
-            <div class="half-grid">
-                <div class="match-column">
-                    <div class="column-label">Ronda dos 32</div>
+                        <article class="r16-card">
+                            <strong>Oitavos M89</strong>
+                            <p>Canadá vs Marrocos</p>
+                        </article>
 
-                    <article class="match-card completed">
-                        <span class="tag">Fechado</span>
-                        <div class="match-code">M73 · 28/06 · FT</div>
-                        <div class="teams">África do Sul 0–1 Canadá</div>
-                        <div class="details">Golo: Stephen Eustáquio 90+2 · Los Angeles Stadium</div>
-                        <div class="path">O Canadá segue para os oitavos contra <strong>Marrocos</strong>.</div>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M90</strong>
+                            <p>Paraguai vs França</p>
+                        </article>
 
-                    <article class="match-card completed">
-                        <span class="tag">Fechado</span>
-                        <div class="match-code">M76 · 29/06 · FT</div>
-                        <div class="teams">Brasil 2–1 Japão</div>
-                        <div class="details">Golos: Kaishu Sano 29 · Casemiro 56 · Gabriel Martinelli 90+5</div>
-                        <div class="path">O Brasil cruza com o vencedor de <strong>Costa do Marfim vs Noruega</strong>.</div>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M91</strong>
+                            <p>Brasil vs Noruega</p>
+                        </article>
 
-                    <article class="match-card completed">
-                        <span class="tag">Fechado</span>
-                        <div class="match-code">M74 · 29/06 · AP</div>
-                        <div class="teams">Alemanha 1–1 Paraguai · pen. 3–4</div>
-                        <div class="details">Havertz 54 · Enciso 42 · Paraguai segue nos penalties</div>
-                        <div class="path">O Paraguai cruza com o vencedor de <strong>França vs Suécia</strong>.</div>
-                    </article>
-
-                    <article class="match-card completed">
-                        <span class="tag">Fechado</span>
-                        <div class="match-code">M75 · 30/06 · AP</div>
-                        <div class="teams">Países Baixos 1–1 Marrocos · pen. 2–3</div>
-                        <div class="details">Gakpo 72 · Diop 90+1 · Marrocos segue nos penalties</div>
-                        <div class="path">Marrocos cruza com o <strong>Canadá</strong>.</div>
-                    </article>
-
-                    <article class="match-card today">
-                        <span class="tag">Hoje</span>
-                        <div class="match-code">M78 · 30/06 · 18:00</div>
-                        <div class="teams">Costa do Marfim vs Noruega</div>
-                        <div class="details">Dallas Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o <strong>Brasil</strong>.</div>
-                    </article>
-
-                    <article class="match-card today">
-                        <span class="tag">Hoje</span>
-                        <div class="match-code">M77 · 30/06 · 22:00</div>
-                        <div class="teams">França vs Suécia</div>
-                        <div class="details">New York/New Jersey Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o <strong>Paraguai</strong>.</div>
-                    </article>
-
-                    <article class="match-card today">
-                        <span class="tag">Madrugada</span>
-                        <div class="match-code">M79 · 01/07 · 02:00</div>
-                        <div class="teams">México vs Equador</div>
-                        <div class="details">Mexico City Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Inglaterra vs RD Congo.</div>
-                    </article>
-
-                    <article class="match-card">
-                        <span class="tag">01/07</span>
-                        <div class="match-code">M80 · 01/07 · 17:00</div>
-                        <div class="teams">Inglaterra vs RD Congo</div>
-                        <div class="details">Atlanta Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de México vs Equador.</div>
-                    </article>
-                </div>
-
-                <div class="r16-column">
-                    <div class="column-label">Oitavos correspondentes</div>
-
-                    <article class="r16-card">
-                        <strong>Oitavos M89</strong>
-                        <p>Canadá vs Marrocos</p>
-                    </article>
-
-                    <article class="r16-card">
-                        <strong>Oitavos M90</strong>
-                        <p>Paraguai vs Vencedor M77</p>
-                    </article>
-
-                    <article class="r16-card">
-                        <strong>Oitavos M91</strong>
-                        <p>Brasil vs Vencedor M78</p>
-                    </article>
-
-                    <article class="r16-card">
-                        <strong>Oitavos M92</strong>
-                        <p>Vencedor M79 vs Vencedor M80</p>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M92</strong>
+                            <p>México vs Vencedor M80</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bracket-half">
-            <h3 class="half-title">Lado B do quadro</h3>
-            <div class="half-grid">
-                <div class="match-column">
-                    <div class="column-label">Ronda dos 32</div>
+            <div class="bracket-half">
+                <h3 class="half-title">Lado B do quadro</h3>
+                <div class="half-grid">
+                    <div class="match-column">
+                        <div class="column-label">Ronda dos 32</div>
 
-                    <article class="match-card">
-                        <span class="tag">01/07</span>
-                        <div class="match-code">M82 · 01/07 · 21:00</div>
-                        <div class="teams">Bélgica vs Senegal</div>
-                        <div class="details">Seattle Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Estados Unidos vs Bósnia e Herzegovina.</div>
-                    </article>
+                        <article class="match-card today">
+                            <span class="tag">Hoje</span>
+                            <div class="match-code">M82 · 01/07 · 21:00</div>
+                            <div class="teams">Bélgica vs Senegal</div>
+                            <div class="details">Seattle Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Estados Unidos vs Bósnia e Herzegovina.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">02/07</span>
-                        <div class="match-code">M81 · 02/07 · 01:00</div>
-                        <div class="teams">Estados Unidos vs Bósnia e Herzegovina</div>
-                        <div class="details">San Francisco Bay Area Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Bélgica vs Senegal.</div>
-                    </article>
+                        <article class="match-card today">
+                            <span class="tag">Madrugada</span>
+                            <div class="match-code">M81 · 02/07 · 01:00</div>
+                            <div class="teams">Estados Unidos vs Bósnia e Herzegovina</div>
+                            <div class="details">San Francisco Bay Area Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Bélgica vs Senegal.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">02/07</span>
-                        <div class="match-code">M84 · 02/07 · 20:00</div>
-                        <div class="teams">Espanha vs Áustria</div>
-                        <div class="details">Los Angeles Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Portugal vs Croácia.</div>
-                    </article>
+                        <article class="match-card">
+                            <span class="tag">02/07</span>
+                            <div class="match-code">M84 · 02/07 · 20:00</div>
+                            <div class="teams">Espanha vs Áustria</div>
+                            <div class="details">Los Angeles Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Portugal vs Croácia.</div>
+                        </article>
 
-                    <article class="match-card portugal">
-                        <span class="tag">02/07</span>
-                        <div class="match-code">M83 · 02/07 · 20:00</div>
-                        <div class="teams">Portugal vs Croácia</div>
-                        <div class="details">Toronto Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Espanha vs Áustria.</div>
-                    </article>
+                        <article class="match-card portugal">
+                            <span class="tag">02/07</span>
+                            <div class="match-code">M83 · 02/07 · 20:00</div>
+                            <div class="teams">Portugal vs Croácia</div>
+                            <div class="details">Toronto Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Espanha vs Áustria.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">03/07</span>
-                        <div class="match-code">M85 · 03/07 · 04:00</div>
-                        <div class="teams">Suíça vs Argélia</div>
-                        <div class="details">BC Place Vancouver · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Colômbia vs Gana.</div>
-                    </article>
+                        <article class="match-card">
+                            <span class="tag">03/07</span>
+                            <div class="match-code">M85 · 03/07 · 04:00</div>
+                            <div class="teams">Suíça vs Argélia</div>
+                            <div class="details">BC Place Vancouver · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Colômbia vs Gana.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">03/07</span>
-                        <div class="match-code">M88 · 03/07 · 19:00</div>
-                        <div class="teams">Austrália vs Egito</div>
-                        <div class="details">Dallas Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Argentina vs Cabo Verde.</div>
-                    </article>
+                        <article class="match-card">
+                            <span class="tag">03/07</span>
+                            <div class="match-code">M88 · 03/07 · 19:00</div>
+                            <div class="teams">Austrália vs Egito</div>
+                            <div class="details">Dallas Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Argentina vs Cabo Verde.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">03/07</span>
-                        <div class="match-code">M86 · 03/07 · 23:00</div>
-                        <div class="teams">Argentina vs Cabo Verde</div>
-                        <div class="details">Miami Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Austrália vs Egito.</div>
-                    </article>
+                        <article class="match-card">
+                            <span class="tag">03/07</span>
+                            <div class="match-code">M86 · 03/07 · 23:00</div>
+                            <div class="teams">Argentina vs Cabo Verde</div>
+                            <div class="details">Miami Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Austrália vs Egito.</div>
+                        </article>
 
-                    <article class="match-card">
-                        <span class="tag">04/07</span>
-                        <div class="match-code">M87 · 04/07 · 02:30</div>
-                        <div class="teams">Colômbia vs Gana</div>
-                        <div class="details">Kansas City Stadium · hora de Portugal continental</div>
-                        <div class="path">O vencedor cruza com o vencedor de Suíça vs Argélia.</div>
-                    </article>
-                </div>
+                        <article class="match-card">
+                            <span class="tag">04/07</span>
+                            <div class="match-code">M87 · 04/07 · 02:30</div>
+                            <div class="teams">Colômbia vs Gana</div>
+                            <div class="details">Kansas City Stadium · hora de Portugal continental</div>
+                            <div class="path">O vencedor cruza com o vencedor de Suíça vs Argélia.</div>
+                        </article>
+                    </div>
 
-                <div class="r16-column">
-                    <div class="column-label">Oitavos correspondentes</div>
+                    <div class="r16-column">
+                        <div class="column-label">Oitavos correspondentes</div>
 
-                    <article class="r16-card">
-                        <strong>Oitavos M94</strong>
-                        <p>Vencedor M81 vs Vencedor M82</p>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M94</strong>
+                            <p>Vencedor M81 vs Vencedor M82</p>
+                        </article>
 
-                    <article class="r16-card">
-                        <strong>Oitavos M93</strong>
-                        <p>Vencedor M83 vs Vencedor M84</p>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M93</strong>
+                            <p>Vencedor M83 vs Vencedor M84</p>
+                        </article>
 
-                    <article class="r16-card">
-                        <strong>Oitavos M96</strong>
-                        <p>Vencedor M85 vs Vencedor M87</p>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M96</strong>
+                            <p>Vencedor M85 vs Vencedor M87</p>
+                        </article>
 
-                    <article class="r16-card">
-                        <strong>Oitavos M95</strong>
-                        <p>Vencedor M86 vs Vencedor M88</p>
-                    </article>
+                        <article class="r16-card">
+                            <strong>Oitavos M95</strong>
+                            <p>Vencedor M86 vs Vencedor M88</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta-box">
-        <h3>Próximos passos do caos</h3>
-        <p>Esta página fica como quadro-base da Ronda dos 32. A cada dia recebe três coisas: o sobrevivente novo, o eliminado riscado e a crónica curta do jogo seguinte.</p>
-        <div class="cta-actions">
-            <a href="mapa-dos-sobreviventes.html">Voltar ao Mapa dos Sobreviventes<small>Resumo da fase de grupos, revelações, desilusões e mapa geral do torneio.</small></a>
-            <a href="diario.html">Voltar ao Diário do Caos<small>Arquivo completo da fase de grupos, dia a dia, com erros, acertos e crónicas.</small></a>
-        </div>
-    </section>
+        <section class="cta-box">
+            <h3>Próximos passos do caos</h3>
+            <p>Esta página fica como quadro-base da Ronda dos 32. A cada dia pode receber três coisas: o sobrevivente novo, o eliminado riscado e a crónica curta do jogo seguinte.</p>
+            <div class="cta-actions">
+                <a href="mapa-dos-sobreviventes.html">Voltar ao Mapa dos Sobreviventes<small>Resumo da fase de grupos, revelações, desilusões e mapa geral do torneio.</small></a>
+                <a href="diario.html">Voltar ao Diário do Caos<small>Arquivo completo da fase de grupos, dia a dia, com erros, acertos e crónicas.</small></a>
+            </div>
+        </section>
 
-    <footer>
-        O grupo acabou. Agora já não há abrigo. Só resta a arte de sobreviver.
-    </footer>
-</main>
+        <footer>
+            O grupo acabou. Agora já não há abrigo. Só resta a arte de sobreviver.
+        </footer>
+    </main>
 
-<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (window.twemoji) {
-            twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-        }
-    });
-</script>
-```
-
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.twemoji) {
+                twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+            }
+        });
+    </script>
 </body>
 </html>
