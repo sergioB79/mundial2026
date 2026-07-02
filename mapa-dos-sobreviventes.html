@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa dos Sobreviventes — Mundial 2026</title>
+
+    <!-- Meta Tags Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mapa dos Sobreviventes 🧭⚽">
+    <meta property="og:description" content="Resumo da fase de grupos do Mundial 2026: revelações, falhanços, sobreviventes e caminhos da Ronda dos 32.">
+    <meta property="og:url" content="https://sergiob79.github.io/mundial2026/mapa-dos-sobreviventes.html">
+    <meta property="og:image" content="https://sergiob79.github.io/mundial2026/mapa.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="820">
+    <meta property="og:site_name" content="O Guia do Caos">
+
+    <style>
+        :root {
+            --bg-page: #faf9f6;
+            --text-dark: #11151c;
+            --text-muted: #576574;
+            --accent-blue: #0984e3;
+            --accent-red: #d63031;
+            --accent-yellow: #ffd200;
+            --accent-green: #00b894;
+            --border-soft: #eae8e2;
+            --card-bg: #ffffff;
+            --ink-soft: #2c3e50;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .magazine-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .nav-editorial {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 15px;
+            margin-bottom: 38px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-editorial a {
+            color: var(--text-dark);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-editorial a:hover,
+        .nav-editorial a.active {
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .survivor-masthead {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .survivor-masthead .date-tag {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-red);
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .survivor-masthead h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: .9;
+            margin: 0 0 18px 0;
+            font-weight: 950;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+        }
+
+        .survivor-masthead .sub-deck {
+            font-size: 1.35rem;
+            font-style: italic;
+            color: var(--text-muted);
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.45;
+        }
+
+        .hero-panel {
+            background: #11151c;
+            color: #fff;
+            border-radius: 22px;
+            padding: clamp(28px, 5vw, 54px);
+            margin: 38px 0 60px;
+            box-shadow: 0 16px 45px rgba(0,0,0,.10);
+        }
+
+        .hero-panel .kicker {
+            color: var(--accent-yellow);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-size: .9rem;
+        }
+
+        .hero-panel h2 {
+            margin: 0 0 20px;
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: .96;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .hero-panel p {
+            color: #f8fafc;
+            font-size: 1.18rem;
+            line-height: 1.75;
+            max-width: 840px;
+            margin: 0 0 22px;
+        }
+
+        .hero-panel p:last-child { margin-bottom: 0; }
+
+        p {
+            font-size: 1.16rem;
+            line-height: 1.75;
+            color: var(--ink-soft);
+            margin: 0 0 26px;
+        }
+
+        .editorial-text {
+            max-width: 780px;
+            margin: 0 auto 50px;
+        }
+
+        p.dropcap::first-letter {
+            font-size: 4.5rem;
+            float: left;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+            font-weight: 950;
+            line-height: 0.8;
+            color: var(--text-dark);
+        }
+
+        h2.section-title {
+            font-size: clamp(1.8rem, 4vw, 2.65rem);
+            font-weight: 950;
+            letter-spacing: -1.5px;
+            margin: 70px 0 28px;
+            text-transform: uppercase;
+            border-left: 7px solid var(--accent-red);
+            padding-left: 16px;
+        }
+
+        .section-lead {
+            max-width: 820px;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .scoreboard {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            margin: 42px 0 62px;
+        }
+
+        @media (max-width: 900px) {
+            .scoreboard { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 560px) {
+            .scoreboard { grid-template-columns: 1fr; }
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.03);
+        }
+
+        .stat-card .number {
+            font-size: 3rem;
+            font-weight: 950;
+            letter-spacing: -2px;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .label {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: .82rem;
+            color: var(--accent-red);
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 1rem;
+            line-height: 1.55;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .survivor-grid,
+        .group-grid,
+        .r32-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin: 34px 0 54px;
+        }
+
+        @media (max-width: 760px) {
+            .survivor-grid,
+            .group-grid,
+            .r32-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 26px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.025);
+        }
+
+        .card h3 {
+            margin: 0 0 13px;
+            font-size: 1.35rem;
+            line-height: 1.15;
+            letter-spacing: -.4px;
+        }
+
+        .card p {
+            font-size: 1.04rem;
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .card p:last-child { margin-bottom: 0; }
+
+        .tagline {
+            display: inline-block;
+            font-size: .76rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+            border-radius: 999px;
+            padding: 6px 10px;
+            background: #f0ede6;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+        }
+
+        .tag-green { background: rgba(0,184,148,.13); color: #00775f; }
+        .tag-red { background: rgba(214,48,49,.12); color: #a91f20; }
+        .tag-blue { background: rgba(9,132,227,.12); color: #0868b2; }
+        .tag-yellow { background: rgba(255,210,0,.25); color: #786200; }
+
+        .group-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .group-card h3 {
+            margin: 0 0 14px;
+            padding-bottom: 9px;
+            border-bottom: 1px dashed var(--border-soft);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .group-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px;
+        }
+
+        .group-card li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px solid #f2f0ec;
+            padding: 8px 0;
+            font-size: .98rem;
+        }
+
+        .group-card li:last-child { border-bottom: none; }
+
+        .group-card .team { font-weight: 750; }
+        .group-card .pts { color: var(--text-muted); white-space: nowrap; }
+        .group-card .passed { color: #00775f; }
+        .group-card .third { color: #0868b2; }
+        .group-card .out { color: #a91f20; text-decoration: line-through; opacity: .8; }
+
+        .group-card p {
+            font-size: .98rem;
+            line-height: 1.55;
+            margin: 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin: 34px 0 58px;
+        }
+
+        @media (max-width: 900px) {
+            .awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 620px) {
+            .awards-grid { grid-template-columns: 1fr; }
+        }
+
+        .award {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .award .label {
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 950;
+            font-size: .76rem;
+            margin-bottom: 8px;
+        }
+
+        .award h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .award p {
+            font-size: .98rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .r32-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .r32-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: var(--accent-red);
+        }
+
+        .r32-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.22rem;
+            letter-spacing: -.2px;
+        }
+
+        .r32-card p {
+            margin: 0;
+            font-size: .98rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+        }
+
+        .mea-culpa-box {
+            background-color: #11151c;
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 54px 0;
+        }
+
+        .mea-culpa-box h2 {
+            color: var(--accent-yellow);
+            font-size: 1.55rem;
+            margin: 0 0 14px;
+            text-transform: uppercase;
+            border: none;
+            padding: 0;
+        }
+
+        .mea-culpa-box p {
+            color: #f8fafc;
+            margin-bottom: 18px;
+        }
+
+        .mea-culpa-box p:last-child { margin-bottom: 0; }
+
+        .quote-box {
+            background: #f0ede6;
+            border-left: 7px solid var(--text-dark);
+            border-radius: 10px;
+            padding: 30px 34px;
+            margin: 52px 0;
+        }
+
+        .quote-box p {
+            font-size: 1.28rem;
+            font-weight: 750;
+            color: var(--text-dark);
+            margin-bottom: 0;
+        }
+
+        .phase-cta {
+            max-width: 900px;
+            margin: 60px auto 15px auto;
+            padding: 30px;
+            background: #11151c;
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .phase-cta h2 {
+            margin: 0 0 10px 0;
+            color: var(--accent-yellow);
+            font-size: 1.45rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .phase-cta p {
+            color: #f8fafc;
+            font-size: 1.04rem;
+            line-height: 1.65;
+            margin: 0 0 20px 0;
+        }
+
+        .phase-cta-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        @media (max-width: 650px) {
+            .phase-cta-actions { grid-template-columns: 1fr; }
+        }
+
+        .phase-cta a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            color: #11151c;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-weight: 900;
+            border: 2px solid transparent;
+            transition: all .2s ease;
+        }
+
+        .phase-cta a:hover {
+            border-color: var(--accent-yellow);
+            transform: translateY(-1px);
+        }
+
+        .phase-cta small {
+            display: block;
+            margin-top: 6px;
+            color: #576574;
+            font-weight: 650;
+            line-height: 1.35;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0 20px 0;
+            font-size: 1.25rem;
+            font-style: italic;
+            border-top: 2px solid var(--text-dark);
+            color: var(--text-dark);
+            font-weight: bold;
+            margin-top: 60px;
+        }
+
+        img.emoji {
+            height: 1.2em;
+            width: 1.2em;
+            margin: 0 .1em;
+            vertical-align: -0.15em;
+        }
+
+        /* HEADER LIMPO — página autónoma */
+        .clean-nav {
+            border-bottom: 2px solid var(--text-dark);
+            margin-bottom: 34px;
+            padding-bottom: 18px;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .clean-nav .brand {
+            font-size: 1rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: none;
+        }
+
+        .clean-nav .brand:hover {
+            border-bottom: none;
+            color: var(--accent-red);
+        }
+
+        .clean-nav .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: .86rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+        }
+
+        .clean-nav .nav-links a {
+            font-weight: 850;
+            opacity: .72;
+        }
+
+        .clean-nav .nav-links a:hover,
+        .clean-nav .nav-links a.active {
+            opacity: 1;
+            border-bottom-color: var(--accent-red);
+        }
+
+        .survivor-hero {
+            position: relative;
+            text-align: left;
+            margin: 0 0 42px;
+            padding: clamp(34px, 7vw, 78px);
+            border-radius: 26px;
+            background:
+                radial-gradient(circle at top right, rgba(255,210,0,.32), transparent 28%),
+                linear-gradient(135deg, #11151c 0%, #171d27 58%, #242b38 100%);
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .survivor-hero::after {
+            content: "32";
+            position: absolute;
+            right: clamp(18px, 5vw, 58px);
+            bottom: -28px;
+            font-size: clamp(7rem, 20vw, 16rem);
+            line-height: .8;
+            font-weight: 950;
+            letter-spacing: -12px;
+            color: rgba(255,255,255,.055);
+            pointer-events: none;
+        }
+
+        .survivor-hero .hero-label {
+            display: inline-block;
+            color: var(--accent-yellow);
+            font-size: .82rem;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 2.6px;
+            margin-bottom: 18px;
+        }
+
+        .survivor-hero h1 {
+            color: #fff;
+            max-width: 760px;
+            font-size: clamp(3.4rem, 10vw, 7.4rem);
+            line-height: .82;
+            margin: 0 0 24px;
+            letter-spacing: -5px;
+            text-transform: uppercase;
+        }
+
+        .survivor-hero .hero-line {
+            color: #f8fafc;
+            max-width: 680px;
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            line-height: 1.45;
+            margin: 0 0 26px;
+            font-style: italic;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-actions a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: #fff;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: .92rem;
+            border: 2px solid rgba(255,255,255,.18);
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .hero-actions a:hover {
+            transform: translateY(-1px);
+            border-color: var(--accent-yellow);
+        }
+
+        @media (max-width: 650px) {
+            .clean-nav {
+                align-items: flex-start;
+            }
+
+            .clean-nav .nav-links {
+                gap: 12px;
+                font-size: .78rem;
+            }
+
+            .survivor-hero {
+                border-radius: 20px;
+            }
+
+            .survivor-hero h1 {
+                letter-spacing: -3px;
+            }
+        }
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="magazine-wrapper">
+
+    <nav class="nav-editorial clean-nav">
+        <a class="brand" href="index.html">O Guia do Caos</a>
+        <div class="nav-links">
+            <a href="diario.html">Diário</a>
+            <a class="active" href="mapa-dos-sobreviventes.html">Sobreviventes</a>
+            <a href="ronda-32.html">Ronda dos 32</a>
+        </div>
+    </nav>
+
+    <header class="survivor-masthead survivor-hero">
+        <div class="hero-label">Fase de grupos · Relatório final</div>
+        <h1>Mapa dos<br>Sobreviventes</h1>
+        <p class="hero-line">48 entraram. 32 ficaram. O resto é ruído, ferida e matemática.</p>
+        <div class="hero-actions">
+            <a href="diario.html">← Arquivo da fase de grupos</a>
+            <a href="ronda-32.html">Entrar na Ronda dos 32 →</a>
+        </div>
+    </header>
+
+    <section class="hero-panel">
+        <div class="kicker">Leitura de passagem</div>
+        <h2>Agora acaba o Excel. Começa a faca.</h2>
+        <p>A fase de grupos terminou com a sensação certa: este Mundial não ficou maior apenas no número de equipas. Ficou maior no ruído, na geografia, na calculadora, nos terceiros lugares, nos guarda-redes improváveis, nas equipas que sobreviveram sem ganhar e nas favoritas que descobriram que posse de bola não é salvo-conduto.</p>
+        <p>Os dois primeiros de cada grupo seguiram. Oito terceiros ainda conseguiram passar pela fresta. O resto ficou no chão, alguns por falta de qualidade, outros por falta de sorte, e alguns — caso do Uruguai — por terem confundido intensidade com destino.</p>
+    </section>
+
+    <section class="scoreboard" aria-label="Resumo numérico da fase de grupos">
+        <div class="stat-card">
+            <div class="number">48</div>
+            <div class="label">Equipas à partida</div>
+            <p>O Mundial abriu a porta a mais países, mais estilos e mais histórias fora do eixo habitual.</p>
+        </div>
+        <div class="stat-card">
+            <div class="number">32</div>
+            <div class="label">Sobreviventes</div>
+            <p>Vinte e quatro apurados diretos mais oito terceiros classificados. O torneio estreitou, mas ainda não ficou simples.</p>
+        </div>
+        <div class="stat-card">
+            <div class="number">16</div>
+            <div class="label">Eliminados</div>
+            <p>Alguns esperados, outros cruéis. O Irão saiu invicto. O Uruguai saiu ferido. A Turquia saiu tarde demais.</p>
+        </div>
+        <div class="stat-card">
+            <div class="number">3</div>
+            <div class="label">Perfeitos</div>
+            <p>México, França e Argentina terminaram com nove pontos. Três mapas limpos num torneio cheio de lama.</p>
+        </div>
+    </section>
+
+    <section class="editorial-text">
+        <p class="dropcap">A primeira fase confirmou a tese do <em>Guia do Caos</em>: num Mundial de 48 equipas, o favorito continua favorito, mas já não controla o ambiente. Há mais jogos armadilha, mais viagens, mais estilos estranhos, mais equipas que aceitam sofrer e mais matemática a decidir destinos. O caos não foi acidente. Foi parte do regulamento.</p>
+        <p>Também confirmou outra coisa: as seleções pequenas já não entram apenas para fazer número. Cabo Verde passou sem ganhar. A RD Congo saiu do grupo de Portugal com quatro pontos. A África do Sul entrou na fase a eliminar. Curaçau fez um ponto histórico. Haiti marcou e saiu com memória. O Mundial alargado pode ter fragilidades, mas ofereceu uma coisa que o futebol precisava: novas caras com direito a narrativa.</p>
+    </section>
+
+    <h2 class="section-title">Os sobreviventes por categoria</h2>
+    <p class="section-lead">Nem todos os apurados chegam iguais. Há quem chegue limpo, há quem chegue manchado, há quem chegue feliz por ainda respirar e há quem chegue perigoso precisamente por ninguém o tratar como centro do torneio.</p>
+
+    <section class="survivor-grid">
+        <article class="card">
+            <span class="tagline tag-green">Chegaram inteiros</span>
+            <h3>México, França e Argentina</h3>
+            <p>Três vitórias em três jogos. O México ainda com a versão mais limpa: seis golos marcados, zero sofridos, estádio em combustão e sensação de candidatura emocional. França e Argentina fizeram o que as equipas grandes fazem quando estão bem: ganharam sem pedir licença.</p>
+        </article>
+
+        <article class="card">
+            <span class="tagline tag-blue">Candidatos sem barulho</span>
+            <h3>Colômbia, Brasil, Espanha e Inglaterra</h3>
+            <p>O Brasil cresceu durante o grupo. A Espanha passou sem sofrer golos. A Inglaterra não encantou, mas ganhou o grupo. A Colômbia talvez tenha sido a mais interessante: menos fogo do que se esperava, mais maturidade do que se temia.</p>
+        </article>
+
+        <article class="card">
+            <span class="tagline tag-yellow">Histórias bonitas</span>
+            <h3>Cabo Verde, África do Sul, RD Congo e Costa do Marfim</h3>
+            <p>Cabo Verde é a história da fase: três empates, zero derrotas, estreia absoluta e passagem. A África do Sul fez história. A RD Congo saiu viva do grupo de Portugal. A Costa do Marfim chegou finalmente a uma fase a eliminar.</p>
+        </article>
+
+        <article class="card">
+            <span class="tagline tag-red">Sobreviventes com nódoas</span>
+            <h3>Portugal, Alemanha, Bélgica e Croácia</h3>
+            <p>Portugal passou invicto, mas não escolheu a porta. A Alemanha ganhou o grupo, mas levou um aviso do Equador. A Bélgica só respirou tarde. A Croácia parece cansada, velha e irritante — exatamente o estado em que costuma continuar viva.</p>
+        </article>
+    </section>
+
+    <h2 class="section-title">Prémios do caos</h2>
+
+    <section class="awards-grid">
+        <article class="award">
+            <div class="label">Melhor história</div>
+            <h3>Cabo Verde</h3>
+            <p>Passar sem ganhar parece absurdo. Mas três empates contra Espanha, Uruguai e Arábia Saudita não são sorte. São nervo.</p>
+        </article>
+
+        <article class="award">
+            <div class="label">Maior falhanço</div>
+            <h3>Uruguai</h3>
+            <p>Entrou com aura de candidato alternativo. Saiu sem vitórias, com expulsão, ruído e a sensação de que o atrito o comeu por dentro.</p>
+        </article>
+
+        <article class="award">
+            <div class="label">Eliminado cruel</div>
+            <h3>Irão</h3>
+            <p>Três empates, zero derrotas e eliminação. Às vezes não se perde um Mundial num mau jogo. Perde-se num frame do VAR.</p>
+        </article>
+
+        <article class="award">
+            <div class="label">Guarda-redes do caos</div>
+            <h3>Vozinha, Eloy Room e companhia</h3>
+            <p>Esta fase teve muitos golos, mas também teve noites salvas por luvas. Cabo Verde e Curaçau foram em parte histórias de guarda-redes.</p>
+        </article>
+
+        <article class="award">
+            <div class="label">Jogo mais selvagem</div>
+            <h3>Argélia 3 – 3 Áustria</h3>
+            <p>Golos, viragens, descontos, sobrevivência e crueldade. Um jogo que parecia escrito por alguém a rasgar a própria folha.</p>
+        </article>
+
+        <article class="award">
+            <div class="label">Aviso ao favorito</div>
+            <h3>Equador 2 – 1 Alemanha</h3>
+            <p>A Alemanha ganhou o grupo, mas perdeu a imunidade. Quando se abre demais, até uma equipa grande vira convite.</p>
+        </article>
+    </section>
+
+    <h2 class="section-title">Mapa dos grupos</h2>
+    <p class="section-lead">Abaixo fica o mapa político da primeira fase: quem mandou, quem sobreviveu pela lateral e quem ficou enterrado na fase de grupos.</p>
+
+    <section class="group-grid">
+        <article class="group-card">
+            <h3>Grupo A</h3>
+            <ul>
+                <li><span class="team passed">México</span><span class="pts">9 pts · 1.º</span></li>
+                <li><span class="team passed">África do Sul</span><span class="pts">4 pts · 2.º</span></li>
+                <li><span class="team out">Coreia do Sul</span><span class="pts">3 pts · 3.º</span></li>
+                <li><span class="team out">Chéquia</span><span class="pts">1 pt · 4.º</span></li>
+            </ul>
+            <p>O México fez pleno. A África do Sul abriu uma porta histórica. A Coreia caiu na matemática.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo B</h3>
+            <ul>
+                <li><span class="team passed">Suíça</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Canadá</span><span class="pts">4 pts · 2.º</span></li>
+                <li><span class="team third">Bósnia e Herzegovina</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Qatar</span><span class="pts">1 pt · 4.º</span></li>
+            </ul>
+            <p>A Suíça foi Suíça: fria, adulta e inconveniente. Canadá e Bósnia seguiram caminhos diferentes, mas ambos respiram.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo C</h3>
+            <ul>
+                <li><span class="team passed">Brasil</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Marrocos</span><span class="pts">7 pts · 2.º</span></li>
+                <li><span class="team out">Escócia</span><span class="pts">3 pts · 3.º</span></li>
+                <li><span class="team out">Haiti</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>Brasil e Marrocos foram sérios. A Escócia ficou curta. Haiti saiu sem pontos, mas não sem memória.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo D</h3>
+            <ul>
+                <li><span class="team passed">Estados Unidos</span><span class="pts">6 pts · 1.º</span></li>
+                <li><span class="team passed">Austrália</span><span class="pts">4 pts · 2.º</span></li>
+                <li><span class="team third">Paraguai</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Turquia</span><span class="pts">3 pts · 4.º</span></li>
+            </ul>
+            <p>Os EUA ganharam o grupo apesar da última derrota. A Turquia encontrou a honra quando já não servia para passar.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo E</h3>
+            <ul>
+                <li><span class="team passed">Alemanha</span><span class="pts">6 pts · 1.º</span></li>
+                <li><span class="team passed">Costa do Marfim</span><span class="pts">6 pts · 2.º</span></li>
+                <li><span class="team third">Equador</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Curaçau</span><span class="pts">1 pt · 4.º</span></li>
+            </ul>
+            <p>A Alemanha passou, mas levou aviso. Curaçau levou sete, depois ganhou um ponto histórico. Isto também é Mundial.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo F</h3>
+            <ul>
+                <li><span class="team passed">Países Baixos</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Japão</span><span class="pts">5 pts · 2.º</span></li>
+                <li><span class="team third">Suécia</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Tunísia</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>O Japão saiu invicto de um grupo difícil. A Holanda chega forte, mas apanha Marrocos logo de seguida.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo G</h3>
+            <ul>
+                <li><span class="team passed">Bélgica</span><span class="pts">5 pts · 1.º</span></li>
+                <li><span class="team passed">Egito</span><span class="pts">5 pts · 2.º</span></li>
+                <li><span class="team out">Irão</span><span class="pts">3 pts · 3.º</span></li>
+                <li><span class="team out">Nova Zelândia</span><span class="pts">1 pt · 4.º</span></li>
+            </ul>
+            <p>A Bélgica ganhou o grupo sem ganhar confiança. O Irão saiu invicto, que é uma forma cruel de cair.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo H</h3>
+            <ul>
+                <li><span class="team passed">Espanha</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Cabo Verde</span><span class="pts">3 pts · 2.º</span></li>
+                <li><span class="team out">Uruguai</span><span class="pts">2 pts · 3.º</span></li>
+                <li><span class="team out">Arábia Saudita</span><span class="pts">2 pts · 4.º</span></li>
+            </ul>
+            <p>Espanha sem sofrer golos. Cabo Verde sem perder jogos. Uruguai sem explicação suficiente.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo I</h3>
+            <ul>
+                <li><span class="team passed">França</span><span class="pts">9 pts · 1.º</span></li>
+                <li><span class="team passed">Noruega</span><span class="pts">6 pts · 2.º</span></li>
+                <li><span class="team third">Senegal</span><span class="pts">3 pts · 3.º</span></li>
+                <li><span class="team out">Iraque</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>A França foi máquina. A Noruega confirmou Haaland. O Senegal acordou tarde, mas ainda entrou pela fresta.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo J</h3>
+            <ul>
+                <li><span class="team passed">Argentina</span><span class="pts">9 pts · 1.º</span></li>
+                <li><span class="team passed">Áustria</span><span class="pts">4 pts · 2.º</span></li>
+                <li><span class="team third">Argélia</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Jordânia</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>A Argentina fechou perfeita. Áustria e Argélia sobreviveram ao jogo que recusou morrer.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo K</h3>
+            <ul>
+                <li><span class="team passed">Colômbia</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Portugal</span><span class="pts">5 pts · 2.º</span></li>
+                <li><span class="team third">RD Congo</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Uzbequistão</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>Portugal não perdeu, mas também não escolheu o caminho. A Colômbia mandou sem precisar de gritar.</p>
+        </article>
+
+        <article class="group-card">
+            <h3>Grupo L</h3>
+            <ul>
+                <li><span class="team passed">Inglaterra</span><span class="pts">7 pts · 1.º</span></li>
+                <li><span class="team passed">Croácia</span><span class="pts">6 pts · 2.º</span></li>
+                <li><span class="team third">Gana</span><span class="pts">4 pts · 3.º</span></li>
+                <li><span class="team out">Panamá</span><span class="pts">0 pts · 4.º</span></li>
+            </ul>
+            <p>A Inglaterra fez o suficiente. A Croácia voltou a parecer velha e viva ao mesmo tempo. O Gana ainda respira.</p>
+        </article>
+    </section>
+
+    <div class="mea-culpa-box">
+        <h2>O que o Guia acertou — e onde levou chapada</h2>
+        <p><strong>Acertou no caos como estrutura.</strong> A fase de grupos foi exatamente isso: terceiros classificados, contas cruzadas, jogos que mudaram de valor depois de acabar, equipas pequenas a roubar tempo e favoritos obrigados a jogar contra relógio, viagens, cansaço e ansiedade.</p>
+        <p><strong>Acertou no risco português.</strong> O Guia avisava que Portugal podia perder-se dentro do próprio talento e sofrer em cantos, segundas bolas e jogos físicos. A RD Congo confirmou o aviso logo na estreia. A Colômbia confirmou outro problema: posse sem lâmina.</p>
+        <p><strong>Acertou na Colômbia como candidata alternativa.</strong> Talvez não tenha sido a Colômbia de incêndio e carnaval. Foi pior para os outros: foi uma Colômbia adulta, pragmática, capaz de ganhar e também de empatar quando empatar chegava.</p>
+        <p><strong>Errou no Uruguai.</strong> A ideia fazia sentido: equipa dura, desconfortável, talhada para mata-mata. Só que a dureza virou ruído, o desconforto virou desgaste e a Celeste caiu antes de chegar à parte onde costuma ser perigosa.</p>
+    </div>
+
+    <h2 class="section-title">O novo labirinto: Ronda dos 32</h2>
+    <p class="section-lead">A fase de grupos era romance coral. Agora é faca curta. Estes são os emparelhamentos que abrem a nova página do torneio.</p>
+
+    <section class="r32-grid">
+        <article class="r32-card">
+            <h3>África do Sul – Canadá</h3>
+            <p>Duas histórias de expansão do mapa. Um quer confirmar o milagre; o outro quer transformar casa emocional em caminho.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Alemanha – Paraguai</h3>
+            <p>A Alemanha chega favorita, mas já avisada. O Paraguai chega como terceiro, que é outro nome para incómodo.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Países Baixos – Marrocos</h3>
+            <p>Um dos jogos grandes da ronda. Talento laranja contra uma equipa que já sabe viver bem em Mundiais grandes.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Brasil – Japão</h3>
+            <p>O Brasil quer acelerar; o Japão quer retirar oxigénio. Um jogo entre talento e disciplina de bisturi.</p>
+        </article>
+        <article class="r32-card">
+            <h3>França – Suécia</h3>
+            <p>A França parece máquina. A Suécia tem corpo para incomodar, mas não pode oferecer meia hora de sono.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Costa do Marfim – Noruega</h3>
+            <p>Primeira fase a eliminar marfinense contra Haaland. Isto tem cheiro a jogo físico, pesado e pouco higiénico.</p>
+        </article>
+        <article class="r32-card">
+            <h3>México – Equador</h3>
+            <p>O México chega perfeito. O Equador chega depois de morder a Alemanha. Jogo ideal para testar se a festa aguenta susto.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Inglaterra – RD Congo</h3>
+            <p>A Inglaterra tem nomes. A RD Congo tem corpo, fé e já provou contra Portugal que não respeita demasiado o estatuto.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Estados Unidos – Bósnia e Herzegovina</h3>
+            <p>Os anfitriões ganharam o grupo, mas perderam o último jogo. A Bósnia chega com quatro pontos e nada a perder.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Bélgica – Senegal</h3>
+            <p>A Bélgica ainda procura confiança. O Senegal chega tarde, mas chega com cinco golos no último jogo.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Portugal – Croácia</h3>
+            <p>Portugal não escolheu a porta e agora apanha uma equipa que parece sempre cansada até deixar alguém pelo caminho.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Espanha – Áustria</h3>
+            <p>A Espanha não sofreu golos. A Áustria tem motor para pressionar. Pode ser controlo ou armadilha.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Suíça – Argélia</h3>
+            <p>A Suíça raramente oferece espetáculo, mas raramente oferece presentes. A Argélia vem de um 3-3 emocionalmente radioativo.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Argentina – Cabo Verde</h3>
+            <p>O campeão perfeito contra a história mais bonita da fase. Messi contra uma equipa que ainda não perdeu.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Colômbia – Gana</h3>
+            <p>A Colômbia chega como líder madura. O Gana chega como equipa de Queiroz: parede, paciência e desconforto.</p>
+        </article>
+        <article class="r32-card">
+            <h3>Austrália – Egito</h3>
+            <p>Jogo de margens pequenas. Austrália de operação, Egito de sobrevivência. Pode ser 90 minutos de xadrez com caneleiras.</p>
+        </article>
+    </section>
+
+    <div class="quote-box">
+        <p>A fase de grupos não separou apenas fortes e fracos. Separou equipas que sabem sofrer das equipas que apenas esperavam ganhar.</p>
+    </div>
+
+    <section class="phase-cta">
+        <h2>A seguir: a faca</h2>
+        <p>Este mapa fecha a fase de grupos e arruma o campo de batalha. A continuação deve viver na página da Ronda dos 32: jogo a jogo, prognóstico a prognóstico, sem carregar o diário inteiro às costas.</p>
+        <div class="phase-cta-actions">
+            <a href="diario.html">📓 Voltar ao Diário<small>Arquivo completo da fase de grupos, dia a dia, com erros, acertos e crónicas.</small></a>
+            <a href="ronda-32.html">⚔️ Entrar na Ronda dos 32<small>Nova página para mata-mata, prognósticos e caminhos até aos oitavos.</small></a>
+        </div>
+    </section>
+
+    <footer>
+        O caos fez a triagem. Agora começa a eliminação.
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.twemoji) {
+            twemoji.parse(document.body, {
+                folder: "svg",
+                ext: ".svg"
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

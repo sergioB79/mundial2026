@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial 2026: O Guia do Caos</title>
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mundial 2026: O Guia do Caos ⚽🏆">
+    <meta property="og:description" content="Histórias, dados, pernas cansadas e os favoritos de topo. O guia tático e editorial para sobreviver ao maior torneio de sempre.">
+    <meta property="og:url" content="https://sergiob79.github.io/mundial2026/">
+    <meta property="og:image" content="https://postimg.cc/Z0PdVvcg">
+    <meta property="og:site_name" content="O Guia do Caos">
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <style>
+        :root {
+            --bg-page: #faf9f6; /* Papel editorial / Off-white */
+            --text-dark: #11151c; /* Preto elegante */
+            --text-muted: #576574;
+            --accent-green: #0984e3; /* Azul desportivo premium para focos */
+            --accent-red: #d63031;
+            --border-soft: #eae8e2;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout de Revista */
+        .magazine-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Grande Capa de Entrada */
+        .cover-story {
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 2px solid var(--text-dark);
+            margin-bottom: 60px;
+        }
+
+        .cover-story .issue-tag {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .cover-story h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin: 0 0 20px 0;
+            font-weight: 900;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+        }
+
+        .cover-story .deck {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        /* Estrutura de Parágrafos */
+        .editorial-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+        }
+
+        p.dropcap::first-letter {
+            font-size: 4.5rem;
+            float: left;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+            font-weight: 900;
+            line-height: 0.8;
+            color: var(--text-dark);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+            color: #2c3e50;
+        }
+
+        /* Secção Dividida */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            margin: 60px 0;
+            align-items: start;
+        }
+
+        @media (max-width: 850px) {
+            .split-section { grid-template-columns: 1fr; gap: 20px; margin: 40px 0; }
+        }
+
+        /* Cartão Lateral de Laboratório */
+        .sidebar-lab {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar-lab h4 {
+            margin-top: 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-lab ul {
+            padding-left: 18px;
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .sidebar-lab li { margin-bottom: 10px; line-height: 1.5; }
+
+        /* Grandes Citações de Destaque */
+        .mega-pullquote {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: -1px;
+            color: var(--text-dark);
+            text-align: center;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+        }
+
+        /* Os Meus Favoritos */
+        .signature-box {
+            background-color: #11151c;
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 60px 0;
+        }
+
+        .signature-box h2 {
+            color: var(--accent-green);
+            font-size: 1.8rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .signature-box p { color: #f8fafc; }
+
+        /* Títulos Elegantes */
+        h2.section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            border-left: 6px solid var(--text-dark);
+            padding-left: 15px;
+        }
+
+        /* Grelhas */
+        .magazine-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Força 4 colunas na linha 1 */
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        /* Garante que em ecrãs pequenos e telemóveis tudo quebra para 1 coluna normal */
+        @media (max-width: 850px) {
+            .magazine-grid { grid-template-columns: 1fr; }
+            .magazine-grid .grid-card { grid-column: span 1 !important; }
+        }
+
+        .grid-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .grid-card h3 { margin-top: 0; font-size: 1.2rem; display: flex; align-items: center; gap: 8px; }
+        .grid-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+        /* Painel Oculto de Tiers */
+        .tier-legend {
+            background: #f0ede6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            font-size: 0.95rem;
+        }
+
+        .tier-row { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .badge-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+        /* Imagens Twemoji Fix Windows */
+        img.emoji {
+            height: 1.2em;
+            width: 1.2em;
+            margin: 0 .1em;
+            vertical-align: -0.15em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 0 20px 0;
+            font-size: 1.3rem;
+            font-style: italic;
+            border-top: 2px solid var(--text-dark);
+            color: var(--text-dark);
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+        }
+    </script>
+</head>
+<body>
+
+<div class="magazine-wrapper">
+
+    <header class="cover-story">
+        <div class="issue-tag">Edição Especial • Mundial 2026</div>
+        <h1>O Guia do Caos</h1>
+        <div class="deck">O Mundial de 2026 não chega em silêncio. Chega grande, talvez grande demais, com quarenta e oito seleções, três países anfitriões e uma promessa perigosa: haverá mais futebol, sim, mas também mais ruído.</div>
+    </header>
+
+    <!-- CTA Diário: topo -->
+    <div style="text-align:center; margin:0 auto 60px; max-width:750px;">
+        <a href="diario.html" style="display:inline-flex; align-items:center; gap:10px; background:var(--accent-red); color:#fff; text-decoration:none; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; font-size:0.95rem; padding:16px 32px; border-radius:999px; box-shadow:0 6px 22px rgba(214,48,49,0.28);">
+            📓 Diário do Caos &nbsp;·&nbsp; Ao Vivo &rarr;
+        </a>
+        <div style="font-size:0.9rem; color:var(--text-muted); margin-top:12px; font-style:italic;">O torneio já começou. Resultados, palpites e o que se passa fora de campo — dia a dia.</div>
+    </div>
+
+    
+    <div class="editorial-text">
+        <p class="dropcap">Durante décadas, o Campeonato do Mundo pareceu uma espécie de templo. Entravam poucos, entravam os melhores, entravam os que tinham sobrevivido ao caminho mais estreito. Agora, o torneio abre portas, alarga corredores e deixa entrar mais geografias, mais sotaques, mais países que nunca tinham sentido o peso da bandeira num palco destes.</p>
+        
+        <p>Há beleza nisso. Há justiça, até. Um Mundial maior permite que crianças em Cabo Verde, no Uzbequistão, na Jordânia ou no Iraque olhem para a televisão e sintam que o impossível, afinal, também sabe o caminho de casa. O futebol cresce quando deixa de pertencer apenas aos habituais.</p>
+        
+        <p><strong>Mas há um preço.</strong></p>
+        
+        <p>Quando o torneio aumenta, aumenta também a confusão. A fase de grupos deixa de ser apenas uma primeira seleção natural e passa a ser uma sala cheia de calculadoras. Com os melhores terceiros ainda em jogo, cada golo pode virar critério, cada cartão pode pesar, cada vitória curta pode parecer insuficiente. O futebol, que devia ser instinto, vai ter momentos de Excel. E nada é mais estranho do que ver uma equipa celebrar um empate sem saber se acabou de sobreviver ou apenas adiou a queda.</p>
+        
+        <p>Este será um Mundial onde o caos não será acidente. Será parte do regulamento. E, como sempre acontece no futebol, o caos não favorece apenas os loucos. Favorece também os treinadores inteligentes. Aqueles que percebem que sofrer também é uma tática. Que uma equipa pode não ter a bola e, ainda assim, mandar no medo do adversário. Que 80% de posse podem servir para pouco se, do outro lado, houver um bloco baixo com paciência, pernas e uma trotinete elétrica estacionada à entrada da área.</p>
+
+        <p>O futebol moderno adora prometer controlo. Mapas de calor, métricas, relatórios, zonas de pressão, modelos preditivos. Tudo útil. Tudo interessante. Tudo muito bonito até a bola bater no poste, ressaltar nas costas do guarda-redes e entrar. Há sempre um momento em que a ciência fica parada a olhar para o relvado, com cara de quem chegou tarde. Talvez seja por isso que o Mundial ainda nos pertence. Porque, apesar de toda a análise, ninguém conseguiu domesticar completamente o ressalto.</p>
+    </div>
+
+    <div class="signature-box">
+        <h2>🎯 Os Meus Favoritos: Três que são Quatro</h2>
+        <p>Os meus candidatos são três — embora, na prática, sejam quatro.</p>
+        <p><strong>Espanha 🇪🇸 e Portugal 🇵🇹 estão no topo da minha lista.</strong> A Espanha pela forma como controla jogos e sufoca adversários com bola. Portugal pela profundidade absurda do plantel e pela quantidade de soluções que tem em quase todas as posições.</p>
+        <p><strong>O terceiro favorito fica em aberto: Uruguai 🇺🇾 ou Colômbia 🇨🇴.</strong></p>
+        <p>O <strong>Uruguai</strong> tem intensidade, músculo e uma capacidade rara de tornar qualquer jogo desconfortável. É a equipa que ninguém quer encontrar numa eliminatória. A <strong>Colômbia</strong> tem fome, velocidade e Luis Díaz. Pode não ser a mais óbvia, mas é daquelas seleções que entram no torneio sem pedir licença e começam a partir previsões.</p>
+        <p><em>Uruguai é o candidato do rigor e da pancada limpa. A Colômbia é o candidato do fogo e da surpresa. No fundo, são três favoritos. Mas o terceiro ainda está a aquecer.</em></p>
+    </div>
+
+    <h2 class="section-title">O Torneio das Pernas Cansadas 🩺</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>Este será também um Mundial de pernas cansadas e cabeças quentes. Um Mundial onde não ganhará apenas quem jogar melhor, mas quem resistir melhor. Quem tiver banco. Quem tiver médicos frios. Quem tiver jogadores capazes de entrar aos 75 minutos e mudar um jogo que já parecia escrito.</p>
+            <p>A qualidade continuará a importar, claro. Mas a profundidade pode ser a nova estrella. As grandes seleções vão chegar com nomes brilhantes, mas também com boletins clínicos carregados. Lesões musculares, fadiga acumulada, jogadores no limite, épocas longas demais para corpos que fingem ser máquinas. O futebol moderno gosta de vender intensidade, mas esquece-se de dizer que alguém a paga. E quem paga, quase sempre, são as pernas.</p>
+            <p>Por isso, o Mundial de 2026 vai perguntar outra coisa aos favoritos: quem sabe viajar bem? Quem recupera melhor? Quem consegue rodar sem cair de nível? Quem tem banco suficiente para trocar nomes sem trocar identidade? Num torneio destes, o onze inicial é apenas a capa do livro. A história escreve-se depois, quando o calor aperta e o suplente entra para decidir.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Fatores de Laboratório</h4>
+            <ul>
+                <li><strong>Logística Continental:</strong> Atravessar distâncias brutais entre os EUA, México e Canadá significa gerir fusos emocionais.</li>
+                <li><strong>Choque Térmico:</strong> Fornos climáticos em Houston, Dallas e Monterrey colocam os atletas à prova.</li>
+                <li><strong>Altitude Real:</strong> A Cidade do México exige recuperação diferenciada no pós-jogo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇵🇹 Portugal: Abundância e Memória</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>Talento há, agora falta não complicar. Portugal chega ao Mundial com uma das equipas mais fortes do torneio. Há qualidade em quase todas as posições, soluções no banco e jogadores capazes de decidir jogos sozinhos. Mas isso também é uma armadilha. Parece que o problema não é escolher quem joga — é escolher quem fica triste no banco.</p>
+            <p>Cristiano Ronaldo será naturalmente uma das grandes histórias. Pode ser o seu último Mundial, e isso traz peso, emoção e câmaras apontadas a cada expressão facial. Mas Portugal já não é só Ronaldo. É Bruno Fernandes, Bernardo Silva, Vitinha, Rafael Leão, João Cancelo, Diogo Costa e uma geração que tem obrigação de pensar alto.</p>
+            <p>Há ainda um fator que não aparece no quadro tático: Diogo Jota. Não como ausência para explorar, mas como memória que acompanha o grupo. Portugal entra neste Mundial também com essa camada emocional — discreta, pesada, humana. Não ganha jogos sozinha, mas pode dar ao balneário uma razão íntima para correr um pouco mais quando faltar ar.</p>
+            <p>O risco maior de Portugal pode estar atrás. Sem uma liderança defensiva clara, a equipa pode tornar-se vulnerável nos momentos em que o jogo deixa de ser bonito e passa a ser bruto. Porque há Mundiais que se ganham com talento, sim, mas também há jogos que se sobrevivem a defender cantos, segundas bolas e bolas bombeadas aos 90 minutos por uma equipa que já percebeu que não precisa de jogar melhor — só precisa de fazer a bola cair no sítio errado.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Onde Portugal se Decide</h4>
+            <ul>
+                <li><strong>O Fator Vitinha:</strong> É ele quem dita o ritmo, a pausa, o critério. Não aparece sempre no resumo do jogo, mas aparece na saúde da equipa. Quando ele joga bem, Portugal respira melhor.</li>
+                <li><strong>A Estabilidade de Rúben Dias:</strong> Confirmado no eixo defensivo. Garante a voz de comando e a autoridade posicional essenciais para organizar os jovens centrais (Inácio/António Silva) nos momentos em que o jogo passa de bonito a bruto.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mega-pullquote">
+        "Portugal não precisa de inventar talento. Precisa de não se perder dentro dele. Temos tradição para sofrer contra quem estaciona o autocarro, a mota e a trotinete elétrica."
+    </div>
+
+    <h2 class="section-title">🇦🇷 Argentina: O Gelo no Relógio</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>Os atuais campeões mundiais entram em campo blindados pelo estatuto e pela frieza de quem sabe exatamente como sofrer sem tremer. Podem parecer lentos ou dar a iniciativa, mas são cirúrgicos a adormecer o ritmo dos adversários através de uma posse de bola ultra-mastigada no miolo, congelando o ímpeto dos favoritos quando as pernas começam a pesar.</p>
+            <p>Se achas que estão velhos e cansados, eles ganham-te o jogo em duas transições cirúrgicas enquanto estás focado em fazer contas à calculadora ou a olhar para as tabelas.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ A Rotação Recuada</h4>
+            <ul>
+                <li><strong>Gestão de Messi:</strong> Toda a estrutura de Scaloni corre e morde pelas pernas de Lionel Messi, gerido devido a queixas físicas no gémeo.</li>
+                <li><strong>O Colete do Miolo:</strong> Mac Allister, De Paul e Enzo Fernández assumem as despesas físicas para dar oxigénio aos veteranos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇫🇷 França: O Exército Silencioso</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>O maior exército de talento do futebol moderno chega com a obrigação óbvia de mandar no labirinto. Se o plano principal encravar, Deschamps tem soluções no banco para mudar a estrutura tática sem perder pingo de qualidade. Aliam um pragmatismo defensivo muito cinzento ao contra-ataque mais destrutivo do planeta.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Dados de Laboratório</h4>
+            <ul>
+                <li><strong>Espaço Livre:</strong> Todo o jogo gravita para isolar Kylian Mbappé e ativar a vertigem de Barcola.</li>
+                <li><strong>Risco Estrutural:</strong> Sofrem com a falta de alternativas de raiz na lateral direita, o que pode abrir fendas contra extremos elétricos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇪🇸 Espanha: Estrutura e Prisão</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>A Espanha surge como uma das candidatas mais sólidas. É equipa de estrutura, de bola, de paciência. Tem jogadores jovens com descaramento e uma ideia coletiva muito clara. Quando está bem, não parece atacar: parece ocupar. Encosta o adversário ao próprio cansaço, obriga-o a correr atrás de uma bola que nunca pede desculpa. A Espanha tem uma virtude rara: sabe quem é.</p>
+            <p>Num Mundial caótico, isso vale muito. Ter uma identidade reconhecível é uma forma de abrigo. Quando o jogo aperta, a Espanha volta à bola. Mas há um perigo antigo: a posse também pode virar decoração. Muito bonita, muito limpa, muito senhora de si — mais sem faca. Se o adversário fechar por dentro, baixar linhas e aceitar sofrer sem entrar em pânico, a Espanha pode transformar domínio em impaciência.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Análise de Estrutura</h4>
+            <ul>
+                <li><strong>Alas Verticais:</strong> Todo o descaramento assenta em Lamine Yamal e Nico Williams.</li>
+                <li><strong>Ameaça de Fadiga:</strong> O ponto crítico é a acumulação de minutos de <strong>Rodri</strong>. Se ele falhar, Zubimendi herda o meio-campo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🔥 O Choque das Forças Alternativas</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>Uruguai: O sofrimento como método.</strong> O Uruguai não é uma promessa de beleza. É uma promessa de desconforto. Uma equipa intensa, física, aggressive, capaz de transformar qualquer jogo num duelo de nervos. Há seleções que procuram harmonia. O Uruguai procura atrito. Quer primeiro estragar o teu jogo. Quando uma eliminatória fica feia, partida, cheia de choques e bolas divididas, o Uruguai começa a sentir-se em casa.</p>
+            <p><strong>Colômbia: Menos pedra, mais fogo.</strong> Menos contenção, mais vertigem. Menos espera, mais faca aberta no corredor. Luis Díaz é o rosto dessa energia: vertical, elétrico, capaz de apanhar defesas mal colocadas e transformar metros livres em pânico. Há jogadores que recebem a bola e pedem calma. Díaz recebe e pede estrada. A Colômbia tem fome de palco.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Contexto de Balneário</h4>
+            <ul>
+                <li><strong>🇺🇾 Darwin Núñez:</strong> O caos puro. Capaz de falhar três golos claros e arrancar a vitória com alma aos 94 minutos. Valverde e Ugarte trancam o meio-campo.</li>
+                <li><strong>🇨🇴 Rotação Alta:</strong> Modelo de asfixia montado por Néstor Lorenzo. <strong>James Rodríguez</strong> entra como trunfo criativo, mas sem pernas para os 90 minutos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇧🇷 Brasil: Magia Sem Chão</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>O Brasil vive uma pergunta própria. Tem talento, como sempre. Tem extremos, drible, juventude, nome, peso histórico e aquela obrigação quase injusta de ser mais do que uma equipa. O Brasil nunca pode apenas ganhar. Tem de convencer. Tem de encantar. Tem de parecer Brasil, o que talvez seja a prisão mais bonita do futebol mundial.</p>
+            <p>Mas o Brasil recente tem sofrido com a falta de equilíbrio. Muita magia sem chão vira fumo. Muito ataque sem proteção transforma cada perda de bola num pequeno incêndio. Para ganhar um Mundial, o Brasil precisa de encontrar um meio-campo que permita aos artistas serem artistas sem obrigar a defesa a viver em estado de emergência.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Equilíbrio Crítico</h4>
+            <ul>
+                <li><strong>Carregar o Piano:</strong> O modelo de Dorival Júnior ressente-se da falta de um '5' posicional (pós-Casemiro).</li>
+                <li><strong>Destaques:</strong> Vinícius Jr. e Rodrygo fixam o drible; Endrick entra como agitador e Neymar é gerido fisicamente.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- CTA Diário: meio -->
+<div style="background:#f0ede6; border-left:6px solid var(--accent-red); border-radius:10px; padding:28px 32px; margin:60px 0; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+    <div style="flex:1 1 320px;">
+        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:3px; font-weight:800; color:var(--accent-red); margin-bottom:6px;">Edição Diária</div>
+        <div style="font-size:1.5rem; font-weight:900; letter-spacing:-0.5px; line-height:1.15; color:var(--text-dark);">O guia é o mapa. O diário é a viagem.</div>
+        <div style="font-size:1rem; color:var(--text-muted); margin-top:8px;">Crónicas jogo a jogo, os nossos palpites (erros incluídos) e o caos de fora das quatro linhas.</div>
+    </div>
+    <a href="diario.html" style="flex:0 0 auto; background:var(--text-dark); color:#fff; text-decoration:none; font-weight:800; text-transform:uppercase; letter-spacing:1px; font-size:0.9rem; padding:14px 26px; border-radius:999px; white-space:nowrap;">Abrir o Diário &rarr;</a>
+</div>
+    <h2 class="section-title">🇬🇧 🇩🇪 O Peso dos Fantasmas</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>A <strong>Inglaterra</strong> volta a chegar com talento para alimentar esperança e trauma na mesma medida. Mas a camisola inglesa transforma cada torneio numa pergunta psicológica: será desta, ou será apenas mais uma forma elegante de sofrer? Quanto mais forte é o plantel, maior parece o medo de desperdiçá-lo.</p>
+            <p>A <strong>Alemanha</strong> já não assusta como antes. Continua grande e perigosa, mas perdeu aquela aura de inevitabilidade. Hoje, precisa de provar que ainda sabe sofrer como Alemanha. Porque o nome pesa, mas já não defende cantos.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>🩺 Boletim Clínico de Elite</h4>
+            <ul>
+                <li><strong>Inglaterra:</strong> Tuchel fez cortes pesados por forma e fadiga — <strong>Foden, Palmer e Alexander-Arnold ficaram fora</strong> da convocatória, e Maguire também não foi chamado. John Stones, esse, está dentro. A pergunta psicológica de sempre, agora com um banco remodelado.</li>
+                <li><strong>Alemanha:</strong> Musiala e Wirtz inventam espaço, mas Musiala chega curto de ritmo após fratura na perna e luxação do tornozelo no Mundial de Clubes — recuperado, mas mais a entrar do banco.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇲🇦 🇨🇩 O Pulmão de África</h2>
+<div class="split-section">
+    <div class="narrative-column">
+        <p><strong>Marrocos</strong> traz a armada tática mais bem organizada da região africana, jogando num bloco médio-baixo imperial onde as dobras defensivas rolam ao milímetro para desesperar os favoritos.</p>
+        <p>A <strong>RD Congo</strong> é a história mais improvável desta margem: regressa a um Mundial pela primeira vez desde 1974, quando jogou como Zaire. Sob o francês Sébastien Desabre, os "Leopardos" deixaram de ser talento disperso e passaram a ser um bloco — um 4-1-4-1 compacto, dificílimo de partir, que aceita dar a bola e morde nos detalhes. Não encantam: raramente dominam um jogo pelo desenho. Mas sofrem com método e têm sangue-frio do ponto branco — despacharam a Nigéria nos penáltis e só depois carimbaram o lugar frente à Jamaica, no play-off intercontinental.</p>
+        <p>E há um pormenor que te toca diretamente: a RD Congo caiu no Grupo de Portugal. Vais tê-los pela frente.</p>
+    </div>
+    <div class="sidebar-lab">
+        <h4>⚙️ Factos de Laboratório</h4>
+        <ul>
+            <li><strong>🇲🇦 Parede Posicional:</strong> Sofyan Amrabat é o colete de forças do miolo; Hakimi e Ziyech garantem saídas venenosas.</li>
+            <li><strong>🇨🇩 Espinha Dorsal de Premier League:</strong> O capitão Chancel Mbemba comanda o eixo; Aaron Wan-Bissaka trouxe disciplina à direita; Yoane Wissa e o veterano Cédric Bakambu carregam o ataque. O calcanhar de Aquiles é a criação no último terço.</li>
+        </ul>
+    </div>
+</div>
+
+    <h2 class="section-title">🌍 🇨🇴 O Músculo e a Vertigem das Duas Margens</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>Senegal, Costa do Marfim & Gana: O Poder Físico.</strong> O **Senegal** e a **Costa do Marfim** chegam com blocos recuados duríssimos de desmontar e uma facilidade assustadora para esticar o jogo em velocidade. Não procuram a posse artística; procuram o choque e a segunda bola. O **Gana**, por sua vez, assenta na irreverência dos seus extremos para partir defesas posicionais em dois ou três lances elétricos.</p>
+            <p><strong>Egito, Equador & Paraguai: O Cinismo de Tabuleiro.</strong> O **Egito** continua a ser uma das equipas mais cínicas do planeta: defendem baixos, fecham as linhas de passe por dentro e dão a bola ao seu farol ofensivo para resolver na frente. O **Equador** e o **Paraguai** trazem a agressividade clássica da qualificação sul-americana — equipas compactas, que adoram o atrito físico, trancam os corredores laterais e transformam cada canto contra os favoritos numa autêntica batalha na área.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Fatores de Laboratório</h4>
+            <ul>
+                <li><strong>Estilo de Choque:</strong> Senegal e Costa do Marfim usam o miolo físico para quebrar o ritmo criativo dos adversários europeus.</li>
+                <li><strong>O Risco de Transição:</strong> O Equador voa nas alas, mas desorganiza-se com facilidade se for forçado a correr para trás.</li>
+                <li><strong>Bloco Egípcio:</strong> Uma estrutura que não tem vergonha de defender com as linhas coladas à própria área para roubar o espaço de drible.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 class="section-title">🇺🇸 EUA: A Pressão do Quintal</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>A jogar em casa, a seleção dos EUA enfrenta o teste supremo da sua história moderna. Já não são apenas uma promessa de miúdos atléticos que correm muito; esta é a "geração de ouro" que precisa de provar que ganhou maturidade tática europeia para competir no xadrez de eliminação direta.</p>
+            <p>O apoio das bancadas americanas e a energia do público vão empurrar a equipa para a frente, mas o perigo real reside no peso da expectativa. Se o meio-campo perder o critério e o jogo virar uma correria anárquica de parada e resposta, os anfitriões correm o risco de se perder no próprio entusiasmo antes de a maturidade chegar ao relvado.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Fatores Clínicos e de Sistema</h4>
+            <ul>
+                <li><strong>O Trunfo Pulisic:</strong> Toda a criatividade e soluções no último terço dependem da noite inspirada de Christian Pulisic para quebrar blocos baixos.</li>
+                <li><strong>Risco de Transição:</strong> O modelo agressivo expõe com frequência as costas dos dois centrais, criando crateras para avançados rápidos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇲🇽 🇨🇦 México e Canadá: Os Outros Donos da Casa</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>México: O Vulcão da Expectativa.</strong> Jogar num território onde o futebol não é apenas um desporto, é uma corda bamba emocional. A seleção mexicana carrega a obsessão histórica de quebrar a barreira dos oitavos-de-final, e fazê-lo no mítico Estádio Azteca traz um peso quase esmagador. O México tem uma equipa de paixão, ritmo e transições rápidas pelas alas, mas o seu maior inimigo costuma ser a própria ansiedade nacional, que transforma qualquer passe falhado numa crise de estado.</p>
+            <p><strong>Canadá: A Vertigem do Norte.</strong> O Canadá já não é um convidado simpático que aparece para ver como é. Entra em 2026 com uma geração ultra-veloz, habituada aos palcos europeus e com uma fome descarada de chocar o continente. É uma equipa feita para o contra-ataque puro: defendem baixos, fecham os espaços centrais e soltam os cavalos em transições que parecem desenhadas em pistas de gelo.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Fatores de Laboratório</h4>
+            <ul>
+                <li><strong>🇲🇽 A Altitude como Arma:</strong> O México sabe usar as condições da Cidade do México para asfixiar os rivais...</li>
+                <li><strong>🇨🇦 O Fator Alphonso Davies:</strong> É o motor e o acelerador do Canadá...</li>
+            </ul>
+        </div>
+    </div> <h2 class="section-title">🇳🇱 Países Baixos: Entre o Carrossel e a Parede</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>Os Países Baixos chegam ao Mundial a carregar o peso histórico de uma identidade que balança entre a genialidade estética e a frustração competitiva. É a eterna seleção da Laranja Mecânica que toda a gente adora ver jogar quando as engrenagens estão oleadas, mas que historicamente parece guardar um parafuso solto para os momentos de decisão absoluta.</p>
+            <p>Taticamente, o carrossel neerlandês já não é o poema romântico de outros tempos; é um modelo muito mais pragmático, vertical e musculado. Conseguem sufocar blocos médios com uma pressão sufocante na primeira fase de construção, mas o perigo reside na desconexão emocional do grupo quando o plano A esbarra numa parede compacta e o relógio começa a correr contra a paciência de Amesterdão.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Linhas de Laboratório</h4>
+            <ul>
+                <li><strong>A Muralha Recuada:</strong> A liderança e a saída de bola dependem inteiramente da solidez posicional de Virgil van Dijk, o pilar que sustenta o equilíbrio defensivo.</li>
+                <li><strong>O Nó do Miolo:</strong> Falta, por vezes, um criativo puro que ligue os setores quando o adversário baixa as linhas e tranca o corredor central com duas linhas de quatro.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇪🇺 Classe Média Europeia: Os Destruidores de Planos</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>Noruega & Suécia: O Poder de Choque Escandinavo.</strong> A **Noruega** chega a este Mundial com uma urgência quase dramática de provar que é mais do que uma rampa de lançamento para Erling Haaland. O plano deles é simples e brutal: trancar a defense e esticar a bola para o "Monstro" resolver em três passadas. Já a **Suécia** traz um futebol muito mais elétrico, assente na vertigem de Viktor Gyökeres e Alexander Isak — uma dupla que recebe aberto, pede estrada e transforma qualquer perda de bola do adversário em pânico absoluto na área.</p>
+            <p><strong>Suíça & Áustria: A Ciência do Coletivo.</strong> A **Suíça** é o relógio suíço do costume: uma equipa cínica, fria, habituada a sofrer sem desatar as linhas e mestre em arrastar os favoritos para prolongamentos enfadonhos onde a paciência morre. A **Áustria**, sob a doutrina mecânica de Ralf Rangnick, oferece o oposto: um bloco de *Gegenpressing* maníaco, sufocante e que corre os 90 minutos como se cada posse de bola fosse uma questão de honra nacional.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Fatores de Laboratório</h4>
+            <ul>
+                <li><strong>🇳🇴 Dependência Óbvia:</strong> Se o miolo norueguês não conseguir alimentar Haaland sob marcação dupla, a equipa transforma-se num deserto de ideias.</li>
+                <li><strong>🇸🇪 O Fator Gyökeres:</strong> O avançado sueco chega no pico físico da carreira. O perigo real está na anarquia defensiva da Suécia quando o bloco sobe demasiado.</li>
+                <li><strong>🇨🇭 Granit Xhaka:</strong> É o termómetro da Suíça. Se ele mantiver a frieza posicional, a equipa adormece o jogo com bola no pé.</li>
+                <li><strong>🇦🇹 Gestão de Energia:</strong> O modelo de Rangnick exige um desgaste físico brutal. Em torneios longos com viagens e calor, as pernas austríacas podem quebrar mais cedo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇧🇪 🇹🇷 🇭🇷 Bélgica, Turquia e Croácia: O Talento Teimoso</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>Bélgica: A Transição das Linhas.</strong> A Bélgica já não carrega a pressões absurdas daquela "geração de ouro" que dominava os rankings mundiais. Hoje, chega a 2026 com uma cara muito mais renovada, veloz e descomprometida. O plano assenta na capacidade criativa de Kevin De Bruyne para inventar caminhos no meio do bloco adversário e na potência física para explorar as transições rápidas, tentando provar que o estofo competitivo belga se reinventou longe dos holofotes do favoritismo absoluto.</p>
+            <p><strong>Turquia: O Fogo da Nova Vaga.</strong> A Turquia entra neste torneio empurrada por uma das massas associativas mais vibrantes do planeta e por uma geração de jovens que joga sem medo do erro. Não são uma equipa de contenção ou paciência; jogam com uma vertigem tremenda, intensidade nos duelos e uma alma enorme nas bolas paradas. Se o jogo partir e virar um tiroteio tático de parada e resposta, a Turquia sente-se em casa.</p>
+            <p><strong>Croácia: Os Sobreviventes do Tempo.</strong> Falar da Croácia é falar da maior resistência psicológica do futebol moderno. Uma seleção que recusa dar-se por vencida, mestre absoluta em mastigar o ritmo dos jogos, adormecer os favoritos na posse de bola e arrastar as eliminatórias para prolongamentos e penalties. Não têm a velocidade de outros tempos, mas têm um cinismo competitivo e uma leitura de jogo que não se aprende nos relatórios de Excel.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>📋 Fatores de Laboratório</h4>
+            <ul>
+                <li><strong>🇧🇪 O Último Passe:</strong> Toda a rotação ofensiva belga ainda orbita em redor do critério e da saúde física de De Bruyne.</li>
+                <li><strong>🇹🇷 O Fator Arda Güler:</strong> É o génio criativo que assume as rédeas no último terço. Se lhe derem espaço à entrada da área, o pé esquerdo dele decide jogos em segundos.</li>
+                <li><strong>🇭🇷 O Miolo Imortal:</strong> A capacidade da Croácia para mandar no medo do adversário assenta na gestão de bola do seu meio-campo histórico, que sabe congelar o relógio como ninguém.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🛡️ A Resistência do Meio-Campo: Os Blocos Médios</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p><strong>Escócia, Bósnia & Chéquia: A Ordem Rígida.</strong> A **Escócia** traz para o Mundial a sua tradicional alma britânica — blocos defensivos compactos, agressividade nas segundas bolas e um aproveitamento cirúrgico de livres e cantos. A **Bósnia-Herzegovina** e a **Chéquia** oferecem uma rigidez tática muito semelhante: equipas organizadas em sistemas de forte preenchimento central, que aceitam dar a iniciativa aos colossos para morder em contra-ataques diretos.</p>
+            <p><strong>Irão, Tunísia, Argélia, Austrália & Arábia Saudita: A Paciência Geográfica.</strong> O **Irão**, a **Tunísia** e a **Argélia** são especialistas na arte de retirar o espaço interior. Sabem flutuar as linhas de pressão conforme o adversário avança, tornando-se seleções extremamente irritantes para quem gosta de jogar por dentro. Já a **Austrália** e a **Arábia Saudita** assentam em modelos de forte desgaste físico — os australianos pelo poder aéreo, os sauditas pela rápida circulação curta que tenta tirar partido do conhecimento tático dos seus blocos domésticos.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Linhas de Laboratório</h4>
+            <ul>
+                <li><strong>O Perigo das Bolas Paradas:</strong> Escócia e Chéquia usam a envergadura física para transformar qualquer lançamento lateral longo num pesadelo de área.</li>
+                <li><strong>Asfixia por Dentro:</strong> O Irão tranca o espaço entre setores com duas linhas ultra-esmagadas, forçando os favoritos a cruzar à deriva.</li>
+                <li><strong>O Fator Desgaste:</strong> A Austrália desgasta o adversário nos duelos individuais, apostando na quebra física dos criativos na segunda parte.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇯🇵 🇰🇷 Rotação Asiática</h2>
+    <div class="split-section">
+        <div class="narrative-column">
+            <p>Os reis do ritmo e da disciplina tática perfeita. O <strong>Japão</strong> joga num carrossel de alta rotação, com trocas posicionais rápidas que enlouquecem defesas pesadas da Europa. Adoram tombar gigantes. Já a <strong>Coreia do Sul</strong> assenta o jogo em transições elétricas guiadas pela velocidade e critério clínico de Son, sendo um osso duríssimo de roer nos 90 minutos.</p>
+        </div>
+        <div class="sidebar-lab">
+            <h4>⚙️ Rotação e Deficiências</h4>
+            <ul>
+                <li><strong>🇯🇵 Falta de Choque:</strong> O carrossel roda fluido, mas peca por falta de um ponta de lança de área físico.</li>
+                <li><strong>🇰🇷 Dependência:</strong> A estrutura depende em demasia que a bola chegue redonda e em condições a Son sob marcação cerrada.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">🎯 Nomes para seguir além do óbvio</h2>
+    <div class="magazine-grid">
+        <div class="grid-card">
+            <h3>🇵🇹 Vitinha</h3>
+            <p>Não é o mais ruidoso, mas dá ritmo, limpa decisões e evita que a equipa se parta. Decide e dita o oxigénio com temperatura.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇨🇴 Luis Díaz</h3>
+            <p>Vertical, agressivo, imprevisível. Se a Colômbia incendiar o torneio, ele será a figura a queimar as alas por fora.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇩🇪 Musiala</h3>
+            <p>Tem o drible curto de corredor estreito. Quando inspirado, a defesa adversária começa a parecer mal estacionada.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇺🇾 Valverde</h3>
+            <p>Corre, recupera, remata e lidera. Um motor indestrutível com acabamento técnico de elite mundial.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇧🇷 Endrick</h3>
+            <p>O miúdo de momento. Entra sem pedir licença e agita marcadores antes de o adversário perceber quem ele é.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇹🇷 Arda Güler</h3>
+            <p>Talento puro. Pé esquerdo ultra-elegante, decisão cirúrgica no último terço e dono absoluto das bolas paradas da Turquia.</p>
+        </div>
+    </div>
+    
+    <h2 class="section-title">O Tabuleiro dos Outros Caminhos 🌍</h2>
+    <div class="magazine-grid">
+        <div class="grid-card">
+            <h3>🇨🇻 Cabo Verde</h3>
+            <p>Estreia assente na união da diáspora e no 4-3-3 de Bubista. Logan Costa convocado no limite. Não vão para a foto; vão tentar estragar algumas.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇺🇿 Uzbequistão</h3>
+            <p>Bloco de 5 defesas montado por Fabio Cannavaro. O central Khusanov (Man. City) é uma parede. Vencem pelo incómodo e pela paciência.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇯🇴 Jordânia</h3>
+            <p>Estreante e livre de pressões. Toda a vertigem e contra-ataques dependem da velocidade de Musa Al-Tamari após a baixa de Al-Naimat.</p>
+        </div>
+        <div class="grid-card">
+            <h3>🇮🇶 Iraque</h3>
+            <p>O regresso após longa espera. Jesús Casas renovou o grupo com miúdos da diáspora. O possante Aymen Hussein manda no jogo aéreo.</p>
+        </div>
+
+        <div class="grid-card" style="grid-column: span 2;">
+            <h3>🎲 Panamá & Catar: Os Calculistas</h3>
+            <p>O <strong>Panamá</strong> e o <strong>Catar</strong> entram no tabuleiro com a lição tática estudada em torneios continentais: blocos baixos, linhas compactas e muita velocidade para explorar o erro e a ansiedade dos favoritos no início da fase de grupos.</p>
+        </div>
+        <div class="grid-card" style="grid-column: span 2;">
+            <h3>🎭 África do Sul, Curaçao & Haiti: A Vertigem</h3>
+            <p>A <strong>África do Sul</strong> traz o futebol apoiado e de passe curto da sua liga local, enquanto as estreias de <strong>Curaçao</strong> e <strong>Haiti</strong> são pura imprevisibilidade caribenha — seleções fisicamente explosivas e completamente descomprometidas com a calculadora.</p>
+        </div>
+    </div>
+    <h2 class="section-title">🇵🇹 A Liga que Veste Outras Bandeiras</h2>
+<div class="editorial-text">
+    <p class="dropcap">Há um Mundial dentro do Mundial. Enquanto Portugal leva os seus, a Liga portuguesa exporta talento por meio mundo: vinte e sete estrangeiros que passaram a época nos nossos relvados vão jogar este torneio com outras catorze bandeiras — de gigantes como o Benfica a clubes de Liga 2 como o Vizela, o Torreense e o Farense.</p>
+</div>
+
+<div class="signature-box">
+    <h2>🦈 O Dado que Diz Tudo</h2>
+    <p>Cabo Verde levou <strong>sete</strong> jogadores da Liga portuguesa para a sua estreia mundial. Portugal levou cinco. Ou seja: a nossa liga vestiu mais a camisola dos "tubarões azuis" do que a das Quinas. Se há prova de que o campeonato se tornou uma fábrica de seleções, é esta.</p>
+</div>
+
+<div class="magazine-grid">
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>🦅 SL Benfica · 7</h3>
+        <p style="margin-bottom:9px;"><strong>Otamendi 🇦🇷</strong> — campeão do mundo em título; é o seu quarto Mundial (2010, 2018, 2022, 2026), já de saída para o River Plate.</p>
+        <p style="margin-bottom:9px;"><strong>Aursnes 🇳🇴</strong> — na primeira presença da Noruega num Mundial em 28 anos.</p>
+        <p style="margin-bottom:9px;"><strong>Schjelderup 🇳🇴</strong> — o jovem dessa mesma Noruega que regressa com Haaland e Ødegaard.</p>
+        <p style="margin-bottom:9px;"><strong>Richard Ríos 🇨🇴</strong> — caiu no grupo de Portugal; vai defrontar o país onde joga.</p>
+        <p style="margin-bottom:9px;"><strong>Lukébakio 🇧🇪</strong> — ala da Bélgica do pós-geração de ouro.</p>
+        <p style="margin-bottom:9px;"><strong>Amar Dedić 🇧🇦</strong> — a Bósnia chegou aqui a eliminar a Itália nos penáltis do play-off.</p>
+        <p style="margin:0;"><strong>Sidny Cabral 🇨🇻</strong> — estreante absoluto, como toda a primeira vez de Cabo Verde.</p>
+    </div>
+
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>🦁 Sporting CP · 4</h3>
+        <p style="margin-bottom:9px;"><strong>Debast 🇧🇪</strong> — dos poucos do grupo com Mundial nas pernas (2022), mas falhou a estreia de 2026 frente ao Egito.</p>
+        <p style="margin-bottom:9px;"><strong>Diomande 🇨🇮</strong> — central jovem ao serviço da Costa do Marfim.</p>
+        <p style="margin-bottom:9px;"><strong>Maxi Araújo 🇺🇾</strong> — o Uruguai caiu no grupo de Cabo Verde; vai cruzar-se com vários colegas de liga.</p>
+        <p style="margin:0;"><strong>Luis Suárez 🇨🇴</strong> — o "outro" Luis Suárez: este vai ao Mundial pela Colômbia, enquanto o uruguaio ficou de fora.</p>
+    </div>
+
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>⚔️ SC Braga · 4</h3>
+        <p style="margin-bottom:9px;"><strong>Horníček 🇨🇿</strong> — guarda-redes da Chéquia, que voltou ao Mundial via play-off.</p>
+        <p style="margin-bottom:9px;"><strong>Lagerbielke 🇸🇪</strong> — central de uma Suécia que passou por cima da Polónia no play-off.</p>
+        <p style="margin-bottom:9px;"><strong>Grillitsch 🇦🇹</strong> — médio da Áustria, de regresso a um Mundial pela primeira vez desde 1998.</p>
+        <p style="margin:0;"><strong>Rodrigo Zalazar 🇺🇾</strong> — vai à FIFA como jogador do Braga, apesar de já ter assinado pelo Sporting.</p>
+    </div>
+
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>🐉 FC Porto · 2</h3>
+        <p style="margin-bottom:9px;"><strong>Deniz Gül 🇹🇷</strong> — jovem avançado da Turquia, apurada no play-off.</p>
+        <p style="margin:0;"><strong>Seko Fofana 🇨🇮</strong> — médio ao serviço da Costa do Marfim.</p>
+    </div>
+
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>🇨🇻 O Resto da Armada Cabo-verdiana</h3>
+        <p style="margin-bottom:9px;"><strong>Dailon Livramento</strong> (Casa Pia) — marcou o golo que aproximou Cabo Verde do apuramento, frente aos Camarões.</p>
+        <p style="margin-bottom:9px;"><strong>Vozinha</strong> (Chaves) — o guarda-redes da estreia histórica.</p>
+        <p style="margin-bottom:9px;"><strong>Jovane Cabral</strong> (Estrela da Amadora) — ex-Sporting, recuperado a tempo para o grupo.</p>
+        <p style="margin-bottom:9px;"><strong>Yannick Semedo</strong> (Farense, Liga 2) — médio dos "tubarões azuis".</p>
+        <p style="margin-bottom:9px;"><strong>Telmo Arcanjo</strong> (V. Guimarães) — meio-campo da geração da estreia.</p>
+        <p style="margin:0;"><strong>Stopira</strong> (Torreense, Liga 2) — o defesa veterano que atravessou toda a caminhada.</p>
+    </div>
+
+    <div class="grid-card" style="grid-column: span 2;">
+        <h3>🌍 Os Outros Outsiders</h3>
+        <p style="margin-bottom:9px;"><strong>Yassin Fortuné & Leverton Pierre 🇭🇹</strong> (Vizela, Liga 2) — dois da II Liga a carregar o Haiti ao primeiro Mundial em 52 anos.</p>
+        <p style="margin-bottom:9px;"><strong>Ghislain Konan 🇨🇮</strong> (Gil Vicente) — lateral-esquerdo da Costa do Marfim.</p>
+        <p style="margin:0;"><strong>Yaya Sithole 🇿🇦</strong> (Tondela) — a África do Sul fechou a qualificação africana à frente da própria Nigéria.</p>
+    </div>
+</div>
+
+
+    
+    <div class="tier-legend">
+        <div class="tier-row">
+            <span class="badge-dot d1"></span> 
+            <strong>Tier 1 (Elite):</strong> França, Espanha, Brasil, Argentina, Portugal, Inglaterra.
+        </div>
+        <div class="tier-row">
+            <span class="badge-dot d2"></span> 
+            <strong>Tier 2 (Pesadelos):</strong> Uruguai, Colômbia, Alemanha, Croácia, Países Baixos, Marrocos.
+        </div>
+        <div class="tier-row">
+            <span class="badge-dot d3"></span> 
+            <strong>Tier 3 (Classe Média):</strong> Japão, Coreia do Sul, EUA, México, Noruega, Suécia, Suíça, Áustria, Canadá, Bélgica, Turquia, Senegal, Costa do Marfim, Equador, Chéquia, Austrália.
+        </div>
+        <div class="tier-row">
+            <span class="badge-dot d4"></span> 
+            <strong>Tier 4/5 (Perigos/Estreias):</strong> Uzbequistão, Cabo Verde, Jordânia, Iraque, Bósnia-Herzegovina, Escócia, Egito, Gana, Paraguai, Irão, Tunísia, Panamá, Argélia, Catar, RD Congo, Curaçao, Haiti, Nova Zelândia, Arábia Saudita, África do Sul.
+        </div>
+    </div>
+    <h2 class="section-title">Fechar o Excel, abrir o jogo ⚽</h2>
+    <div class="editorial-text">
+        <p>Podemos escrever quarenta páginas de análise e sentir, por instantes, que compreendemos alguma coisa. Depois a bola rola. E quando a bola rola, os computadores deixam de correr. Quem corre são os homens. Quem falha são os homens. Quem inventa são os homens. Quem treme, quem insiste, quem cai, quem se levanta aos 90+4 para atacar uma última bola bombeada para a área — são os homens.</p>
+        <p>O Mundial de 2026 será menos puro e mais selvagem. Menos concentrado e mais disperso. Dependente de detalhes físicos, emocionais e logísticos. Não bastará jogar bem. Será preciso viajar bem, recuperar bem, gerir bem, sofrer bem. O resto é nevoeiro. E ainda bem. Sem caos, isto era só calendário. Com caos, volta a ser futebol.</p>
+    </div>
+    <!-- CTA Diário: fim -->
+<div class="signature-box" style="text-align:center;">
+    <h2 style="color:var(--accent-green);">📓 O Caos Continua no Diário</h2>
+    <p>O guia foi escrito antes do apito inicial. Agora a bola rola — e cada dia traz novos ressaltos. Acompanha as crónicas, os palpites e os tropeções no <strong>Diário do Caos</strong>.</p>
+    <p style="margin-bottom:0;">
+        <a href="diario.html" style="display:inline-block; background:var(--accent-green); color:#fff; text-decoration:none; font-weight:800; text-transform:uppercase; letter-spacing:1px; font-size:1rem; padding:15px 34px; border-radius:999px; margin-top:10px;">Entrar no Diário &rarr;</a>
+    </p>
+</div>
+    <footer>
+        "Porque o futebol é o único lugar onde uma análise de 40 páginas pode morrer num ressalto."
+    </footer>
+
+</div>
+
+</body>
+</html>
+    
