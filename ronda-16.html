@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronda dos 16 — Mundial 2026</title>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ronda dos 16 — Mundial 2026">
+    <meta property="og:description" content="Oitavos de final do Mundial 2026: dois jogos por dia, análise limpa, prognósticos afinados e quadro vivo.">
+    <meta property="og:url" content="https://sergiob79.github.io/mundial2026/ronda-16.html">
+    <meta property="og:site_name" content="O Guia do Caos">
+    <style>
+        :root {
+            --paper: #f6f3ec;
+            --ink: #101217;
+            --muted: #667085;
+            --line: #ded8cc;
+            --card: #fffefa;
+            --acid: #c7ff3d;
+            --red: #e23b3b;
+            --blue: #2563eb;
+            --black: #05070b;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(199,255,61,.20), transparent 28%),
+                radial-gradient(circle at 90% 10%, rgba(37,99,235,.14), transparent 30%),
+                var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; }
+        .page { max-width: 1180px; margin: 0 auto; padding: 32px 18px 68px; }
+        .nav {
+            display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap;
+            border: 1px solid var(--ink); border-radius: 999px; padding: 10px 14px; background: rgba(255,254,250,.75); backdrop-filter: blur(10px);
+            position: sticky; top: 12px; z-index: 10;
+        }
+        .brand { font-weight: 950; letter-spacing: -.5px; text-decoration: none; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 10px; flex-wrap: wrap; font-size: .82rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 850; }
+        .nav-links a { text-decoration: none; padding: 8px 10px; border-radius: 999px; color: var(--muted); }
+        .nav-links a.active, .nav-links a:hover { color: var(--ink); background: var(--acid); }
+        .hero {
+            margin: 44px 0 28px; min-height: 420px; border-radius: 34px; overflow: hidden; color: #fff;
+            background:
+                linear-gradient(110deg, rgba(5,7,11,.92), rgba(5,7,11,.62)),
+                repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 70px),
+                linear-gradient(135deg, #111827, #1e293b 56%, #0f172a);
+            display: grid; grid-template-columns: 1.18fr .82fr; gap: 22px; padding: clamp(28px, 6vw, 70px); position: relative;
+            box-shadow: 0 30px 80px rgba(16,18,23,.16);
+        }
+        .hero::after { content: "16"; position: absolute; right: 28px; bottom: -34px; font-size: clamp(8rem, 24vw, 18rem); font-weight: 950; letter-spacing: -16px; color: rgba(255,255,255,.06); line-height: .75; }
+        .eyebrow { color: var(--acid); font-size: .8rem; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 950; margin-bottom: 18px; display: inline-block; }
+        h1 { font-size: clamp(3.8rem, 11vw, 8.4rem); line-height: .78; letter-spacing: -7px; margin: 0 0 22px; text-transform: uppercase; }
+        .deck { font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.45; max-width: 720px; color: #f8fafc; margin: 0; font-style: italic; }
+        .hero-panel { align-self: end; position: relative; z-index: 2; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 22px; backdrop-filter: blur(14px); }
+        .hero-panel strong { display: block; color: var(--acid); font-size: 2.3rem; line-height: 1; margin-bottom: 8px; }
+        .hero-panel p { margin: 0; color: #e5e7eb; line-height: 1.55; }
+        .status-grid, .match-grid, .bracket-grid, .source-grid { display: grid; gap: 18px; }
+        .status-grid { grid-template-columns: repeat(4, minmax(0,1fr)); margin: 24px 0 54px; }
+        .pill-card, .match-card, .panel, .source-card { background: rgba(255,254,250,.92); border: 1px solid var(--line); border-radius: 24px; padding: 22px; box-shadow: 0 14px 36px rgba(16,18,23,.05); }
+        .pill-card b { display: block; font-size: .72rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+        .pill-card strong { display: block; font-size: 1.55rem; letter-spacing: -1px; margin-bottom: 8px; }
+        .pill-card p, .panel p, .source-card p { margin: 0; color: var(--muted); line-height: 1.58; }
+        .section-head { margin: 58px 0 22px; display: flex; align-items: end; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 14px; }
+        .section-head h2 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); line-height: .9; letter-spacing: -3px; text-transform: uppercase; }
+        .section-head span { color: var(--muted); font-weight: 850; text-transform: uppercase; letter-spacing: 1.6px; font-size: .78rem; }
+        .match-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .match-card { padding: 0; overflow: hidden; }
+        .match-top { padding: 22px; background: var(--black); color: #fff; display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+        .match-top .time { color: var(--acid); font-weight: 950; letter-spacing: 1.4px; text-transform: uppercase; font-size: .8rem; }
+        .match-top .venue { color: #cbd5e1; font-size: .82rem; text-align: right; }
+        .teams { padding: 28px 22px 20px; display: grid; gap: 12px; }
+        .team { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: clamp(1.55rem, 4vw, 2.4rem); font-weight: 950; letter-spacing: -1.5px; line-height: 1; }
+        .seed { font-size: .72rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); font-weight: 900; }
+        .analysis { padding: 0 22px 24px; display: grid; gap: 14px; }
+        .analysis p { margin: 0; color: #344054; line-height: 1.66; font-size: 1.02rem; }
+        .prediction { border: 2px solid var(--ink); background: var(--acid); border-radius: 16px; padding: 15px; font-weight: 950; letter-spacing: -.2px; }
+        .risk { border-left: 5px solid var(--red); padding: 10px 0 10px 14px; color: var(--muted); font-size: .96rem; }
+        .bracket-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .bracket-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; min-height: 118px; }
+        .bracket-card b { display: block; color: var(--red); font-size: .72rem; text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 8px; }
+        .bracket-card p { margin: 0; color: var(--ink); font-weight: 850; line-height: 1.35; }
+        .panel { margin-top: 20px; }
+        .panel h3 { margin: 0 0 12px; font-size: 1.4rem; letter-spacing: -.6px; }
+        .source-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        .source-card a { font-weight: 900; text-decoration-thickness: 2px; }
+
+        .day-block { margin: 34px 0 46px; }
+        .result-card { background: var(--black); color: #fff; border-radius: 24px; padding: 24px; box-shadow: 0 18px 44px rgba(16,18,23,.12); }
+        .result-card h3 { margin: 0 0 10px; font-size: 1.65rem; letter-spacing: -.8px; }
+        .result-card .score { color: var(--acid); font-weight: 950; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px; display: block; }
+        .result-card p { color: #e5e7eb; line-height: 1.62; margin: 0; }
+        .review-strip { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+        .review-card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+        .review-card b { color: var(--red); text-transform: uppercase; letter-spacing: 1.2px; font-size: .74rem; display: block; margin-bottom: 8px; }
+        .review-card p { margin: 0; color: #344054; line-height: 1.55; }
+        .qualified { border: 2px solid var(--ink); background: linear-gradient(135deg, var(--acid), #fffefa); }
+        @media (max-width: 900px) { .review-strip { grid-template-columns: 1fr; } }
+        footer { margin-top: 62px; padding-top: 26px; border-top: 2px solid var(--ink); font-weight: 950; font-style: italic; text-align: center; font-size: 1.2rem; }
+        @media (max-width: 900px) { .hero, .match-grid, .status-grid, .bracket-grid, .source-grid { grid-template-columns: 1fr; } h1 { letter-spacing: -4px; } .nav { position: static; border-radius: 24px; } }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <nav class="nav">
+            <a class="brand" href="index.html">O Guia do Caos</a>
+            <div class="nav-links">
+                <a href="ronda-32.html">Arquivo R32</a>
+                <a class="active" href="ronda-16.html">Ronda dos 16</a>
+                <a href="mapa-dos-sobreviventes.html">Sobreviventes</a>
+                <a href="especial-portugal-croacia.html">Portugal–Croácia</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div>
+                <span class="eyebrow">Oitavos de final · Dia 2 · 5 de julho · Horários PT</span>
+                <h1>Ronda<br>dos 16</h1>
+                <p class="deck">A primeira porta fechou sem poesia para os anfitriões. Marrocos e França passaram; hoje entram Brasil, Noruega, México e Inglaterra. Menos jogos. Mais lâmina.</p>
+            </div>
+            <aside class="hero-panel">
+                <strong>2 jogos</strong>
+                <p>Brasil–Noruega às 21h e México–Inglaterra às 03h. Um jogo de estrelas contra gelo nórdico; outro de estádio inteiro contra a velha ansiedade inglesa.</p>
+            </aside>
+        </header>
+
+        <section class="status-grid">
+            <article class="pill-card"><b>Formato</b><strong>8 jogos · 4 dias</strong><p>Dois por dia. A página fica mais limpa: análise mais longa, menos agenda acumulada.</p></article>
+            <article class="pill-card"><b>Hoje</b><strong>BRA–NOR · MEX–ING</strong><p>O segundo dia cruza mito, casa e desconforto: Brasil contra Haaland; México contra Inglaterra na última noite mexicana.</p></article>
+            <article class="pill-card"><b>Portugal</b><strong id="portugal-espanha">vs Espanha</strong><p>O duelo ibérico fica no terceiro dia da ronda. A margem emocional já vem curta.</p></article>
+            <article class="pill-card"><b>Já passaram</b><strong>MAR · FRA</strong><p>Marrocos atropelou o Canadá. França passou pelo buraco estreito de um penálti de Mbappé.</p></article>
+        </section>
+
+        <div class="section-head">
+            <h2>Ontem: a faca entrou</h2>
+            <span>Resultados confirmados</span>
+        </div>
+
+        <section class="match-grid day-block">
+            <article class="result-card">
+                <span class="score">Canadá 0–3 Marrocos</span>
+                <h3>O anfitrião saiu sem guarda de honra</h3>
+                <p>O Canadá chegou aos oitavos com a energia limpa da história feita. Marrocos tratou isso como ruído. Azzedine Ounahi marcou duas vezes na segunda parte, Soufiane Rahimi fechou aos 90+8, e o coanfitrião caiu em Houston sem conseguir transformar estádio em argumento.</p>
+            </article>
+            <article class="result-card">
+                <span class="score">Paraguai 0–1 França</span>
+                <h3>Mbappé abriu a fechadura</h3>
+                <p>O Paraguai conseguiu transformar o jogo num corredor baixo, feio e quase sem ar. A França aceitou a pobreza estética e esperou pelo erro. Aos 69/70 minutos, Mbappé converteu de penálti e levou a equipa para os quartos. Não foi demonstração. Foi sentença curta.</p>
+            </article>
+        </section>
+
+        <div class="section-head">
+            <h2>Revisão dos palpites</h2>
+            <span>Ontem vs realidade</span>
+        </div>
+
+        <section class="review-strip">
+            <article class="review-card">
+                <b>Canadá–Marrocos</b>
+                <p><strong>Palpite:</strong> 1–1, Marrocos nos penáltis. <strong>Saiu:</strong> 0–3. Vencedor certo; caminho errado. Não houve drama até ao ponto de penálti. Houve Marrocos adulto, Canadá esvaziado e Ounahi a cortar o jogo ao meio.</p>
+            </article>
+            <article class="review-card">
+                <b>Paraguai–França</b>
+                <p><strong>Palpite:</strong> 0–2 França. <strong>Saiu:</strong> 0–1. Vencedor certo; excesso de limpeza no marcador. O Paraguai segurou mais do que parecia provável, mas a França tem essa crueldade: não precisa de jogar bonito para continuar viva.</p>
+            </article>
+        </section>
+
+        <section class="panel qualified">
+            <h3>Primeiro quarto-de-final definido</h3>
+            <p><strong>Marrocos vs França · 9 de julho · Boston.</strong> O primeiro dia entregou um quarto-de-final com duas formas diferentes de frieza: Marrocos pela fricção organizada; França pela elite que resolve mesmo quando o jogo está sujo.</p>
+        </section>
+
+        <div class="section-head">
+            <h2>Jogos de hoje</h2>
+            <span>Dia 2 · prognósticos</span>
+        </div>
+
+        <section class="match-grid">
+            <article class="match-card">
+                <div class="match-top">
+                    <div><div class="time">21:00 · M91</div><strong>Oitavos de final</strong></div>
+                    <div class="venue">New York/New Jersey Stadium<br>Hora de Portugal continental</div>
+                </div>
+                <div class="teams">
+                    <div class="team"><span>Brasil</span><span class="seed">peso histórico</span></div>
+                    <div class="team"><span>Noruega</span><span class="seed">Haaland e gelo</span></div>
+                </div>
+                <div class="analysis">
+                    <p>O Brasil chega ao jogo que parece confortável no papel e perigoso na prática. Contra o Japão, teve de provar que ainda sabe acelerar quando o jogo pede faca. Agora apanha uma Noruega que não veio fazer turismo: corpo, verticalidade, bola longa com intenção e Haaland como problema que não precisa de muitas páginas.</p>
+                    <p>A Noruega não tem de dominar para ferir. Tem de sobreviver aos primeiros vinte minutos, impedir que o Brasil transforme largura em carnaval, e depois acertar a primeira bola que cair entre central e guarda-redes. É o tipo de adversário que parece simples até marcar.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> Brasil tem de matar a transição antes dela nascer. Se permitir jogo partido, dá a Haaland exactamente a matéria-prima que ele pede: espaço, contacto e uma bola com cheiro a pânico.</p>
+                    <div class="prediction">Prognóstico: Brasil 2–1 Noruega</div>
+                </div>
+            </article>
+
+            <article class="match-card">
+                <div class="match-top">
+                    <div><div class="time">03:00 · M92</div><strong>Oitavos de final</strong></div>
+                    <div class="venue">Mexico City Stadium<br>Madrugada de 6 de julho em Portugal</div>
+                </div>
+                <div class="teams">
+                    <div class="team"><span>México</span><span class="seed">última noite em casa</span></div>
+                    <div class="team"><span>Inglaterra</span><span class="seed">talento sob ruído</span></div>
+                </div>
+                <div class="analysis">
+                    <p>O México joga o último jogo do torneio em solo mexicano. Isso não é detalhe: é combustível e é veneno. A equipa vai ter estádio, pressão, memória e urgência. Se marcar primeiro, o jogo deixa de ser futebol internacional e passa a ser cerimónia tribal.</p>
+                    <p>A Inglaterra tem mais talento bruto e mais formas de resolver, mas também tem o velho vício de conversar demasiado com o próprio medo. Contra a RD Congo passou; agora o problema é outro: gerir altitude emocional, assobio, e uma equipa mexicana que vai tratar cada duelo como fronteira.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> se a Inglaterra controlar o primeiro quarto de hora, ganha autoridade. Se o México empurra o jogo para coração e segunda bola, o favorito começa a pesar a própria camisola.</p>
+                    <div class="prediction">Prognóstico: México 1–1 Inglaterra · Inglaterra nos penáltis</div>
+                </div>
+            </article>
+        </section>
+
+        <div class="section-head">
+            <h2>Quadro dos oitavos</h2>
+            <span>Mapa actualizado</span>
+        </div>
+
+        <section class="bracket-grid">
+            <article class="bracket-card qualified"><b>M89 · terminado</b><p>Paraguai 0–1 França</p></article>
+            <article class="bracket-card qualified"><b>M90 · terminado</b><p>Canadá 0–3 Marrocos</p></article>
+            <article class="bracket-card"><b>M91 · 05/07 · 21h</b><p>Brasil vs Noruega</p></article>
+            <article class="bracket-card"><b>M92 · 06/07 · 03h PT</b><p>México vs Inglaterra</p></article>
+            <article class="bracket-card"><b>M93</b><p>Portugal vs Espanha</p></article>
+            <article class="bracket-card"><b>M94</b><p>Estados Unidos vs Bélgica</p></article>
+            <article class="bracket-card"><b>M95</b><p>Argentina vs Egito</p></article>
+            <article class="bracket-card"><b>M96</b><p>Suíça vs Colômbia</p></article>
+        </section>
+
+        <section class="panel">
+            <h3>Leitura do dia</h3>
+            <p>O primeiro dia dos oitavos limpou uma ilusão: jogar em casa não basta, e sofrer bonito também não. O segundo dia muda o eixo. Brasil–Noruega é o jogo da diferença entre mito e mecanismo. México–Inglaterra é o jogo da diferença entre estádio e nervo. Quem passar sai com caminho aberto para as próximas páginas; quem cair vira rodapé cruel.</p>
+        </section>
+
+        <div class="section-head">
+            <h2>Fontes usadas</h2>
+            <span>Dados factuais</span>
+        </div>
+        <section class="source-grid">
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-morocco-match-report-highlights">FIFA</a>: Canadá 0–3 Marrocos; bis de Azzedine Ounahi e golo tardio de Soufiane Rahimi.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights">FIFA</a>: Paraguai 0–1 França; penálti de Kylian Mbappé e França apurada para defrontar Marrocos.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums">FIFA</a>: M91 Brasil–Noruega em New York/New Jersey; M92 México–Inglaterra no Mexico City Stadium.</p></article>
+        </section>
+
+        <footer>Os oitavos já começaram a escolher quem tem faca e quem só trouxe bandeira.</footer>
+    </main>
+</body>
+</html>
