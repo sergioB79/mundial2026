@@ -88,6 +88,18 @@
         .panel h3 { margin: 0 0 12px; font-size: 1.4rem; letter-spacing: -.6px; }
         .source-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
         .source-card a { font-weight: 900; text-decoration-thickness: 2px; }
+
+        .day-block { margin: 34px 0 46px; }
+        .result-card { background: var(--black); color: #fff; border-radius: 24px; padding: 24px; box-shadow: 0 18px 44px rgba(16,18,23,.12); }
+        .result-card h3 { margin: 0 0 10px; font-size: 1.65rem; letter-spacing: -.8px; }
+        .result-card .score { color: var(--acid); font-weight: 950; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px; display: block; }
+        .result-card p { color: #e5e7eb; line-height: 1.62; margin: 0; }
+        .review-strip { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+        .review-card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+        .review-card b { color: var(--red); text-transform: uppercase; letter-spacing: 1.2px; font-size: .74rem; display: block; margin-bottom: 8px; }
+        .review-card p { margin: 0; color: #344054; line-height: 1.55; }
+        .qualified { border: 2px solid var(--ink); background: linear-gradient(135deg, var(--acid), #fffefa); }
+        @media (max-width: 900px) { .review-strip { grid-template-columns: 1fr; } }
         footer { margin-top: 62px; padding-top: 26px; border-top: 2px solid var(--ink); font-weight: 950; font-style: italic; text-align: center; font-size: 1.2rem; }
         @media (max-width: 900px) { .hero, .match-grid, .status-grid, .bracket-grid, .source-grid { grid-template-columns: 1fr; } h1 { letter-spacing: -4px; } .nav { position: static; border-radius: 24px; } }
     </style>
@@ -106,74 +118,113 @@
 
         <header class="hero">
             <div>
-                <span class="eyebrow">Oitavos de final · Dia 1 · 4 de julho · Horários PT</span>
+                <span class="eyebrow">Oitavos de final · Dia 2 · 5 de julho · Horários PT</span>
                 <h1>Ronda<br>dos 16</h1>
-                <p class="deck">Saiu a multidão. Ficou o corredor estreito. Agora são dois jogos por dia, menos barulho, mais leitura, e cada previsão tem de cortar mais fino.</p>
+                <p class="deck">A primeira porta fechou sem poesia para os anfitriões. Marrocos e França passaram; hoje entram Brasil, Noruega, México e Inglaterra. Menos jogos. Mais lâmina.</p>
             </div>
             <aside class="hero-panel">
                 <strong>2 jogos</strong>
-                <p>Canadá–Marrocos às 18h e Paraguai–França às 22h. Primeiro dia dos oitavos: anfitrião contra semifinalista africano; sobrevivente alemão contra a equipa que menos pede licença.</p>
+                <p>Brasil–Noruega às 21h e México–Inglaterra às 03h. Um jogo de estrelas contra gelo nórdico; outro de estádio inteiro contra a velha ansiedade inglesa.</p>
             </aside>
         </header>
 
         <section class="status-grid">
             <article class="pill-card"><b>Formato</b><strong>8 jogos · 4 dias</strong><p>Dois por dia. A página fica mais limpa: análise mais longa, menos agenda acumulada.</p></article>
-            <article class="pill-card"><b>Hoje</b><strong>CAN–MAR · PAR–FRA</strong><p>O lado A abre os oitavos e começa a desenhar o primeiro quarto-de-final.</p></article>
+            <article class="pill-card"><b>Hoje</b><strong>BRA–NOR · MEX–ING</strong><p>O segundo dia cruza mito, casa e desconforto: Brasil contra Haaland; México contra Inglaterra na última noite mexicana.</p></article>
             <article class="pill-card"><b>Portugal</b><strong id="portugal-espanha">vs Espanha</strong><p>O duelo ibérico fica no terceiro dia da ronda. A margem emocional já vem curta.</p></article>
-            <article class="pill-card"><b>Últimos apurados</b><strong>EGI · ARG · COL</strong><p>Egito, Argentina e Colômbia fecharam a Ronda dos 32 e completaram o quadro.</p></article>
+            <article class="pill-card"><b>Já passaram</b><strong>MAR · FRA</strong><p>Marrocos atropelou o Canadá. França passou pelo buraco estreito de um penálti de Mbappé.</p></article>
+        </section>
+
+        <div class="section-head">
+            <h2>Ontem: a faca entrou</h2>
+            <span>Resultados confirmados</span>
+        </div>
+
+        <section class="match-grid day-block">
+            <article class="result-card">
+                <span class="score">Canadá 0–3 Marrocos</span>
+                <h3>O anfitrião saiu sem guarda de honra</h3>
+                <p>O Canadá chegou aos oitavos com a energia limpa da história feita. Marrocos tratou isso como ruído. Azzedine Ounahi marcou duas vezes na segunda parte, Soufiane Rahimi fechou aos 90+8, e o coanfitrião caiu em Houston sem conseguir transformar estádio em argumento.</p>
+            </article>
+            <article class="result-card">
+                <span class="score">Paraguai 0–1 França</span>
+                <h3>Mbappé abriu a fechadura</h3>
+                <p>O Paraguai conseguiu transformar o jogo num corredor baixo, feio e quase sem ar. A França aceitou a pobreza estética e esperou pelo erro. Aos 69/70 minutos, Mbappé converteu de penálti e levou a equipa para os quartos. Não foi demonstração. Foi sentença curta.</p>
+            </article>
+        </section>
+
+        <div class="section-head">
+            <h2>Revisão dos palpites</h2>
+            <span>Ontem vs realidade</span>
+        </div>
+
+        <section class="review-strip">
+            <article class="review-card">
+                <b>Canadá–Marrocos</b>
+                <p><strong>Palpite:</strong> 1–1, Marrocos nos penáltis. <strong>Saiu:</strong> 0–3. Vencedor certo; caminho errado. Não houve drama até ao ponto de penálti. Houve Marrocos adulto, Canadá esvaziado e Ounahi a cortar o jogo ao meio.</p>
+            </article>
+            <article class="review-card">
+                <b>Paraguai–França</b>
+                <p><strong>Palpite:</strong> 0–2 França. <strong>Saiu:</strong> 0–1. Vencedor certo; excesso de limpeza no marcador. O Paraguai segurou mais do que parecia provável, mas a França tem essa crueldade: não precisa de jogar bonito para continuar viva.</p>
+            </article>
+        </section>
+
+        <section class="panel qualified">
+            <h3>Primeiro quarto-de-final definido</h3>
+            <p><strong>Marrocos vs França · 9 de julho · Boston.</strong> O primeiro dia entregou um quarto-de-final com duas formas diferentes de frieza: Marrocos pela fricção organizada; França pela elite que resolve mesmo quando o jogo está sujo.</p>
         </section>
 
         <div class="section-head">
             <h2>Jogos de hoje</h2>
-            <span>Análise afinada</span>
+            <span>Dia 2 · prognósticos</span>
         </div>
 
         <section class="match-grid">
             <article class="match-card">
                 <div class="match-top">
-                    <div><div class="time">18:00 · M90</div><strong>Oitavos de final</strong></div>
-                    <div class="venue">Houston · NRG Stadium<br>Hora de Portugal continental</div>
+                    <div><div class="time">21:00 · M91</div><strong>Oitavos de final</strong></div>
+                    <div class="venue">New York/New Jersey Stadium<br>Hora de Portugal continental</div>
                 </div>
                 <div class="teams">
-                    <div class="team"><span>Canadá</span><span class="seed">anfitrião</span></div>
-                    <div class="team"><span>Marrocos</span><span class="seed">especialista em fricção</span></div>
+                    <div class="team"><span>Brasil</span><span class="seed">peso histórico</span></div>
+                    <div class="team"><span>Noruega</span><span class="seed">Haaland e gelo</span></div>
                 </div>
                 <div class="analysis">
-                    <p>O Canadá chega com a energia limpa de quem já fez história: Eustáquio marcou aos 90+2 à África do Sul e deu ao coanfitrião a primeira presença nesta fase. Esse tipo de golo cria crença, mas também mascara uma coisa: o Canadá ainda precisa de transformar emoção em controlo.</p>
-                    <p>Marrocos chega mais confortável neste território. Já sabe jogar eliminatórias como quem fecha portas: bloco denso, transição rápida, bolas paradas, paciência para deixar o favorito ou o anfitrião ficar impaciente. Contra os Países Baixos foi isso: sobreviver, sujar, levar ao limite e decidir.</p>
-                    <p class="risk"><strong>Chave táctica:</strong> se o Canadá marcar primeiro, o estádio pode virar combustível. Se Marrocos segura a primeira meia hora e começa a roubar campo, o jogo entra no habitat marroquino: contacto, intervalo curto e nervo.</p>
-                    <div class="prediction">Prognóstico afinado: Canadá 1–1 Marrocos · Marrocos nos penáltis</div>
+                    <p>O Brasil chega ao jogo que parece confortável no papel e perigoso na prática. Contra o Japão, teve de provar que ainda sabe acelerar quando o jogo pede faca. Agora apanha uma Noruega que não veio fazer turismo: corpo, verticalidade, bola longa com intenção e Haaland como problema que não precisa de muitas páginas.</p>
+                    <p>A Noruega não tem de dominar para ferir. Tem de sobreviver aos primeiros vinte minutos, impedir que o Brasil transforme largura em carnaval, e depois acertar a primeira bola que cair entre central e guarda-redes. É o tipo de adversário que parece simples até marcar.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> Brasil tem de matar a transição antes dela nascer. Se permitir jogo partido, dá a Haaland exactamente a matéria-prima que ele pede: espaço, contacto e uma bola com cheiro a pânico.</p>
+                    <div class="prediction">Prognóstico: Brasil 2–1 Noruega</div>
                 </div>
             </article>
 
             <article class="match-card">
                 <div class="match-top">
-                    <div><div class="time">22:00 · M89</div><strong>Oitavos de final</strong></div>
-                    <div class="venue">Filadélfia<br>Hora de Portugal continental</div>
+                    <div><div class="time">03:00 · M92</div><strong>Oitavos de final</strong></div>
+                    <div class="venue">Mexico City Stadium<br>Madrugada de 6 de julho em Portugal</div>
                 </div>
                 <div class="teams">
-                    <div class="team"><span>Paraguai</span><span class="seed">caçador de gigantes</span></div>
-                    <div class="team"><span>França</span><span class="seed">favorito frio</span></div>
+                    <div class="team"><span>México</span><span class="seed">última noite em casa</span></div>
+                    <div class="team"><span>Inglaterra</span><span class="seed">talento sob ruído</span></div>
                 </div>
                 <div class="analysis">
-                    <p>O Paraguai chega com a pele da Alemanha nas mãos. Isso muda o estatuto psicológico do jogo: já não entra só como resistência sul-americana; entra como equipa que sabe que pode carregar uma eliminatória até aos penáltis e sobreviver ao peso da camisola adversária.</p>
-                    <p>A França, porém, é outra espécie de problema. Contra a Suécia limpou 3–0, Mbappé bisou, Barcola marcou, e a equipa nunca pareceu precisar de explicar demasiado. A França tem a coisa mais perigosa nesta fase: capacidade para ganhar sem se abrir.</p>
-                    <p class="risk"><strong>Chave táctica:</strong> o Paraguai precisa de baixar o ritmo, cortar o jogo e levar a França para impaciência. Se Mbappé recebe espaço antes dos 60', o plano paraguaio passa de armadilha a incêndio.</p>
-                    <div class="prediction">Prognóstico afinado: Paraguai 0–2 França</div>
+                    <p>O México joga o último jogo do torneio em solo mexicano. Isso não é detalhe: é combustível e é veneno. A equipa vai ter estádio, pressão, memória e urgência. Se marcar primeiro, o jogo deixa de ser futebol internacional e passa a ser cerimónia tribal.</p>
+                    <p>A Inglaterra tem mais talento bruto e mais formas de resolver, mas também tem o velho vício de conversar demasiado com o próprio medo. Contra a RD Congo passou; agora o problema é outro: gerir altitude emocional, assobio, e uma equipa mexicana que vai tratar cada duelo como fronteira.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> se a Inglaterra controlar o primeiro quarto de hora, ganha autoridade. Se o México empurra o jogo para coração e segunda bola, o favorito começa a pesar a própria camisola.</p>
+                    <div class="prediction">Prognóstico: México 1–1 Inglaterra · Inglaterra nos penáltis</div>
                 </div>
             </article>
         </section>
 
         <div class="section-head">
             <h2>Quadro dos oitavos</h2>
-            <span>Mapa limpo</span>
+            <span>Mapa actualizado</span>
         </div>
 
         <section class="bracket-grid">
-            <article class="bracket-card"><b>M89 · 04/07 · 22h</b><p>Paraguai vs França</p></article>
-            <article class="bracket-card"><b>M90 · 04/07 · 18h</b><p>Canadá vs Marrocos</p></article>
-            <article class="bracket-card"><b>M91</b><p>Brasil vs Noruega</p></article>
-            <article class="bracket-card"><b>M92</b><p>México vs Inglaterra</p></article>
+            <article class="bracket-card qualified"><b>M89 · terminado</b><p>Paraguai 0–1 França</p></article>
+            <article class="bracket-card qualified"><b>M90 · terminado</b><p>Canadá 0–3 Marrocos</p></article>
+            <article class="bracket-card"><b>M91 · 05/07 · 21h</b><p>Brasil vs Noruega</p></article>
+            <article class="bracket-card"><b>M92 · 06/07 · 03h PT</b><p>México vs Inglaterra</p></article>
             <article class="bracket-card"><b>M93</b><p>Portugal vs Espanha</p></article>
             <article class="bracket-card"><b>M94</b><p>Estados Unidos vs Bélgica</p></article>
             <article class="bracket-card"><b>M95</b><p>Argentina vs Egito</p></article>
@@ -181,8 +232,8 @@
         </section>
 
         <section class="panel">
-            <h3>Leitura de abertura</h3>
-            <p>O primeiro dia dos oitavos tem uma assimetria bonita: Canadá–Marrocos é jogo de tensão, estádio e sobrevivência; Paraguai–França é jogo de método contra talento superior. Se a Ronda dos 32 ainda permitia três jogos por dia e alguma névoa, esta página muda de regime: dois jogos, mais espaço para detalhe, menos desculpa para prognóstico preguiçoso.</p>
+            <h3>Leitura do dia</h3>
+            <p>O primeiro dia dos oitavos limpou uma ilusão: jogar em casa não basta, e sofrer bonito também não. O segundo dia muda o eixo. Brasil–Noruega é o jogo da diferença entre mito e mecanismo. México–Inglaterra é o jogo da diferença entre estádio e nervo. Quem passar sai com caminho aberto para as próximas páginas; quem cair vira rodapé cruel.</p>
         </section>
 
         <div class="section-head">
@@ -190,12 +241,12 @@
             <span>Dados factuais</span>
         </div>
         <section class="source-grid">
-            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights">FIFA</a>: Austrália 1–1 Egito, Egito 4–2 nos penáltis, golos de Ashour e autogolo de Hany.</p></article>
-            <article class="source-card"><p><a href="https://www.clarin.com/deportes/argentina-vs-cabo-verde-mundial-2026-ponele-puntaje-messi-jugadores-seleccion_0_wuOeMmRcla.html">Clarín</a> / imprensa argentina: Argentina 3–2 Cabo Verde após prolongamento; próximo duelo com o Egito.</p></article>
-            <article class="source-card"><p><a href="https://www.fifa.com/en/match-centre/match/17/285023/289287/400021517?gender=2&date=2026-07-04">FIFA</a>: Colômbia 1–0 Gana, Jhon Arias aos 14', Colômbia apurada para defrontar a Suíça.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-morocco-match-report-highlights">FIFA</a>: Canadá 0–3 Marrocos; bis de Azzedine Ounahi e golo tardio de Soufiane Rahimi.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights">FIFA</a>: Paraguai 0–1 França; penálti de Kylian Mbappé e França apurada para defrontar Marrocos.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums">FIFA</a>: M91 Brasil–Noruega em New York/New Jersey; M92 México–Inglaterra no Mexico City Stadium.</p></article>
         </section>
 
-        <footer>Os 32 acabaram. Os 16 já não prometem festa. Prometem sentença.</footer>
+        <footer>Os oitavos já começaram a escolher quem tem faca e quem só trouxe bandeira.</footer>
     </main>
 </body>
 </html>
