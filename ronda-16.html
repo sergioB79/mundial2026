@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronda dos 16 — Mundial 2026</title>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ronda dos 16 — Mundial 2026">
+    <meta property="og:description" content="Oitavos de final do Mundial 2026: dois jogos por dia, análise limpa, prognósticos afinados e quadro vivo.">
+    <meta property="og:url" content="https://sergiob79.github.io/mundial2026/ronda-16.html">
+    <meta property="og:site_name" content="O Guia do Caos">
+    <style>
+        :root {
+            --paper: #f6f3ec;
+            --ink: #101217;
+            --muted: #667085;
+            --line: #ded8cc;
+            --card: #fffefa;
+            --acid: #c7ff3d;
+            --red: #e23b3b;
+            --blue: #2563eb;
+            --black: #05070b;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(199,255,61,.20), transparent 28%),
+                radial-gradient(circle at 90% 10%, rgba(37,99,235,.14), transparent 30%),
+                var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; }
+        .page { max-width: 1180px; margin: 0 auto; padding: 32px 18px 68px; }
+        .nav {
+            display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap;
+            border: 1px solid var(--ink); border-radius: 999px; padding: 10px 14px; background: rgba(255,254,250,.75); backdrop-filter: blur(10px);
+            position: sticky; top: 12px; z-index: 10;
+        }
+        .brand { font-weight: 950; letter-spacing: -.5px; text-decoration: none; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 10px; flex-wrap: wrap; font-size: .82rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 850; }
+        .nav-links a { text-decoration: none; padding: 8px 10px; border-radius: 999px; color: var(--muted); }
+        .nav-links a.active, .nav-links a:hover { color: var(--ink); background: var(--acid); }
+        .hero {
+            margin: 44px 0 28px; min-height: 420px; border-radius: 34px; overflow: hidden; color: #fff;
+            background:
+                linear-gradient(110deg, rgba(5,7,11,.92), rgba(5,7,11,.62)),
+                repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 70px),
+                linear-gradient(135deg, #111827, #1e293b 56%, #0f172a);
+            display: grid; grid-template-columns: 1.18fr .82fr; gap: 22px; padding: clamp(28px, 6vw, 70px); position: relative;
+            box-shadow: 0 30px 80px rgba(16,18,23,.16);
+        }
+        .hero::after { content: "16"; position: absolute; right: 28px; bottom: -34px; font-size: clamp(8rem, 24vw, 18rem); font-weight: 950; letter-spacing: -16px; color: rgba(255,255,255,.06); line-height: .75; }
+        .eyebrow { color: var(--acid); font-size: .8rem; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 950; margin-bottom: 18px; display: inline-block; }
+        h1 { font-size: clamp(3.8rem, 11vw, 8.4rem); line-height: .78; letter-spacing: -7px; margin: 0 0 22px; text-transform: uppercase; }
+        .deck { font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.45; max-width: 720px; color: #f8fafc; margin: 0; font-style: italic; }
+        .hero-panel { align-self: end; position: relative; z-index: 2; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 22px; backdrop-filter: blur(14px); }
+        .hero-panel strong { display: block; color: var(--acid); font-size: 2.3rem; line-height: 1; margin-bottom: 8px; }
+        .hero-panel p { margin: 0; color: #e5e7eb; line-height: 1.55; }
+        .status-grid, .match-grid, .bracket-grid, .source-grid { display: grid; gap: 18px; }
+        .status-grid { grid-template-columns: repeat(4, minmax(0,1fr)); margin: 24px 0 54px; }
+        .pill-card, .match-card, .panel, .source-card { background: rgba(255,254,250,.92); border: 1px solid var(--line); border-radius: 24px; padding: 22px; box-shadow: 0 14px 36px rgba(16,18,23,.05); }
+        .pill-card b { display: block; font-size: .72rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+        .pill-card strong { display: block; font-size: 1.55rem; letter-spacing: -1px; margin-bottom: 8px; }
+        .pill-card p, .panel p, .source-card p { margin: 0; color: var(--muted); line-height: 1.58; }
+        .section-head { margin: 58px 0 22px; display: flex; align-items: end; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 14px; }
+        .section-head h2 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); line-height: .9; letter-spacing: -3px; text-transform: uppercase; }
+        .section-head span { color: var(--muted); font-weight: 850; text-transform: uppercase; letter-spacing: 1.6px; font-size: .78rem; }
+        .match-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .match-card { padding: 0; overflow: hidden; }
+        .match-top { padding: 22px; background: var(--black); color: #fff; display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+        .match-top .time { color: var(--acid); font-weight: 950; letter-spacing: 1.4px; text-transform: uppercase; font-size: .8rem; }
+        .match-top .venue { color: #cbd5e1; font-size: .82rem; text-align: right; }
+        .teams { padding: 28px 22px 20px; display: grid; gap: 12px; }
+        .team { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: clamp(1.55rem, 4vw, 2.4rem); font-weight: 950; letter-spacing: -1.5px; line-height: 1; }
+        .seed { font-size: .72rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); font-weight: 900; }
+        .analysis { padding: 0 22px 24px; display: grid; gap: 14px; }
+        .analysis p { margin: 0; color: #344054; line-height: 1.66; font-size: 1.02rem; }
+        .prediction { border: 2px solid var(--ink); background: var(--acid); border-radius: 16px; padding: 15px; font-weight: 950; letter-spacing: -.2px; }
+        .risk { border-left: 5px solid var(--red); padding: 10px 0 10px 14px; color: var(--muted); font-size: .96rem; }
+        .bracket-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .bracket-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; min-height: 118px; }
+        .bracket-card b { display: block; color: var(--red); font-size: .72rem; text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 8px; }
+        .bracket-card p { margin: 0; color: var(--ink); font-weight: 850; line-height: 1.35; }
+        .panel { margin-top: 20px; }
+        .panel h3 { margin: 0 0 12px; font-size: 1.4rem; letter-spacing: -.6px; }
+        .source-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        .source-card a { font-weight: 900; text-decoration-thickness: 2px; }
+
+        .day-block { margin: 34px 0 46px; }
+        .result-card { background: var(--black); color: #fff; border-radius: 24px; padding: 24px; box-shadow: 0 18px 44px rgba(16,18,23,.12); }
+        .result-card h3 { margin: 0 0 10px; font-size: 1.65rem; letter-spacing: -.8px; }
+        .result-card .score { color: var(--acid); font-weight: 950; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px; display: block; }
+        .result-card p { color: #e5e7eb; line-height: 1.62; margin: 0; }
+        .review-strip { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+        .review-card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+        .review-card b { color: var(--red); text-transform: uppercase; letter-spacing: 1.2px; font-size: .74rem; display: block; margin-bottom: 8px; }
+        .review-card p { margin: 0; color: #344054; line-height: 1.55; }
+        .qualified { border: 2px solid var(--ink); background: linear-gradient(135deg, var(--acid), #fffefa); }
+        @media (max-width: 900px) { .review-strip { grid-template-columns: 1fr; } }
+        footer { margin-top: 62px; padding-top: 26px; border-top: 2px solid var(--ink); font-weight: 950; font-style: italic; text-align: center; font-size: 1.2rem; }
+        @media (max-width: 900px) { .hero, .match-grid, .status-grid, .bracket-grid, .source-grid { grid-template-columns: 1fr; } h1 { letter-spacing: -4px; } .nav { position: static; border-radius: 24px; } }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <nav class="nav">
+            <a class="brand" href="index.html">O Guia do Caos</a>
+            <div class="nav-links">
+                <a href="ronda-32.html">Arquivo R32</a>
+                <a class="active" href="ronda-16.html">Ronda dos 16</a>
+                <a href="mapa-dos-sobreviventes.html">Sobreviventes</a>
+                <a href="especial-portugal-croacia.html">Portugal–Croácia</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div>
+                <span class="eyebrow">Oitavos de final · Dia 3 · 6 de julho · Horários PT</span>
+                <h1>Ronda<br>dos 16</h1>
+                <p class="deck">O Brasil caiu onde pensava ter peso histórico. O México caiu onde pensava ter casa. Hoje a ronda deixa de ser mapa e vira nervo ibérico: Portugal–Espanha em Dallas, EUA–Bélgica em Seattle.</p>
+            </div>
+            <aside class="hero-panel">
+                <strong>Portugal joga hoje</strong>
+                <p>Portugal–Espanha às 20h PT. Depois, EUA–Bélgica à 01h PT. Dois jogos com estádio cheio, memória curta e margem zero para equipas que gostam de explicar depois.</p>
+            </aside>
+        </header>
+
+        <section class="status-grid">
+            <article class="pill-card"><b>Formato</b><strong>8 jogos · 4 dias</strong><p>Quatro eliminatórias fechadas, quatro por decidir. A página já entrou no território em que cada favorito começa a parecer vulnerável.</p></article>
+            <article class="pill-card"><b>Hoje</b><strong>POR–ESP · EUA–BEL</strong><p>Derby ibérico às 20h; anfitrião americano contra Bélgica na madrugada portuguesa.</p></article>
+            <article class="pill-card"><b>Portugal</b><strong id="portugal-espanha">vs Espanha</strong><p>Dallas recebe o jogo que não precisa de aquecimento: Ronaldo e Ramos contra a Espanha de Yamal e Oyarzabal.</p></article>
+            <article class="pill-card"><b>Já passaram</b><strong>MAR · FRA · NOR · ING</strong><p>Marrocos–França e Noruega–Inglaterra já são quartos-de-final. O lado direito do quadro ficou menos previsível.</p></article>
+        </section>
+
+        <div class="section-head">
+            <h2>Ontem: o mito rachou</h2>
+            <span>Resultados confirmados</span>
+        </div>
+
+        <section class="match-grid day-block">
+            <article class="result-card">
+                <span class="score">Brasil 1–2 Noruega</span>
+                <h3>Haaland tirou o Brasil do pedestal</h3>
+                <p>O jogo começou com aviso: Ørjan Nyland defendeu cedo um penálti de Bruno Guimarães. O Brasil ficou com a bola e com a história; a Noruega ficou com o plano. Na parte final, Erling Haaland apareceu duas vezes e transformou o jogo numa frase seca: o nome da camisola não defende a área. A Noruega está nos quartos pela primeira vez.</p>
+            </article>
+            <article class="result-card">
+                <span class="score">México 2–3 Inglaterra</span>
+                <h3>Dez ingleses sobreviveram ao caldeirão</h3>
+                <p>O México teve estádio, ruído e um adversário ferido: Jarell Quansah foi expulso aos 54 minutos. A Inglaterra, reduzida a dez, não desapareceu. Bellingham bisou, Kane marcou de penálti, e a equipa saiu da Cidade do México com uma vitória de sobrevivência pura. Não foi controlo. Foi resistência com classe.</p>
+            </article>
+        </section>
+
+        <div class="section-head">
+            <h2>Revisão dos palpites</h2>
+            <span>Ontem vs realidade</span>
+        </div>
+
+        <section class="review-strip">
+            <article class="review-card">
+                <b>Brasil–Noruega</b>
+                <p><strong>Palpite:</strong> 2–1 Brasil. <strong>Saiu:</strong> 1–2 Noruega. Falhou o vencedor, mas não o perigo. A transição norueguesa era a ameaça; a diferença foi que Haaland não precisou de volume, só de momento. O Brasil não matou o jogo quando pôde e pagou em público.</p>
+            </article>
+            <article class="review-card">
+                <b>México–Inglaterra</b>
+                <p><strong>Palpite:</strong> 1–1, Inglaterra nos penáltis. <strong>Saiu:</strong> 2–3 Inglaterra. Vencedor certo; subestimado o caos. A Inglaterra não precisou dos penáltis, mas precisou de jogar com dez, sofrer o estádio e encontrar Bellingham em modo incêndio controlado.</p>
+            </article>
+        </section>
+
+        <section class="panel qualified">
+            <h3>Segundo quarto-de-final definido</h3>
+            <p><strong>Noruega vs Inglaterra · 10 de julho · Miami.</strong> Haaland contra uma Inglaterra que acabou de sobreviver com dez homens. É o quarto-de-final mais simples de vender e o mais difícil de controlar: área, bola parada, nervo e reputação.</p>
+        </section>
+
+        <div class="section-head">
+            <h2>Jogos de hoje</h2>
+            <span>Dia 3 · prognósticos</span>
+        </div>
+
+        <section class="match-grid">
+            <article class="match-card">
+                <div class="match-top">
+                    <div><div class="time">20:00 · M93</div><strong>Portugal em campo</strong></div>
+                    <div class="venue">Dallas Stadium · Arlington<br>Hora de Portugal continental</div>
+                </div>
+                <div class="teams">
+                    <div class="team"><span>Portugal</span><span class="seed">última geração, última margem</span></div>
+                    <div class="team"><span>Espanha</span><span class="seed">bola, juventude e lâmina</span></div>
+                </div>
+                <div class="analysis">
+                    <p>Este jogo não começa aos zero minutos. Começa em tudo o que Portugal e Espanha já disseram uma à outra sem precisar de microfone: posse contra ferida, paciência contra ansiedade, fronteira contra fronteira. Portugal vem de uma vitória arrancada à Croácia com Cristiano Ronaldo e Gonçalo Ramos a resolverem quando a eliminatória já cheirava a prolongamento emocional.</p>
+                    <p>A Espanha chega com outra textura: Lamine Yamal e Mikel Oyarzabal deram-lhe velocidade, ruptura e aquela sensação de equipa que consegue transformar circulação em corte. O perigo para Portugal é aceitar demasiado tempo sem bola e chamar a Espanha para perto da área. O perigo para Espanha é acreditar que domínio territorial é o mesmo que controlo.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> Portugal precisa de quebrar a primeira pressão espanhola sem devolver sempre a bola ao mesmo corredor. Se Vitinha/Bruno conseguirem receber de frente e Leão tiver metros, Espanha deixa de atacar em tapete e passa a correr para trás.</p>
+                    <div class="prediction">Prognóstico: Portugal 2–2 Espanha · Portugal nos penáltis</div>
+                </div>
+            </article>
+
+            <article class="match-card">
+                <div class="match-top">
+                    <div><div class="time">01:00 · M94</div><strong>Oitavos de final</strong></div>
+                    <div class="venue">Seattle Stadium<br>Madrugada de 7 de julho em Portugal</div>
+                </div>
+                <div class="teams">
+                    <div class="team"><span>Estados Unidos</span><span class="seed">anfitrião em pressão alta</span></div>
+                    <div class="team"><span>Bélgica</span><span class="seed">comeback e ofício</span></div>
+                </div>
+                <div class="analysis">
+                    <p>Os EUA chegam com a vantagem mais perigosa de todas: a sensação de que o país inteiro já empurrou o jogo antes de ele começar. Pulisic ainda não marcou neste Mundial, mas continua a ser o ponto que muda a temperatura da equipa. Sem ele ou sem a sua melhor versão, a selecção americana perde a faísca que transforma pressão em golo.</p>
+                    <p>A Bélgica vem de uma qualificação construída à força, com memória de reviravolta e jogadores habituados a viver dentro do desconforto. Não precisa de ser mais rápida do que os EUA durante noventa minutos; precisa de sobreviver ao arranque, baixar o volume do estádio e castigar o primeiro espaço que a pressa americana deixar aberto.</p>
+                    <p class="risk"><strong>Chave táctica:</strong> se os EUA marcam primeiro, Seattle vira tempestade. Se a Bélgica chega viva ao intervalo, o jogo passa para o terreno onde ela é mais perigosa: decisão curta, bola parada e paciência adulta.</p>
+                    <div class="prediction">Prognóstico: Estados Unidos 1–2 Bélgica</div>
+                </div>
+            </article>
+        </section>
+
+        <div class="section-head">
+            <h2>Quadro dos oitavos</h2>
+            <span>Mapa actualizado</span>
+        </div>
+
+        <section class="bracket-grid">
+            <article class="bracket-card qualified"><b>M89 · terminado</b><p>Paraguai 0–1 França</p></article>
+            <article class="bracket-card qualified"><b>M90 · terminado</b><p>Canadá 0–3 Marrocos</p></article>
+            <article class="bracket-card qualified"><b>M91 · terminado</b><p>Brasil 1–2 Noruega</p></article>
+            <article class="bracket-card qualified"><b>M92 · terminado</b><p>México 2–3 Inglaterra</p></article>
+            <article class="bracket-card"><b>M93 · 06/07 · 20h</b><p>Portugal vs Espanha</p></article>
+            <article class="bracket-card"><b>M94 · 07/07 · 01h PT</b><p>Estados Unidos vs Bélgica</p></article>
+            <article class="bracket-card"><b>M95 · 07/07</b><p>Argentina vs Egito</p></article>
+            <article class="bracket-card"><b>M96 · 08/07</b><p>Suíça vs Colômbia</p></article>
+        </section>
+
+        <section class="panel">
+            <h3>Leitura do dia</h3>
+            <p>O dia de hoje é sobre identidade sob pressão. Portugal tem de provar que ainda sabe ser equipa quando o jogo pede mais do que memória individual. Espanha tem de provar que a juventude aguenta a pancada de uma eliminatória ibérica. E os EUA, logo depois, têm de provar que casa não é cenário: é responsabilidade. A ronda já avisou o Brasil e o México. Quem entra com biografia em vez de plano sai cedo.</p>
+        </section>
+
+        <div class="section-head">
+            <h2>Fontes usadas</h2>
+            <span>Dados factuais</span>
+        </div>
+        <section class="source-grid">
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-norway-match-report-highlights">FIFA</a>: Brasil 1–2 Noruega; bis de Erling Haaland, defesa de Ørjan Nyland e Noruega nos quartos pela primeira vez.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-match-report-highlights">FIFA</a>: México 2–3 Inglaterra; Inglaterra apurada apesar da expulsão de Jarell Quansah aos 54 minutos.</p></article>
+            <article class="source-card"><p><a href="https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup">NBC Sports</a>: Jude Bellingham bisou e Harry Kane marcou de penálti na vitória inglesa.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-portugal-preview-live-stream-team-news-tickets">FIFA</a>: Portugal–Espanha, oitavos de final em Dallas a 6 de julho.</p></article>
+            <article class="source-card"><p><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/christian-pulisic-usa-belgium-preview">FIFA</a>: Pulisic continua peça-chave dos EUA antes do duelo com a Bélgica.</p></article>
+        </section>
+
+        <footer>Hoje a ronda não pergunta quem tem nome. Pergunta quem aguenta quando o nome já não chega.</footer>
+    </main>
+</body>
+</html>
